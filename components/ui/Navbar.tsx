@@ -263,14 +263,14 @@ const DesktopNavLink: React.FC<{
           <span
             className={`relative text-sm xl:text-base font-medium transition-all duration-200 whitespace-nowrap ${
               isActive || servicesOpen
-                ? "text-violet-600"
-                : "text-gray-100 group-hover:text-violet-600/80"
+                ? "text-[#1E72A1]"
+                : "text-gray-100 group-hover:text-[#3A9AD4]/80"
             }`}
             aria-expanded={servicesOpen}
             aria-haspopup="true">
             {link.label}
             <span
-              className={`absolute left-0 -bottom-1.5 h-0.5 bg-gradient-to-r from-violet-500 to-purple-500 transition-all duration-300 ${
+              className={`absolute left-0 -bottom-1.5 h-0.5 bg-gradient-to-r from-[#1E72A1] to-[#3A9AD4] transition-all duration-300 ${
                 isActive || servicesOpen ? "w-full" : "w-0 group-hover:w-full"
               }`}
             />
@@ -282,8 +282,8 @@ const DesktopNavLink: React.FC<{
               size={16}
               className={`${
                 isActive || servicesOpen
-                  ? "text-violet-600"
-                  : "text-gray-100 group-hover:text-violet-600/80"
+                  ? "text-primary"
+                  : "text-gray-100 group-hover:text-primary/80"
               }`}
             />
           </motion.div>
@@ -296,9 +296,9 @@ const DesktopNavLink: React.FC<{
               className="absolute left-0 top-full mt-3 w-64 rounded-xl shadow-2xl z-50 overflow-hidden"
               style={{
                 background:
-                  "linear-gradient(135deg, rgba(30, 20, 50, 0.98) 0%, rgba(20, 15, 40, 0.98) 100%)",
+                  "linear-gradient(135deg, #1E72A1 0%, rgba(15, 45, 70, 0.98) 100%)",
                 backdropFilter: "blur(20px)",
-                border: "1px solid rgba(139, 92, 246, 0.2)",
+                border: "1px solid rgba(30, 114, 161, 0.3)",
               }}
               role="menu"
               aria-label="Services dropdown menu"
@@ -319,15 +319,15 @@ const DesktopNavLink: React.FC<{
                       onClick={onDropdownItemClick}
                       className={`flex items-center px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
                         currentPath === subLink.href
-                          ? "bg-violet-500/20 text-violet-300"
-                          : "text-gray-200 hover:bg-violet-500/10 hover:text-violet-300"
+                          ? "bg-[#1E72A1]/20 text-[#3A9AD4]"
+                          : "text-gray-200 hover:bg-[#1E72A1]/10 hover:text-[#3A9AD4]"
                       }`}
                       role="menuitem">
                       <div
                         className={`w-1.5 h-1.5 rounded-full mr-3 transition-colors duration-200 ${
                           currentPath === subLink.href
-                            ? "bg-violet-400"
-                            : "bg-violet-500/40"
+                            ? "bg-[#3A9AD4]"
+                            : "bg-[#1E72A1]/40"
                         }`}
                       />
                       {subLink.label}
@@ -346,11 +346,11 @@ const DesktopNavLink: React.FC<{
     <Link
       href={link.href}
       className={`relative text-sm xl:text-base font-medium transition-all duration-200 whitespace-nowrap group ${
-        isActive ? "text-violet-600" : "text-gray-100 hover:text-violet-600/80"
+        isActive ? "text-[#1E72A1]" : "text-gray-100 hover:text-[#3A9AD4]/80"
       }`}>
       {link.label}
       <span
-        className={`absolute left-0 -bottom-1.5 h-0.5 bg-gradient-to-r from-violet-500 to-purple-500 transition-all duration-300 ${
+        className={`absolute left-0 -bottom-1.5 h-0.5 bg-gradient-to-r from-[#1E72A1] to-[#3A9AD4] transition-all duration-300 ${
           isActive ? "w-full" : "w-0 group-hover:w-full"
         }`}
       />
@@ -373,7 +373,7 @@ const CTAButtons: React.FC<{ onLinkClick?: () => void }> = ({
     <div className="flex items-center gap-3">
       <Link href="/book-consultation" onClick={onLinkClick}>
         <button
-          className="flex items-center justify-center h-12 px-6 gap-2.5 rounded-lg text-sm xl:text-base font-semibold text-white cursor-pointer whitespace-nowrap transition-all duration-200 bg-gradient-to-r from-violet-600 to-violet-700 hover:shadow-[0_4px_10px_0_rgba(255,210,238,0.09)] hover:opacity-90"
+          className="flex items-center justify-center h-12 px-6 gap-2.5 rounded-lg text-sm xl:text-base font-semibold text-white cursor-pointer whitespace-nowrap transition-all duration-200 bg-gradient-to-r from-[#1E72A1] to-[#3A9AD4] hover:shadow-[0_4px_10px_0_rgba(30,114,161,0.2)] hover:opacity-90"
           aria-label="Book a consultation">
           Book Consultation
         </button>
@@ -437,9 +437,9 @@ const MobileMenu: React.FC<{
             className="fixed top-0 right-0 h-full w-full sm:w-[340px] z-[9999] lg:hidden overflow-y-auto"
             style={{
               background:
-                "linear-gradient(135deg, rgba(30, 20, 50, 0.98) 0%, rgba(20, 15, 40, 0.98) 100%)",
+                "linear-gradient(135deg, rgba(15, 45, 70, 0.98) 0%, rgba(15, 40, 65, 0.98) 100%)",
               backdropFilter: "blur(25px)",
-              borderLeft: "1px solid rgba(139, 92, 246, 0.2)",
+              borderLeft: "1px solid rgba(30, 114, 161, 0.3)",
             }}
             role="dialog"
             aria-modal="true"
@@ -454,13 +454,13 @@ const MobileMenu: React.FC<{
               className="flex items-center justify-between sticky top-0 z-10 p-4 sm:p-5"
               style={{
                 background:
-                  "linear-gradient(135deg, rgba(30, 20, 50, 0.98) 0%, rgba(20, 15, 40, 0.98) 100%)",
-                borderBottom: "1px solid rgba(139, 92, 246, 0.2)",
+                  "linear-gradient(135deg, rgba(15, 45, 70, 0.98) 0%, rgba(15, 40, 65, 0.98) 100%)",
+                borderBottom: "1px solid rgba(30, 114, 161, 0.3)",
               }}>
               <Logo onClick={onClose} />
               <button
                 onClick={onClose}
-                className="p-2 rounded-lg text-white hover:bg-violet-500/20 transition-all duration-200"
+                className="p-2 rounded-lg text-white hover:bg-[#1E72A1]/20 transition-all duration-200"
                 aria-label="Close menu">
                 <X size={22} />
               </button>
@@ -481,14 +481,14 @@ const MobileMenu: React.FC<{
                             onClick={onServicesToggle}
                             className={`relative flex items-center justify-between w-full px-4 py-3.5 font-medium rounded-lg transition-all duration-200 ${
                               isActive || servicesOpen
-                                ? "text-violet-300 bg-violet-500/15"
-                                : "text-white hover:bg-violet-500/10 hover:text-violet-300"
+                                ? "text-[#3A9AD4] bg-[#1E72A1]/15"
+                                : "text-white hover:bg-[#1E72A1]/10 hover:text-[#3A9AD4]"
                             }`}
                             aria-expanded={servicesOpen}
                             aria-haspopup="true">
                             <span>{link.label}</span>
                             {isActive && (
-                              <div className="absolute left-0 w-1 h-full rounded-r bg-gradient-to-b from-violet-500 to-purple-500" />
+                              <div className="absolute left-0 w-1 h-full rounded-r bg-gradient-to-b from-[#1E72A1] to-[#3A9AD4]" />
                             )}
                             <motion.div
                               animate={{ rotate: servicesOpen ? 180 : 0 }}
@@ -500,7 +500,7 @@ const MobileMenu: React.FC<{
                           <AnimatePresence>
                             {servicesOpen && (
                               <motion.div
-                                className="ml-4 pl-4 mt-1 border-l-2 border-violet-500/30 overflow-hidden"
+                                className="ml-4 pl-4 mt-1 border-l-2 border-[#1E72A1]/30 overflow-hidden"
                                 variants={mobileDropdownVariants}
                                 initial="closed"
                                 animate="open"
@@ -514,15 +514,15 @@ const MobileMenu: React.FC<{
                                       onClick={onClose}
                                       className={`flex items-center px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
                                         currentPath === subLink.href
-                                          ? "text-violet-300 bg-violet-500/10"
-                                          : "text-gray-300 hover:bg-violet-500/10 hover:text-violet-300"
+                                          ? "text-[#3A9AD4] bg-[#1E72A1]/10"
+                                          : "text-gray-300 hover:bg-[#1E72A1]/10 hover:text-[#3A9AD4]"
                                       }`}
                                       role="menuitem">
                                       <div
                                         className={`w-2 h-2 rounded-full mr-3 ${
                                           currentPath === subLink.href
-                                            ? "bg-violet-400"
-                                            : "bg-violet-500/40"
+                                            ? "bg-[#3A9AD4]"
+                                            : "bg-[#1E72A1]/40"
                                         }`}
                                       />
                                       {subLink.label}
@@ -539,12 +539,12 @@ const MobileMenu: React.FC<{
                           onClick={onClose}
                           className={`relative flex items-center px-4 py-3.5 font-medium rounded-lg transition-all duration-200 ${
                             isActive
-                              ? "text-violet-300 bg-violet-500/15"
-                              : "text-white hover:bg-violet-500/10 hover:text-violet-300"
+                              ? "text-[#3A9AD4] bg-[#1E72A1]/15"
+                              : "text-white hover:bg-[#1E72A1]/10 hover:text-[#3A9AD4]"
                           }`}>
                           {link.label}
                           {isActive && (
-                            <div className="absolute left-0 w-1 h-full rounded-r bg-gradient-to-b from-violet-500 to-purple-500" />
+                            <div className="absolute left-0 w-1 h-full rounded-r bg-gradient-to-b from-[#1E72A1] to-[#3A9AD4]" />
                           )}
                         </Link>
                       )}
@@ -556,7 +556,7 @@ const MobileMenu: React.FC<{
 
             {/* Divider */}
             <div className="px-5 sm:px-6">
-              <div className="border-t border-violet-500/20" />
+              <div className="border-t border-[#1E72A1]/20" />
             </div>
 
             {/* CTA Buttons */}
@@ -727,7 +727,7 @@ const LandingNavbar: React.FC = () => {
           backdropFilter: "blur(20px)",
           background: "#00000033",
           boxShadow: isScrolled
-            ? "0 4px 10px 0 rgba(255, 210, 238, 0.09)"
+            ? "0 4px 10px 0 rgba(30, 114, 161, 0.15)"
             : "none",
         }}>
         <Container className="flex items-center justify-between">
@@ -761,7 +761,7 @@ const LandingNavbar: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-lg text-white hover:bg-violet-500/20 transition-all duration-200"
+            className="lg:hidden p-2 rounded-lg text-white hover:bg-[#1E72A1]/20 transition-all duration-200"
             onClick={openMobileMenu}
             aria-label="Open menu"
             aria-expanded={mobileMenuOpen}>

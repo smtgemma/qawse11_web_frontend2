@@ -63,7 +63,7 @@ export default function FrameWorkSection() {
                 y: -8,
                 transition: { duration: 0.3, ease: "easeOut" },
               }}
-              className="relative flex  items-center justify-between gap-2.5 rounded-[20px] p-8 transition-all duration-300 border hover:border-[#6C03FF] bg-[rgba(255,255,255,0.10)]  hover:shadow-[0_4px_40px_0_rgba(106,0,255,0.5)] w-full ">
+              className="relative flex  items-center justify-between gap-2.5 rounded-[20px] p-8 transition-all duration-300 border hover:border-[#1E72A1] bg-[rgba(255,255,255,0.10)]  hover:shadow-[0_4px_40px_0_rgba(30,114,161,0.5)] w-full ">
               {/* Header with title and number */}
               <div className="flex flex-col items-start gap-2">
                 <h3 className="text-[22px] font-semibold text-white leading-tight">
@@ -87,8 +87,8 @@ export default function FrameWorkSection() {
                     y1="0%"
                     x2="100%"
                     y2="0%">
-                    <stop offset="0%" stopColor="#6C03FF" />
-                    <stop offset="100%" stopColor="#9A3DFF" />
+                    <stop offset="0%" stopColor="#1E72A1" />
+                    <stop offset="100%" stopColor="#3A9AD4" />
                   </linearGradient>
                 </defs>
                 <text

@@ -59,8 +59,8 @@ export default function IndustrySolutions() {
                 x2="154"
                 y2="6.5"
                 gradientUnits="userSpaceOnUse">
-                <stop stopColor="#6C03FF" />
-                <stop offset="1" stopColor="#9A3DFF" />
+                <stop stopColor="#1E72A1" />
+                <stop offset="1" stopColor="#3A9AD4" />
               </linearGradient>
             </defs>
           </svg>
@@ -92,9 +92,9 @@ export default function IndustrySolutions() {
                 y: -8,
                 transition: { duration: 0.3, ease: "easeOut" },
               }}
-              className="flex flex-col items-center justify-center gap-2.5 rounded-[20px] px-8 py-16 transition-all duration-300 border hover:border-[#6C03FF] bg-[rgba(255,255,255,0.10)]  hover:shadow-[0_4px_40px_0_rgba(106,0,255,0.5)] w-full ">
+              className="flex flex-col items-center justify-center gap-2.5 rounded-[20px] px-8 py-16 transition-all duration-300 border hover:border-[#1E72A1] bg-[rgba(255,255,255,0.10)]  hover:shadow-[0_4px_40px_0_rgba(30,114,161,0.5)] w-full ">
               <motion.div
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-[linear-gradient(90deg,#6C03FF_0%,#9A3DFF_100%)]"
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-[linear-gradient(90deg,#1E72A1_0%,#3A9AD4_100%)]"
                 whileHover={{
                   scale: 1.1,
                   transition: { duration: 0.3 },

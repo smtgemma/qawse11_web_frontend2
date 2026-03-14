@@ -80,8 +80,8 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({
                 x2="92"
                 y2="6.5"
                 gradientUnits="userSpaceOnUse">
-                <stop stopColor="#6C03FF" />
-                <stop offset="1" stopColor="#9A3DFF" />
+                <stop stopColor="#1E72A1" />
+                <stop offset="1" stopColor="#3A9AD4" />
               </linearGradient>
             </defs>
           </svg>

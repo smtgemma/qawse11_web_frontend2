@@ -145,7 +145,7 @@ export default function ContactForm() {
                     id="firstName"
                     {...register("firstName")}
                     placeholder="Ex. John"
-                    className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#6C03FF] transition-colors"
+                    className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
                   />
                   {errors.firstName && (
                     <p className="text-red-400 text-xs mt-1.5">
@@ -164,7 +164,7 @@ export default function ContactForm() {
                     id="lastName"
                     {...register("lastName")}
                     placeholder="Ex. Doe"
-                    className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#6C03FF] transition-colors"
+                    className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
                   />
                   {errors.lastName && (
                     <p className="text-red-400 text-xs mt-1.5">
@@ -186,7 +186,7 @@ export default function ContactForm() {
                   id="email"
                   {...register("email")}
                   placeholder="Ex. Hello@Email.co"
-                  className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#6C03FF] transition-colors"
+                  className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
                 />
                 {errors.email && (
                   <p className="text-red-400 text-xs mt-1.5">
@@ -211,7 +211,7 @@ export default function ContactForm() {
                     id="company"
                     {...register("company")}
                     placeholder="Your Company Name"
-                    className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#6C03FF] transition-colors"
+                    className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
                   />
                   {errors.company && (
                     <p className="text-red-400 text-xs mt-1.5">
@@ -229,7 +229,7 @@ export default function ContactForm() {
                     <select
                       id="country"
                       {...register("country")}
-                      className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#6C03FF] transition-colors appearance-none pr-10">
+                      className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none pr-10">
                       <option value="" disabled hidden>
                         Select Your Country
                       </option>
@@ -273,7 +273,7 @@ export default function ContactForm() {
                   <select
                     id="projectType"
                     {...register("projectType")}
-                    className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#6C03FF] transition-colors appearance-none pr-10">
+                    className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none pr-10">
                     <option value="" disabled hidden>
                       Select Your Project Type...
                     </option>
@@ -318,7 +318,7 @@ export default function ContactForm() {
                   <select
                     id="budgetRange"
                     {...register("budgetRange")}
-                    className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#6C03FF] transition-colors appearance-none pr-10">
+                    className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none pr-10">
                     <option value="" disabled hidden>
                       Select Your Budget Range
                     </option>
@@ -365,7 +365,7 @@ export default function ContactForm() {
                   {...register("message")}
                   placeholder="Describe your project, goals, or challenges..."
                   rows={5}
-                  className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#6C03FF] transition-colors resize-none"
+                  className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors resize-none"
                 />
                 {errors.message && (
                   <p className="text-red-400 text-xs mt-1.5">
@@ -384,7 +384,7 @@ export default function ContactForm() {
                   className="absolute inset-0 transition-opacity duration-500 ease-in-out"
                   style={{
                     background:
-                      "linear-gradient(90deg, #6C03FF 0%, #9A3DFF 100%)",
+                      "linear-gradient(90deg, #1E72A1 0%, #3A9AD4 100%)",
                     opacity: 1,
                   }}
                 />
@@ -394,7 +394,7 @@ export default function ContactForm() {
                   className="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 group-disabled:opacity-0"
                   style={{
                     background:
-                      "linear-gradient(90deg, #9A3DFF 0%, #6C03FF 100%)",
+                      "linear-gradient(90deg, #3A9AD4 0%, #1E72A1 100%)",
                   }}
                 />
 

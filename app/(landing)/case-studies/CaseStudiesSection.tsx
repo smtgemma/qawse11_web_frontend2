@@ -161,7 +161,7 @@ export default function CaseStudiesSection() {
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.3 }}
                   variants={index % 2 === 0 ? fadeInLeft : fadeInRight}
-                  className="group relative border border-transparent rounded-[20px] overflow-hidden cursor-pointer hover:border-[#6C03FF] transition-all duration-500">
+                  className="group relative border border-transparent rounded-[20px] overflow-hidden cursor-pointer hover:border-[#1E72A1] transition-all duration-500">
                   {/* Image Container */}
                   <div className="relative w-full lg:h-[520px] h-[300px] overflow-hidden">
                     <Image
@@ -175,13 +175,13 @@ export default function CaseStudiesSection() {
                   {/* Content Container */}
                   <div className="py-8 px-3 flex items-center justify-between">
                     {/* Title */}
-                    <h3 className="lg:text-2xl text-lg font-semibold text-white group-hover:text-[#9A3DFF] transition-colors duration-300">
+                    <h3 className="lg:text-2xl text-lg font-semibold text-white group-hover:text-[#3A9AD4] transition-colors duration-300">
                       {study.title}
                     </h3>
 
                     {/* Arrow Icon */}
                     <div
-                      className={`lg:w-12 lg:h-12 w-10 h-10 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 ${study.iconBg} group-hover:bg-linear-to-br group-hover:from-[#6C03FF] group-hover:to-[#9A3DFF]`}>
+                      className={`lg:w-12 lg:h-12 w-10 h-10 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 ${study.iconBg} group-hover:bg-linear-to-br group-hover:from-[#1E72A1] group-hover:to-[#3A9AD4]`}>
                       <ArrowRight className="lg:w-6 lg:h-6 w-5 h-5 text-white -rotate-45" />
                     </div>
                   </div>
@@ -205,7 +205,7 @@ export default function CaseStudiesSection() {
                 className="absolute inset-0 transition-opacity duration-500 ease-in-out"
                 style={{
                   background:
-                    "linear-gradient(90deg, #6C03FF 0%, #9A3DFF 100%)",
+                    "linear-gradient(90deg, #1E72A1 0%, #3A9AD4 100%)",
                   opacity: 1,
                 }}
               />
@@ -215,7 +215,7 @@ export default function CaseStudiesSection() {
                 className="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100"
                 style={{
                   background:
-                    "linear-gradient(90deg, #9A3DFF 0%, #6C03FF 100%)",
+                    "linear-gradient(90deg, #3A9AD4 0%, #1E72A1 100%)",
                 }}
               />
 

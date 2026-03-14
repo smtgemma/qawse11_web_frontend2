@@ -105,7 +105,7 @@ const HeroSection = () => {
             style={{
               height: "50px",
               gap: "10px",
-              background: "linear-gradient(90deg, #6C03FF 0%, #9A3DFF 100%)",
+              background: "linear-gradient(90deg, #1E72A1 0%, #3A9AD4 100%)",
               color: "#FFFFFF",
               border: "none",
             }}>

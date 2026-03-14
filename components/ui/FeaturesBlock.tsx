@@ -157,8 +157,8 @@ const FeaturesBlock: React.FC<FeaturesBlockProps> = ({
                           x2="20"
                           y2="10"
                           gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#6C03FF" />
-                          <stop offset="1" stopColor="#9A3DFF" />
+                          <stop stopColor="#1E72A1" />
+                          <stop offset="1" stopColor="#3A9AD4" />
                         </linearGradient>
                       </defs>
                     </svg>

@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
                 {/* <Link
                   href="http://linkedin.com/"
                   target="_blank"
-                  className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#6C03FF] to-[#9A3DFF] flex items-center justify-center transition-all hover:shadow-[0_4px_40px_rgba(108,3,255,0.6)]"
+                  className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#1E72A1] to-[#3A9AD4] flex items-center justify-center transition-all hover:shadow-[0_4px_40px_rgba(30,114,161,0.6)]"
                   aria-label="LinkedIn">
                   <Linkedin className="w-5 h-5 text-white" />
                 </Link> */}
@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
                 <Link
                   href="https://x.com/dima360ai/"
                   target="_blank"
-                  className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#6C03FF] to-[#9A3DFF] flex items-center justify-center transition-all hover:shadow-[0_4px_40px_rgba(108,3,255,0.6)]"
+                  className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#1E72A1] to-[#3A9AD4] flex items-center justify-center transition-all hover:shadow-[0_4px_40px_rgba(30,114,161,0.6)]"
                   aria-label="X (Twitter)">
                   <svg
                     width="20"
@@ -99,7 +99,7 @@ const Footer: React.FC = () => {
                 <Link
                   href="https://www.instagram.com/dima360ai/"
                   target="_blank"
-                  className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#6C03FF] to-[#9A3DFF] flex items-center justify-center transition-all hover:shadow-[0_4px_40px_rgba(108,3,255,0.6)]"
+                  className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#1E72A1] to-[#3A9AD4] flex items-center justify-center transition-all hover:shadow-[0_4px_40px_rgba(30,114,161,0.6)]"
                   aria-label="X (Twitter)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

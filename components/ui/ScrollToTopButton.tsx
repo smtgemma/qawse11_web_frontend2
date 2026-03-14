@@ -63,7 +63,7 @@ export default function ScrollToTopButton() {
             boxShadow: "0 12px 30px rgba(0,0,0,0.55)",
           }}
           whileTap={{ scale: 0.95, y: 0 }}
-          className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-11 h-11 md:w-12 md:h-12 rounded-full bg-linear-to-r from-violet-500 via-violet-600 to-violet-800 text-white shadow-[0_6px_18px_rgba(0,0,0,0.35)] backdrop-blur-sm overflow-hidden group">
+          className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-11 h-11 md:w-12 md:h-12 rounded-full bg-linear-to-r from-[#1E72A1] via-[#3A9AD4] to-[#1E72A1] text-white shadow-[0_6px_18px_rgba(0,0,0,0.35)] backdrop-blur-sm overflow-hidden group">
           <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           <motion.span
             animate={{ y: [0, -3, 0] }}

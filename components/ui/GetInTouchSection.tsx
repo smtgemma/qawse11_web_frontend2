@@ -174,8 +174,8 @@ const GetInTouchSection: React.FC<GetInTouchSectionProps> = ({
                       x2="92"
                       y2="6.5"
                       gradientUnits="userSpaceOnUse">
-                      <stop stopColor="#6C03FF" />
-                      <stop offset="1" stopColor="#9A3DFF" />
+                      <stop stopColor="#1E72A1" />
+                      <stop offset="1" stopColor="#3A9AD4" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -224,7 +224,7 @@ const GetInTouchSection: React.FC<GetInTouchSectionProps> = ({
                 className="rounded-[12px] p-8 md:p-5 lg:p-8"
                 style={{
                   background:
-                    "linear-gradient(90deg, #6C03FF 0%, #9A3DFF 100%)",
+                    "linear-gradient(90deg, #1E72A1 0%, #3A9AD4 100%)",
                 }}>
                 {/* Get In Touch Form */}
                 <div className="mb-8">

@@ -222,7 +222,7 @@ export default function CaseStudyDetailContent({
                         key={index}
                         variants={fadeInUp}
                         className="flex items-center gap-3 text-sm md:text-base text-white">
-                        <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-gradient-to-br from-[#6C03FF] to-[#9A3DFF] flex items-center justify-center shrink-0">
+                        <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-gradient-to-br from-[#1E72A1] to-[#3A9AD4] flex items-center justify-center shrink-0">
                           <Check className="w-3 h-3 md:w-4 md:h-4 text-white" />
                         </div>
                         <span className="leading-snug">{challenge}</span>
@@ -289,7 +289,7 @@ export default function CaseStudyDetailContent({
                           key={index}
                           variants={fadeInUp}
                           className="flex items-center gap-3 text-sm md:text-base text-white">
-                          <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-gradient-to-br from-[#6C03FF] to-[#9A3DFF] flex items-center justify-center shrink-0">
+                          <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-gradient-to-br from-[#1E72A1] to-[#3A9AD4] flex items-center justify-center shrink-0">
                             <Check className="w-3 h-3 md:w-4 md:h-4 text-white" />
                           </div>
                           <span className="leading-snug">{feature}</span>
@@ -406,7 +406,7 @@ export default function CaseStudyDetailContent({
                   {prevSlug ? (
                     <Link
                       href={`/case-studies/${prevSlug}`}
-                      className="flex items-center gap-2 md:gap-3 text-white hover:text-[#9A3DFF] transition-colors group">
+                      className="flex items-center gap-2 md:gap-3 text-white hover:text-[#3A9AD4] transition-colors group">
                       <svg width="20" height="20" className="md:w-6 md:h-6 group-hover:-translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 12L11 18M5 12L11 6M5 12L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
@@ -448,7 +448,7 @@ export default function CaseStudyDetailContent({
                   {nextSlug ? (
                     <Link
                       href={`/case-studies/${nextSlug}`}
-                      className="flex items-center gap-2 md:gap-3 text-white hover:text-[#9A3DFF] transition-colors text-right group">
+                      className="flex items-center gap-2 md:gap-3 text-white hover:text-[#3A9AD4] transition-colors text-right group">
                       <div className="hidden sm:block">
                         <p className="text-lg md:text-2xl font-bold text-white">Next</p>
                         <p className="text-xs md:text-base font-medium line-clamp-1">
@@ -499,7 +499,7 @@ export default function CaseStudyDetailContent({
                     className="space-y-5 md:space-y-6">
                     {/* Client */}
                     <motion.div variants={fadeInUp} className="flex items-start gap-3 md:gap-4">
-                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-[#6C03FF] to-[#9A3DFF] flex items-center justify-center shrink-0">
+                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-[#1E72A1] to-[#3A9AD4] flex items-center justify-center shrink-0">
                         <User className="w-5 h-5 md:w-6 md:h-6 text-white" />
                       </div>
                       <div>
@@ -512,7 +512,7 @@ export default function CaseStudyDetailContent({
 
                     {/* Date */}
                     <motion.div variants={fadeInUp} className="flex items-start gap-3 md:gap-4">
-                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-[#6C03FF] to-[#9A3DFF] flex items-center justify-center shrink-0">
+                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-[#1E72A1] to-[#3A9AD4] flex items-center justify-center shrink-0">
                         <Calendar className="w-5 h-5 md:w-6 md:h-6 text-white" />
                       </div>
                       <div>
@@ -525,7 +525,7 @@ export default function CaseStudyDetailContent({
 
                     {/* Location */}
                     <motion.div variants={fadeInUp} className="flex items-start gap-3 md:gap-4">
-                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-[#6C03FF] to-[#9A3DFF] flex items-center justify-center shrink-0">
+                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-[#1E72A1] to-[#3A9AD4] flex items-center justify-center shrink-0">
                         <MapPin className="w-5 h-5 md:w-6 md:h-6 text-white" />
                       </div>
                       <div>
@@ -545,7 +545,7 @@ export default function CaseStudyDetailContent({
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 variants={scaleIn}
-                className="bg-[#0a0a0a] border border-[#9A3DFF]/40 rounded-[16px] md:rounded-[20px] relative overflow-hidden group hover:border-[#9A3DFF]/60 transition-colors">
+                className="bg-[#0a0a0a] border border-[#3A9AD4]/40 rounded-[16px] md:rounded-[20px] relative overflow-hidden group hover:border-[#3A9AD4]/60 transition-colors">
                 <div className="absolute top-3 right-3 md:top-5 md:right-5 z-10">
                   <span className="px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-white/30 text-xs md:text-sm font-medium text-white bg-white/15 backdrop-blur-sm">
                     Popular Project

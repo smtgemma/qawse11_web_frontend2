@@ -96,8 +96,8 @@ const WhyItMattersSection: React.FC<WhyItMattersSectionProps> = ({
                         x2="24"
                         y2="12"
                         gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#6C03FF" />
-                        <stop offset="1" stopColor="#9A3DFF" />
+                        <stop stopColor="#1E72A1" />
+                        <stop offset="1" stopColor="#3A9AD4" />
                       </linearGradient>
                     </defs>
                   </svg>
