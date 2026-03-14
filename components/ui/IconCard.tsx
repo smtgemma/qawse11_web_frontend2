@@ -34,9 +34,9 @@ const IconCard: React.FC<IconCardProps> = ({
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={cardVariants}
-      className={`flex flex-col gap-4 md:gap-5 lg:gap-6 rounded-[16px] md:rounded-[20px] p-6 md:p-8 lg:p-14 border border-[#6C03FF] bg-[#FFFFFF1A] ${className}`}>
+      className={`flex flex-col gap-4 md:gap-5 lg:gap-6 rounded-[16px] md:rounded-[20px] p-6 md:p-8 lg:p-14 border border-[#1E72A1] bg-[#FFFFFF1A] ${className}`}>
       {/* Icon */}
-      <div className="flex h-12 w-12 items-center justify-center rounded-[12px] md:rounded-[14px] bg-[linear-gradient(90deg,#6C03FF_0%,#9A3DFF_100%)] shrink-0">
+      <div className="flex h-12 w-12 items-center justify-center rounded-[12px] md:rounded-[14px] bg-[linear-gradient(90deg,#1E72A1_0%,#3A9AD4_100%)] shrink-0">
         <Icon className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
       </div>
 

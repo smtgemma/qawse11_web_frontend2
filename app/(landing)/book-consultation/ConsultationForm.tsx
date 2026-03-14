@@ -166,7 +166,7 @@ export default function ConsultationForm() {
                 id="firstName"
                 {...register("firstName")}
                 placeholder="Ex. John"
-                className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#6C03FF] transition-colors"
+                className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
               />
               {errors.firstName && (
                 <p className="text-red-400 text-xs mt-1.5">
@@ -185,7 +185,7 @@ export default function ConsultationForm() {
                 id="lastName"
                 {...register("lastName")}
                 placeholder="Ex. Doe"
-                className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#6C03FF] transition-colors"
+                className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
               />
               {errors.lastName && (
                 <p className="text-red-400 text-xs mt-1.5">
@@ -207,7 +207,7 @@ export default function ConsultationForm() {
               id="email"
               {...register("email")}
               placeholder="ex. hello@email.co"
-              className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#6C03FF] transition-colors"
+              className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
             />
             {errors.email && (
               <p className="text-red-400 text-xs mt-1.5">
@@ -229,7 +229,7 @@ export default function ConsultationForm() {
                 id="company"
                 {...register("company")}
                 placeholder="Your company name"
-                className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#6C03FF] transition-colors"
+                className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
               />
               {errors.company && (
                 <p className="text-red-400 text-xs mt-1.5">
@@ -249,7 +249,7 @@ export default function ConsultationForm() {
                 <select
                   id="timeline"
                   {...register("timeline")}
-                  className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#6C03FF] transition-colors appearance-none cursor-pointer">
+                  className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none cursor-pointer">
                   <option value="" disabled hidden>
                     Select Timeline...
                   </option>
@@ -280,7 +280,7 @@ export default function ConsultationForm() {
               id="country"
               {...register("country")}
               placeholder="Type your country"
-              className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#6C03FF] transition-colors"
+              className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
             />
             {errors.country && (
               <p className="text-red-400 text-xs mt-1.5">
@@ -300,7 +300,7 @@ export default function ConsultationForm() {
               <select
                 id="projectType"
                 {...register("projectType")}
-                className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#6C03FF] transition-colors appearance-none cursor-pointer">
+                className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none cursor-pointer">
                 <option value="" disabled hidden>
                   Select Your Project Type...
                 </option>
@@ -332,7 +332,7 @@ export default function ConsultationForm() {
               <select
                 id="budgetRange"
                 {...register("budgetRange")}
-                className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#6C03FF] transition-colors appearance-none cursor-pointer">
+                className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none cursor-pointer">
                 <option value="" disabled hidden>
                   Select Your Budget Range
                 </option>
@@ -370,7 +370,7 @@ export default function ConsultationForm() {
                     onChange={() => handleCheckboxChange(option)}
                     className="sr-only peer"
                   />
-                  <div className="w-5 h-5 rounded border-2 border-[#3a3a3a] bg-[#2a2a2a] peer-checked:bg-gradient-to-br peer-checked:from-[#6C03FF] peer-checked:to-[#9A3DFF] peer-checked:border-[#6C03FF] transition-all duration-200 flex items-center justify-center">
+                  <div className="w-5 h-5 rounded border-2 border-[#3a3a3a] bg-[#2a2a2a] peer-checked:bg-gradient-to-br peer-checked:from-[#1E72A1] peer-checked:to-[#3A9AD4] peer-checked:border-[#1E72A1] transition-all duration-200 flex items-center justify-center">
                     {helpWith.includes(option) && (
                       <svg
                         className="w-3 h-3 text-white"
@@ -407,7 +407,7 @@ export default function ConsultationForm() {
               {...register("projectDetails")}
               placeholder="Briefly describe your goals, challenges, and desired outcomes."
               rows={5}
-              className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#6C03FF] transition-colors resize-none"
+              className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors resize-none"
             />
             {errors.projectDetails && (
               <p className="text-red-400 text-xs mt-1.5">
@@ -422,7 +422,7 @@ export default function ConsultationForm() {
               <Shield className="w-5 h-5 text-white shrink-0 mt-0.5" />
               <p className="text-white text-sm">
                 We respond within{" "}
-                <span className="text-[#9A3DFF] font-semibold">24 hours</span>.
+                <span className="text-[#3A9AD4] font-semibold">24 hours</span>.
                 No obligation. 100% confidential.
               </p>
             </div>
@@ -434,7 +434,7 @@ export default function ConsultationForm() {
             accordance with our{" "}
             <Link
               href="/privacy-policy"
-              className="text-[#9A3DFF] hover:underline font-medium">
+              className="text-[#3A9AD4] hover:underline font-medium">
               Privacy Policy.
             </Link>
           </p>
@@ -448,7 +448,7 @@ export default function ConsultationForm() {
             <span
               className="absolute inset-0 transition-opacity duration-500 ease-in-out"
               style={{
-                background: "linear-gradient(90deg, #6C03FF 0%, #9A3DFF 100%)",
+                background: "linear-gradient(90deg, #1E72A1 0%, #3A9AD4 100%)",
                 opacity: 1,
               }}
             />
@@ -457,7 +457,7 @@ export default function ConsultationForm() {
             <span
               className="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 group-disabled:opacity-0"
               style={{
-                background: "linear-gradient(90deg, #9A3DFF 0%, #6C03FF 100%)",
+                background: "linear-gradient(90deg, #3A9AD4 0%, #1E72A1 100%)",
               }}
             />
 

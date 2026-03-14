@@ -55,7 +55,7 @@ const CTASection: React.FC<CTASectionProps> = ({
 
   return (
     <div
-      className={`relative w-full py-12 md:py-16 lg:py-[100px] bg-gradient-to-b from-[#8B35FF] via-[#9747FF] to-[#7C2FFF] ${className}`}>
+      className={`relative w-full py-12 md:py-16 lg:py-[100px] bg-gradient-to-b from-[#1E72A1] via-[#3A9AD4] to-[#1E72A1] ${className}`}>
       <Container className="relative z-10">
         <motion.div
           variants={containerVariants}
@@ -100,7 +100,7 @@ const CTASection: React.FC<CTASectionProps> = ({
           <motion.div
             variants={fadeInUp}
             className="flex flex-col sm:flex-row items-center justify-center sm:items-center gap-4 md:gap-6 w-full px-4 sm:px-0">
-            {/* Primary Button - White background, purple text */}
+            {/* Primary Button - White background, theme color text */}
             {primaryButtonText && (
               <motion.div className="">
                 {primaryButtonHref ? (
@@ -109,7 +109,7 @@ const CTASection: React.FC<CTASectionProps> = ({
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.98 }}
                     transition={{ duration: 0.2 }}
-                    className="flex items-center justify-center gap-2 px-6 py-3 md:py-4 rounded-lg text-sm md:text-base font-semibold bg-white text-[#6C03FF] border border-[#6C03FF] hover:bg-white/95 transition-all duration-200 w-fit">
+                    className="flex items-center justify-center gap-2 px-6 py-3 md:py-4 rounded-lg text-sm md:text-base font-semibold bg-white text-[#1E72A1] border border-[#1E72A1] hover:bg-white/95 transition-all duration-200 w-fit">
                     <svg
                       width="24"
                       height="24"
@@ -152,8 +152,8 @@ const CTASection: React.FC<CTASectionProps> = ({
                           x2="16"
                           y2="4"
                           gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#6C03FF" />
-                          <stop offset="1" stopColor="#9A3DFF" />
+                          <stop stopColor="#1E72A1" />
+                          <stop offset="1" stopColor="#3A9AD4" />
                         </linearGradient>
                         <linearGradient
                           id="paint1_linear_1107_654"
@@ -162,8 +162,8 @@ const CTASection: React.FC<CTASectionProps> = ({
                           x2="21"
                           y2="13"
                           gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#6C03FF" />
-                          <stop offset="1" stopColor="#9A3DFF" />
+                          <stop stopColor="#1E72A1" />
+                          <stop offset="1" stopColor="#3A9AD4" />
                         </linearGradient>
                         <linearGradient
                           id="paint2_linear_1107_654"
@@ -172,8 +172,8 @@ const CTASection: React.FC<CTASectionProps> = ({
                           x2="21"
                           y2="10.5"
                           gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#6C03FF" />
-                          <stop offset="1" stopColor="#9A3DFF" />
+                          <stop stopColor="#1E72A1" />
+                          <stop offset="1" stopColor="#3A9AD4" />
                         </linearGradient>
                         <linearGradient
                           id="paint3_linear_1107_654"
@@ -182,8 +182,8 @@ const CTASection: React.FC<CTASectionProps> = ({
                           x2="16"
                           y2="16"
                           gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#6C03FF" />
-                          <stop offset="1" stopColor="#9A3DFF" />
+                          <stop stopColor="#1E72A1" />
+                          <stop offset="1" stopColor="#3A9AD4" />
                         </linearGradient>
                       </defs>
                     </svg>
@@ -196,7 +196,7 @@ const CTASection: React.FC<CTASectionProps> = ({
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.98 }}
                     transition={{ duration: 0.2 }}
-                    className="flex items-center justify-center gap-2 px-6 py-3 md:py-4 rounded-lg text-sm md:text-base font-semibold bg-white text-[#6C03FF] border border-[#6C03FF] hover:bg-white/95 transition-all duration-200 w-fit">
+                    className="flex items-center justify-center gap-2 px-6 py-3 md:py-4 rounded-lg text-sm md:text-base font-semibold bg-white text-[#1E72A1] border border-[#1E72A1] hover:bg-white/95 transition-all duration-200 w-fit">
                     <svg
                       width="24"
                       height="24"
@@ -239,8 +239,8 @@ const CTASection: React.FC<CTASectionProps> = ({
                           x2="16"
                           y2="4"
                           gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#6C03FF" />
-                          <stop offset="1" stopColor="#9A3DFF" />
+                          <stop stopColor="#1E72A1" />
+                          <stop offset="1" stopColor="#3A9AD4" />
                         </linearGradient>
                         <linearGradient
                           id="paint1_linear_1107_654"
@@ -249,8 +249,8 @@ const CTASection: React.FC<CTASectionProps> = ({
                           x2="21"
                           y2="13"
                           gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#6C03FF" />
-                          <stop offset="1" stopColor="#9A3DFF" />
+                          <stop stopColor="#1E72A1" />
+                          <stop offset="1" stopColor="#3A9AD4" />
                         </linearGradient>
                         <linearGradient
                           id="paint2_linear_1107_654"
@@ -259,8 +259,8 @@ const CTASection: React.FC<CTASectionProps> = ({
                           x2="21"
                           y2="10.5"
                           gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#6C03FF" />
-                          <stop offset="1" stopColor="#9A3DFF" />
+                          <stop stopColor="#1E72A1" />
+                          <stop offset="1" stopColor="#3A9AD4" />
                         </linearGradient>
                         <linearGradient
                           id="paint3_linear_1107_654"
@@ -269,8 +269,8 @@ const CTASection: React.FC<CTASectionProps> = ({
                           x2="16"
                           y2="16"
                           gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#6C03FF" />
-                          <stop offset="1" stopColor="#9A3DFF" />
+                          <stop stopColor="#1E72A1" />
+                          <stop offset="1" stopColor="#3A9AD4" />
                         </linearGradient>
                       </defs>
                     </svg>
@@ -289,7 +289,7 @@ const CTASection: React.FC<CTASectionProps> = ({
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.98 }}
                     transition={{ duration: 0.2 }}
-                    className="flex items-center justify-center gap-2 px-6 py-3 md:py-4 rounded-lg text-sm md:text-base font-semibold bg-transparent text-white border border-white hover:bg-[#7A1FFF] transition-all duration-200 w-fit">
+                    className="flex items-center justify-center gap-2 px-6 py-3 md:py-4 rounded-lg text-sm md:text-base font-semibold bg-transparent text-white border border-white hover:bg-[#3A9AD4] transition-all duration-200 w-fit">
                     <span>{secondaryButtonText}</span>
                     <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
                   </motion.a>
@@ -299,7 +299,7 @@ const CTASection: React.FC<CTASectionProps> = ({
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.98 }}
                     transition={{ duration: 0.2 }}
-                    className="flex items-center justify-center gap-2 px-6 py-3 md:py-4 rounded-lg text-sm md:text-base font-semibold bg-transparent text-white border border-white hover:bg-[#7A1FFF] transition-all duration-200 w-fit">
+                    className="flex items-center justify-center gap-2 px-6 py-3 md:py-4 rounded-lg text-sm md:text-base font-semibold bg-transparent text-white border border-white hover:bg-[#3A9AD4] transition-all duration-200 w-fit">
                     <span>{secondaryButtonText}</span>
                     <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
                   </motion.button>

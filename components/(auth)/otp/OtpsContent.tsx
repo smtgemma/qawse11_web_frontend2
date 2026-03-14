@@ -123,7 +123,7 @@ const OtpInput: React.FC<OtpInputProps> = ({
             className={`w-full h-14 text-center text-2xl font-semibold bg-white/10 rounded-xl text-white focus:outline-none focus:ring-2 transition-all backdrop-blur-sm ${
               error
                 ? "ring-2 ring-red-500 focus:ring-red-500"
-                : "focus:ring-purple-500"
+                : "focus:ring-[#1E72A1]"
             } ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
           />
         ))}
@@ -470,7 +470,7 @@ const OtpContent: React.FC = () => {
                       isRateLimited ||
                       verifyAttempts >= OTP_MAX_VERIFY_ATTEMPTS
                     }
-                    className="text-sm text-[#9A3DFF] hover:text-[#6C03FF] transition-colors font-medium focus:outline-none focus:underline disabled:text-gray-500 disabled:cursor-not-allowed">
+                    className="text-sm text-[#3A9AD4] hover:text-[#1E72A1] transition-colors font-medium focus:outline-none focus:underline disabled:text-gray-500 disabled:cursor-not-allowed">
                     {isResending ? (
                       <span className="flex items-center gap-2">
                         <svg
@@ -522,7 +522,7 @@ const OtpContent: React.FC = () => {
                   verifyAttempts >= OTP_MAX_VERIFY_ATTEMPTS ||
                   otpExpired
                 }
-                className="w-full h-12 flex items-center justify-center rounded-xl bg-linear-to-r from-[#6C03FF] to-[#9A3DFF] text-white font-semibold text-base hover:opacity-90 active:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed">
+                className="w-full h-12 flex items-center justify-center rounded-xl bg-linear-to-r from-[#1E72A1] to-[#3A9AD4] text-white font-semibold text-base hover:opacity-90 active:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-[#1E72A1] focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed">
                 {isVerifying ? (
                   <div className="flex items-center gap-2">
                     <svg
@@ -558,7 +558,7 @@ const OtpContent: React.FC = () => {
                 Back to{" "}
                 <Link
                   href="/signin"
-                  className="text-[#9A3DFF] hover:text-[#6C03FF] transition-colors font-medium focus:outline-none focus:underline">
+                  className="text-[#3A9AD4] hover:text-[#1E72A1] transition-colors font-medium focus:outline-none focus:underline">
                   Sign in!
                 </Link>
               </p>

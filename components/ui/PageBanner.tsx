@@ -65,7 +65,7 @@ const PageBanner: React.FC<PageBannerProps> = ({
           className="relative rounded-[16px] p-10 lg:p-20 lg:py-[100px]"
           style={{
             background:
-              "linear-gradient(90deg, #6C03FF 0%, #9A3DFF 100%)",
+              "linear-gradient(90deg, #1E72A1 0%, #3A9AD4 100%)",
           }}>
           {/* Button - Top Center */}
           {buttonText && (

@@ -156,7 +156,7 @@ export default function PrivacyPolicyPage() {
                 For questions regarding this privacy policy, contact us at:{" "}
                 <Link
                   href="mailto:hello@dima360ai.com"
-                  className="text-[#9A3DFF] hover:underline font-medium">
+                  className="text-[#1E72A1] hover:underline font-medium">
                   hello@dima360ai.com
                 </Link>
               </p>

@@ -46,18 +46,10 @@ const OurSolutionSection = () => {
           <p className="text-sm md:text-base lg:text-lg font-medium -mb-1">
            Our Services
           </p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="122"
-            height="13"
-            viewBox="0 0 122 13"
-            fill="none"
-            className="w-[100px] md:w-[110px] lg:w-[122px]">
-            <path
-              d="M84.3952 1.42943C100.556 1.20471 111.178 0.795807 116.528 0.217955C119.589 -0.116833 121.63 -0.0603571 121.895 0.348955C122.047 0.590873 122.028 0.739583 121.877 0.888632C121.423 1.33578 114.732 2.15519 108.589 2.52781C102.616 2.88324 100.443 2.93997 83.6391 3.12571C74.34 3.21973 64.4348 3.34902 61.6375 3.42354L56.5348 3.53551L57.1955 4.07742C58.2167 4.93388 60.1452 6.03232 64.5104 8.23137C66.7599 9.35038 68.6686 10.4119 68.7639 10.5804C69.0664 11.0643 68.7639 11.8471 68.2347 11.9766C67.9695 12.0328 66.3063 11.9953 64.5104 11.8658C60.7686 11.6032 55.06 11.715 21.1886 12.7022C16.0104 12.8512 9.11076 12.9817 5.87843 13H0L7.86389 11.9576C7.86389 11.9576 48.5954 9.85238 60.3906 9.81569L62.7529 9.79553L60.2964 8.54711C58.9541 7.85804 57.4607 7.05711 56.9885 6.75901C55.4194 5.7707 53.2269 3.94364 53.0187 3.44146C52.5651 2.4176 53.2839 1.7097 54.5878 1.93327C54.9274 1.98831 58.8785 1.93255 63.3391 1.82019C67.7997 1.70783 77.2687 1.5223 84.3952 1.42943Z"
-              fill="#9A3DFF"
-            />
-          </svg>
+          <svg width="115" height="9" viewBox="0 0 115 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M114.319 2.65106C113.852 1.6684 109.842 1.25465 97.7914 0.909859C86.5471 0.582305 73.4569 -0.365883 50.5863 0.151308C33.1045 0.547821 11.3371 2.13387 11.3371 3.0131C11.3371 3.65097 12.1857 3.66821 20.2902 3.0993C27.7793 2.58211 31.6194 2.46143 36.3081 2.32351C17.5109 3.66821 13.5011 4.54744 3.48727 5.39218C-2.79261 5.92661 0.877726 7.46094 3.16903 7.30578C3.19025 7.30578 32.4044 5.37494 35.1624 5.47838C35.417 5.49562 32.6378 5.80593 28.9674 6.16797C18.7202 7.20235 20.6933 8.92615 28.3734 8.13312C54.2142 5.46097 78.5275 4.63346 97.2611 5.78852C103.18 6.15055 103.838 6.15055 103.838 5.70232C103.838 4.90929 102.226 4.30608 99.7009 4.1854C95.7547 3.97853 80.5642 3.3922 73.6903 3.2198C73.1599 3.20256 73.4145 2.87518 73.8812 2.8407C76.6817 2.61659 98.9159 2.78881 107.657 3.03017C114.085 3.20256 114.552 3.1855 114.319 2.65106Z" fill="#1E72A1"/>
+</svg>
+
         </div>
 
         <h1 className="text-2xl md:text-3xl lg:text-[40px] font-semibold leading-[1.3] md:leading-[1.35] lg:leading-[50px]">
@@ -80,9 +72,9 @@ const OurSolutionSection = () => {
               key={index}
               variants={cardVariants}
               whileHover={{ y: -10, transition: { duration: 0.3 } }}
-              className="flex flex-col items-start gap-2.5 rounded-[20px] md:rounded-[20px] p-6 md:p-8 lg:p-12 transition-all duration-300 bg-[rgba(255,255,255,0.05)] hover:bg-[linear-gradient(90deg,#6C03FF_0%,#9A3DFF_100%)] hover:shadow-[0_4px_40px_rgba(106,0,255,0.6)]">
+              className="flex flex-col items-start gap-2.5 rounded-[20px] md:rounded-[20px] p-6 md:p-8 lg:p-12 transition-all duration-300 bg-[rgba(255,255,255,0.05)] hover:bg-[linear-gradient(90deg,#1E72A1_0%,#3A9AD4_100%)] hover:shadow-[0_4px_40px_rgba(30,114,161,0.6)]">
               <motion.div
-                className="mb-4 md:mb-5 lg:mb-6 flex h-12 w-12 md:h-13 md:w-13 lg:h-14 lg:w-14 items-center justify-center rounded-full bg-[linear-gradient(90deg,#6C03FF_0%,#9A3DFF_100%)]"
+                className="mb-4 md:mb-5 lg:mb-6 flex h-12 w-12 md:h-13 md:w-13 lg:h-14 lg:w-14 items-center justify-center rounded-full bg-[linear-gradient(90deg,#1E72A1_0%,#3A9AD4_100%)]"
                 whileHover={{
                   rotate: 360,
                   scale: 1.1,
