@@ -296,7 +296,7 @@ const DesktopNavLink: React.FC<{
               className="absolute left-0 top-full mt-3 w-64 rounded-xl shadow-2xl z-50 overflow-hidden"
               style={{
                 background:
-                  "linear-gradient(135deg, #1E72A1 0%, rgba(15, 45, 70, 0.98) 100%)",
+                  "linear-gradient(0deg, #1E72A1 0%, rgba(15, 45, 70, 0.9) 100%)",
                 backdropFilter: "blur(20px)",
                 border: "1px solid rgba(30, 114, 161, 0.3)",
               }}
@@ -319,7 +319,7 @@ const DesktopNavLink: React.FC<{
                       onClick={onDropdownItemClick}
                       className={`flex items-center px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
                         currentPath === subLink.href
-                          ? "bg-[#1E72A1]/20 text-[#3A9AD4]"
+                          ? "bg-[#1E72A1]/20 text-[#ffffff]"
                           : "text-gray-200 hover:bg-[#1E72A1]/10 hover:text-[#3A9AD4]"
                       }`}
                       role="menuitem">
@@ -327,7 +327,7 @@ const DesktopNavLink: React.FC<{
                         className={`w-1.5 h-1.5 rounded-full mr-3 transition-colors duration-200 ${
                           currentPath === subLink.href
                             ? "bg-[#3A9AD4]"
-                            : "bg-[#1E72A1]/40"
+                            : "bg-white"
                         }`}
                       />
                       {subLink.label}
