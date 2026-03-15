@@ -5,7 +5,7 @@
 
 /* Landing page color and design tokens - Dark as default */
 :root {
-     --background: black;
+     --background: #031119;
      --foreground: white;
      --card: oklch(0.145 0 0);
      --card-foreground: oklch(0.985 0 0);

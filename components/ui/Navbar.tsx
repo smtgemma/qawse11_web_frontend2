@@ -415,7 +415,7 @@ const MobileMenu: React.FC<{
         <>
           {/* Backdrop */}
           <motion.div
-            className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[9998] lg:hidden"
+            className="fixed inset-0 bg-[#051C2A33] backdrop-blur-sm z-[9998] lg:hidden"
             onClick={onClose}
             aria-hidden="true"
             variants={backdropVariants}

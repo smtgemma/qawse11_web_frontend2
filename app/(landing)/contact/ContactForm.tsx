@@ -122,7 +122,7 @@ export default function ContactForm() {
   ];
 
   return (
-    <div className="bg-black text-white lg:mt-[100px] mt-[50px] overflow-hidden">
+    <div className=" text-white lg:mt-[100px] mt-[50px] overflow-hidden">
       <Container className="">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -145,7 +145,7 @@ export default function ContactForm() {
                     id="firstName"
                     {...register("firstName")}
                     placeholder="Ex. John"
-                    className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
+                    className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
                   />
                   {errors.firstName && (
                     <p className="text-red-400 text-xs mt-1.5">
@@ -164,7 +164,7 @@ export default function ContactForm() {
                     id="lastName"
                     {...register("lastName")}
                     placeholder="Ex. Doe"
-                    className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
+                    className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
                   />
                   {errors.lastName && (
                     <p className="text-red-400 text-xs mt-1.5">
@@ -186,7 +186,7 @@ export default function ContactForm() {
                   id="email"
                   {...register("email")}
                   placeholder="Ex. Hello@Email.co"
-                  className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
+                  className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
                 />
                 {errors.email && (
                   <p className="text-red-400 text-xs mt-1.5">
@@ -211,7 +211,7 @@ export default function ContactForm() {
                     id="company"
                     {...register("company")}
                     placeholder="Your Company Name"
-                    className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
+                    className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
                   />
                   {errors.company && (
                     <p className="text-red-400 text-xs mt-1.5">
@@ -229,7 +229,7 @@ export default function ContactForm() {
                     <select
                       id="country"
                       {...register("country")}
-                      className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none pr-10">
+                      className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none pr-10">
                       <option value="" disabled hidden>
                         Select Your Country
                       </option>
@@ -273,7 +273,7 @@ export default function ContactForm() {
                   <select
                     id="projectType"
                     {...register("projectType")}
-                    className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none pr-10">
+                    className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none pr-10">
                     <option value="" disabled hidden>
                       Select Your Project Type...
                     </option>
@@ -318,7 +318,7 @@ export default function ContactForm() {
                   <select
                     id="budgetRange"
                     {...register("budgetRange")}
-                    className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none pr-10">
+                    className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none pr-10">
                     <option value="" disabled hidden>
                       Select Your Budget Range
                     </option>
@@ -365,7 +365,7 @@ export default function ContactForm() {
                   {...register("message")}
                   placeholder="Describe your project, goals, or challenges..."
                   rows={5}
-                  className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors resize-none"
+                  className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors resize-none"
                 />
                 {errors.message && (
                   <p className="text-red-400 text-xs mt-1.5">
@@ -403,8 +403,8 @@ export default function ContactForm() {
                   <Send className="w-5 h-5" />
                   <span>
                     {isSubmitting || isLoading
-                      ? "Submitting..."
-                      : "Submit Inquiry"}
+                      ? "Booking..."
+                      : "Book a Call"}
                   </span>
                 </span>
               </button>

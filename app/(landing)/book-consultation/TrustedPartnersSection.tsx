@@ -5,10 +5,10 @@ import Image from "next/image";
 
 export default function TrustedPartnersSection() {
   const logos = [
-    { src: "/images/shopify.svg", alt: "Shopify" },
-    { src: "/images/meta.svg", alt: "Meta" },
-    { src: "/images/zaiper.svg", alt: "Zapier" },
-    { src: "/images/openAi.svg", alt: "OpenAI" },
+    { src: "/images/googlepartner.png", alt: "Shopify" },
+    { src: "/images/meta.png", alt: "Meta" },
+    { src: "/images/Hubspot.png", alt: "Zapier" },
+    { src: "/images/shopify.png", alt: "OpenAI" },
   ];
 
   const containerVariants = {
@@ -47,7 +47,7 @@ export default function TrustedPartnersSection() {
   };
 
   return (
-    <div className="w-full bg-black">
+    <div className="w-full">
       <div className="">
         <motion.div
           initial="hidden"
@@ -59,15 +59,14 @@ export default function TrustedPartnersSection() {
           <motion.h2
             variants={fadeInUp}
             className="text-lg text-white/80 mb-4">
-            Trusted Technology Partners
+            Trusted By Growth-Focused Brands
           </motion.h2>
 
           {/* Description */}
           <motion.p
             variants={fadeInUp}
             className="text-lg lg:text-2xl text-white font-medium mb-8">
-            Partnering With Fortune 500 Companies And Innovative Enterprises
-            Worldwide
+            Partnering with startups, scale-ups, and enterprises to deliver measurable marketing ROI.
           </motion.p>
 
           {/* Logos */}

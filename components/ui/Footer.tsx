@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
   const activeClass = "text-white font-medium";
 
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-[#031119] text-white">
       <Container className="py-8 sm:py-12 md:py-16">
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row justify-between items-start pb-8 sm:pb-10 md:pb-12 max-w-[1300px] mx-auto gap-8 sm:gap-10 md:gap-12 lg:gap-0">

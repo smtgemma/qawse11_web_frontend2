@@ -148,7 +148,7 @@ export default function CaseStudyDetailContent({
   return (
     <>
       {/* Content Section */}
-      <div className="bg-black text-white lg:mt-[100px] md:mt-[80px] mt-[60px] overflow-hidden">
+      <div className=" text-white lg:mt-[100px] md:mt-[80px] mt-[60px] overflow-hidden">
         <Container className="">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
             {/* Left Column - Main Content */}
