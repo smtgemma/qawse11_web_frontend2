@@ -17,13 +17,14 @@ interface CaseStudyDetailContentProps {
       date: string;
       location: string;
     };
-    overview?: string;
+    overview?: string | string[];
     features?: string[];
-    content: {
-      challenge: string | string[];
-      solution: string;
-      results: string[];
-    };
+    // content: {
+    //   challenge: string | string[];
+    //   solution: string;
+    //   results: string[];
+    // };
+    relatedImages?: string[];
   };
   slug: string;
 }
@@ -200,55 +201,6 @@ export default function CaseStudyDetailContent({
                 )}
               </motion.div>
 
-              {/* The Challenge Section */}
-              {Array.isArray(caseStudy.content.challenge) && caseStudy.content.challenge.length > 0 && (
-                <motion.section 
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.3 }}
-                  variants={fadeInUp}
-                  className="space-y-3 md:space-y-4 mt-10 md:mt-14 mb-6">
-                  <h2 className="text-xl sm:text-2xl font-semibold text-white">
-                    The Challenge
-                  </h2>
-                  <motion.div 
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
-                    variants={staggerContainer}
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
-                    {caseStudy.content.challenge.map((challenge, index) => (
-                      <motion.div
-                        key={index}
-                        variants={fadeInUp}
-                        className="flex items-center gap-3 text-sm md:text-base text-white">
-                        <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-gradient-to-br from-[#1E72A1] to-[#3A9AD4] flex items-center justify-center shrink-0">
-                          <Check className="w-3 h-3 md:w-4 md:h-4 text-white" />
-                        </div>
-                        <span className="leading-snug">{challenge}</span>
-                      </motion.div>
-                    ))}
-                  </motion.div>
-                </motion.section>
-              )}
-
-              {/* The Solution Section */}
-              {caseStudy.content.solution && Array.isArray(caseStudy.content.challenge) && (
-                <motion.section 
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.3 }}
-                  variants={fadeInUp}
-                  className="space-y-3 md:space-y-4 mt-10 md:mt-14 mb-6">
-                  <h2 className="text-xl sm:text-2xl font-semibold text-white">
-                    The Solution
-                  </h2>
-                  <p className="text-sm md:text-base text-white/90 leading-relaxed">
-                    {caseStudy.content.solution}
-                  </p>
-                </motion.section>
-              )}
-
               {/* Features Grid */}
               {caseStudy.features && (
                 <motion.section 
@@ -257,9 +209,6 @@ export default function CaseStudyDetailContent({
                   viewport={{ once: true, amount: 0.3 }}
                   variants={fadeInUp}
                   className="space-y-3 md:space-y-4 mt-10 md:mt-14 mb-6">
-                  <h2 className="text-xl sm:text-2xl font-semibold text-white">
-                    {getFeaturesTitle()}
-                  </h2>
                   {slug === "enterprise-workflow-automation" ? (
                     <motion.ul 
                       initial="hidden"
@@ -301,7 +250,6 @@ export default function CaseStudyDetailContent({
               )}
 
               {/* Project Overview Section */}
-              {caseStudy.overview && !Array.isArray(caseStudy.content.challenge) && slug !== "enterprise-workflow-automation" && (
                 <motion.section 
                   initial="hidden"
                   whileInView="visible"
@@ -311,85 +259,46 @@ export default function CaseStudyDetailContent({
                   <h2 className="text-xl sm:text-2xl font-semibold text-white">
                     Project Overview
                   </h2>
-                  <p className="text-sm md:text-base text-white/90 leading-relaxed">
-                    {caseStudy.overview}
-                  </p>
+                  <div className="space-y-3 text-sm md:text-base text-white/90 leading-relaxed">
+                    {Array.isArray(caseStudy.overview)
+                      ? caseStudy.overview.map((para, i) => (
+                          <p key={i}>{para}</p>
+                        ))
+                      : caseStudy.overview && <p>{caseStudy.overview}</p>}
+                  </div>
                 </motion.section>
-              )}
-              {!caseStudy.overview && typeof caseStudy.content.challenge === "string" && slug !== "enterprise-workflow-automation" && (
-                <motion.section 
+             
+
+              {/* Two Images Side by Side - from caseStudyData.relatedImages */}
+              {caseStudy.relatedImages && caseStudy.relatedImages.length >= 2 && (
+                <motion.div
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true, amount: 0.3 }}
-                  variants={fadeInUp}
-                  className="space-y-3 md:space-y-4 mt-10 md:mt-14 mb-6">
-                  <h2 className="text-xl sm:text-2xl font-semibold text-white">
-                    Project Overview
-                  </h2>
-                  <p className="text-sm md:text-base text-white/90 leading-relaxed">
-                    {caseStudy.content.challenge}
-                  </p>
-                </motion.section>
-              )}
-
-              {/* Outcome Section */}
-              {caseStudy.content.results && caseStudy.content.results.length > 0 && slug !== "enterprise-workflow-automation" && (
-                <motion.section 
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.3 }}
-                  variants={fadeInUp}
-                  className="space-y-3 md:space-y-4 mt-10 md:mt-14 mb-6">
-                  <h2 className="text-xl sm:text-2xl font-semibold text-white">
-                    {getOutcomeTitle()}
-                  </h2>
-                  <motion.ul 
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
-                    variants={staggerContainer}
-                    className="space-y-2 md:space-y-3">
-                    {caseStudy.content.results.map((result, index) => (
-                      <motion.li
-                        key={index}
-                        variants={fadeInUp}
-                        className="flex items-start gap-3 text-sm md:text-base text-white/90 leading-relaxed">
-                        <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-white/60 mt-2 shrink-0" />
-                        <span>{result}</span>
-                      </motion.li>
-                    ))}
-                  </motion.ul>
-                </motion.section>
-              )}
-
-              {/* Two Images Side by Side */}
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={staggerContainer}
-                className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-16 md:mb-[100px]">
-                <motion.div 
-                  variants={fadeInLeft}
-                  className="relative w-full h-[180px] sm:h-[200px] md:h-[230px] rounded-[12px] md:rounded-[20px] overflow-hidden shadow-xl">
-                  <Image
-                    src="/images/predictive-sales-engine.png"
-                    alt="Predictive Analytics"
-                    fill
-                    className="object-cover hover:scale-110 transition-transform duration-700"
-                  />
+                  viewport={{ once: true, amount: 0.2 }}
+                  variants={staggerContainer}
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-16 md:mb-[100px]">
+                  <motion.div
+                    variants={fadeInLeft}
+                    className="relative w-full h-[180px] sm:h-[200px] md:h-[230px] rounded-[12px] md:rounded-[20px] overflow-hidden shadow-xl">
+                    <Image
+                      src={caseStudy.relatedImages[0]}
+                      alt={`${caseStudy.title} - Image 1`}
+                      fill
+                      className="object-cover hover:scale-110 transition-transform duration-700"
+                    />
+                  </motion.div>
+                  <motion.div
+                    variants={fadeInRight}
+                    className="relative w-full h-[180px] sm:h-[200px] md:h-[230px] rounded-[12px] md:rounded-[20px] overflow-hidden shadow-xl">
+                    <Image
+                      src={caseStudy.relatedImages[1]}
+                      alt={`${caseStudy.title} - Image 2`}
+                      fill
+                      className="object-cover hover:scale-110 transition-transform duration-700"
+                    />
+                  </motion.div>
                 </motion.div>
-                <motion.div 
-                  variants={fadeInRight}
-                  className="relative w-full h-[180px] sm:h-[200px] md:h-[230px] rounded-[12px] md:rounded-[20px] overflow-hidden shadow-xl">
-                  <Image
-                    src="/images/ai-support-agent.png"
-                    alt="AI Support"
-                    fill
-                    className="object-cover hover:scale-110 transition-transform duration-700"
-                  />
-                </motion.div>
-              </motion.div>
+              )}
 
               {/* Divider */}
               <div className="h-px bg-white/20" />

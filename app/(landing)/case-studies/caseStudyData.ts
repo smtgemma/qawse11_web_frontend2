@@ -9,207 +9,186 @@ export const caseStudyData: Record<
       date: string;
       location: string;
     };
-    overview: string;
+    overview: string | string[];
     features: string[];
-    content: {
-      challenge: string | string[];
-      solution: string;
-      results: string[];
-    };
     relatedImages?: string[];
   }
 > = {
-  "ai-workflow-automation": {
-    title: "AI Workflow Automation Case Study",
-    image: "/images/ai-workflow-automation.png",
+  "e-commerce-revenue-surge": {
+    title: "E-commerce Revenue Surge Case Study",
+    image: "/images/E-commerce Revenue Surge.png",
     description: [
-      "We are at the forefront of innovation, redefining how intelligence shapes the technology of tomorrow. Our focus is on building solutions that integrate artificial intelligence, machine learning, and next-generation technologies to transform industries and create smarter, more efficient systems.",
-      "From predictive analytics and intelligent automation to adaptive algorithms and data-driven decision-making, our solutions empower businesses to stay ahead in a rapidly evolving world. With a commitment to pushing the boundaries of what's possible.",
-      "With a commitment to pushing the boundaries of what's possible, we aim to create technology that doesn't just solve problems but anticipates needs, adapts to changes, and drives sustainable growth. Whether it's building smart applications, advancing IoT ecosystems, or leveraging AI for business insights, we deliver solutions that are intelligent, scalable, and future-ready. Join us in shaping the future.",
+      "In today’s digital marketplace, e-commerce businesses are experiencing an unprecedented surge in revenue as more consumers turn to online shopping for convenience and variety.",
+      "Leveraging data-driven marketing, personalized experiences, and streamlined checkout processes, companies are not only attracting new customers but also increasing repeat purchases.",
+      "From targeted promotions to optimized product recommendations, every touchpoint contributes to higher conversion rates and sustained growth, positioning e-commerce as a dominant force in the global retail landscape.",
     ],
     projectInfo: {
       client: "Michel Miller",
       date: "17 Nov 2025",
       location: "42 Hangston, USA",
     },
-    overview:
-      "This project focused on implementing an end-to-end AI-driven workflow automation system to improve efficiency, scalability, and decision-making.",
-    features: [
-      "Analytics Explained",
-      "Scalability and Adaptability",
-      "Capacity Expansion",
-      "AI-Driven Automation",
-      "Key Deliverables",
-      "Custom Technology Solutions",
+    overview: [
+      "The initiative focuses on boosting online sales through optimized marketing strategies, user experience enhancements, and data-driven decision-making.",
+      "The project leverages advanced analytics, targeted campaigns, and streamlined checkout processes to increase conversion rates and overall revenue for e-commerce businesses.",
     ],
-    content: {
-      challenge:
-        "A global logistics company faced significant challenges in managing their complex supply chain operations. Manual processes led to delays, errors, and increased operational costs.",
-      solution:
-        "Dima360AI implemented an intelligent workflow automation system that integrated with existing ERP systems, enabling real-time tracking, automated decision-making, and predictive analytics for supply chain optimization.",
-      results: [
-        // "67% reduction in processing time",
-        // "45% decrease in operational costs",
-        // "99.2% accuracy in order fulfillment",
-        // "Real-time visibility across all supply chain nodes",
-      ],
-    },
+    features: [
+      "Optimized Conversion Funnels",
+      "Data-Driven Marketing",
+      "Dynamic Pricing Strategies",
+      "Enhanced User Experience",
+      "Upselling & Cross-Selling Techniques",
+      "Performance Tracking & Reporting",
+    ],
+    relatedImages: [
+      "/images/E-commerce Revenue Surge1.png",
+      "/images/E-commerce Revenue Surge2.png",
+    ],
   },
-  "ai-support-agent": {
-    title: "AI Support Agent Case Study",
-    image: "/images/ai-support-agent.png",
+
+  "saas-lead-generation": {
+    title: "SaaS Lead Generation Case Study",
+    image: "/images/SaaS Lead Generation.png",
     description: [
-      "At Dima360AI, we believe that AI-driven support solutions are the key to revolutionizing customer interactions. Our AI support agent offers businesses a smarter, more efficient way to handle customer queries and support requests.",
-      "By integrating advanced AI technologies, we enable businesses to deliver faster, personalized, and more accurate responses, enhancing customer satisfaction and operational efficiency.",
-      "The AI Support agent operates around the clock, ensuring that your customers can get help whenever they need it, without delays. Powered by natural language processing (NLP), the AI agent can instantly understand and respond to customer inquiries, reducing wait times and improving the overall experience.",
-      "Through machine learning, the AI support agent learns from every interaction, providing personalized responses based on the customer’s history and preferences.",
-      "Our AI support agent can communicate in multiple languages, making it ideal for global businesses with diverse customer bases. The AI system analyzes patterns and trends in customer interactions, offering valuable insights to improve business strategies and service offerings.",
+      "Generating qualified leads is one of the biggest challenges for SaaS companies operating in competitive markets. This case study highlights how a targeted lead generation strategy helped a SaaS brand attract high-quality prospects and increase product demo bookings.",
+      "Through strategic paid advertising, conversion-optimized landing pages, and marketing automation, the company successfully built a scalable lead acquisition system.",
     ],
     projectInfo: {
       client: "Michel Miller",
       date: "17 Nov 2025",
       location: "42 Hangston, USA",
     },
-    overview:
-      "This project focused on building an AI-powered, multilingual support agent to automate customer interactions while improving response accuracy and operational efficiency.",
-    features: [
-      "AI Integration",
-      "AI Training",
-      "Continuous Improvement",
+    overview: [
+      "The campaign focused on attracting decision-makers through targeted messaging and high-intent keywords. Landing pages were optimized for demo bookings, while marketing automation workflows nurtured leads through the sales funnel.",
+      "As a result, the SaaS company experienced a significant increase in qualified leads, demo requests, and overall sales pipeline growth.",
     ],
-    content: {
-      challenge:
-        "A leading e-commerce platform struggled with high customer support volume, leading to long wait times and decreased customer satisfaction.",
-      solution:
-        "We deployed an advanced AI support agent system capable of handling multiple customer queries simultaneously, understanding context, and providing accurate responses 24/7.",
-      results: [
-        // "80% of queries resolved automatically",
-        // "90% customer satisfaction rate",
-        // "24/7 availability without additional costs",
-        // "50% reduction in support ticket volume",
-      ],
-    },
+    features: [
+      "High-Intent Keyword Targeting",
+      "Conversion-Focused Landing Pages",
+      "Marketing Automation & CRM Integration",
+      "Paid Search & LinkedIn Advertising",
+      "Lead Qualification Funnels",
+      "Analytics & Performance Optimization",
+    ],
+    relatedImages: [
+      "/images/SaaS Lead Generation1.png",
+      "/images/SaaS Lead Generation2.png",
+    ],
   },
-  "predictive-sales-engine": {
-    title: "Predictive Sales Engine Case Study",
-    image: "/images/predictive-sales-engine.png",
+  "local-business-domination": {
+    title: "Local Business Domination",
+    image: "/images/Local Business Domination.png",
     description: [
-      "Dima360AI's Predictive Sales Engine uses AI-driven analytics to forecast demand, prioritize leads, and optimize sales performance. This AI-powered solution leverages advanced analytics and machine learning to help businesses forecast customer behavior, optimize sales strategies, and make smarter, data-driven decisions. By anticipating future sales trends and identifying high-value prospects, businesses can close deals faster and maximize revenue potential.",
-      "The Predictive Sales Engine uses historical data, customer behavior, and market trends to predict future sales with high accuracy, allowing businesses to allocate resources efficiently and plan ahead. The AI system analyzes leads and assigns scores based on their likelihood to convert. This allows sales teams to focus their efforts on high-priority leads, increasing conversion rates and driving more revenue. The AI engine provides real-time insights into the sales pipeline, helping sales managers identify bottlenecks, optimize workflows, and ensure that leads are progressing smoothly through the sales cycle.",
+      "Local businesses need strong digital visibility to compete effectively within their communities. This project focused on helping a regional business dominate local search results and attract more customers through location-focused marketing strategies.",
+      "The strategy combined local SEO, reputation management, and targeted advertising to increase both online visibility and in-store visits.",
     ],
     projectInfo: {
       client: "Michel Miller",
       date: "17 Nov 2025",
       location: "42 Hangston, USA",
     },
-    overview:
-      "This project delivers an AI-powered predictive sales engine designed to improve forecasting accuracy and sales efficiency. Our predictive sales engine combines the latest in machine learning, predictive analytics, and big data to empower your sales team with the tools they need to succeed.",
-    features: [
-      "Data Collection & Integration",
-      "Machine Learning Algorithms",
-      "Actionable Insights",
+    overview: [
+      "The campaign improved the business’s online presence across search engines and local directories. By optimizing local keywords, improving Google Business listings, and encouraging positive customer reviews, the brand achieved higher rankings in local search results.",
+      "These improvements led to increased phone inquiries, website visits, and foot traffic from nearby customers.",
     ],
-    content: {
-      challenge:
-        "A retail chain needed better sales forecasting to optimize inventory levels and reduce stockouts while minimizing overstock situations.",
-      solution:
-        "Dima360AI developed a predictive sales engine using machine learning algorithms that analyze historical data, market trends, and external factors to provide accurate sales forecasts.",
-      results: [
-        "Improved forecasting accuracy",
-        "Increased sales efficiency",
-        "Improved lead prioritization and conversion rates",
-      ],
-    },
+    features: [
+      "Local SEO Optimization",
+      "Google Business Profile Management",
+      "Customer Review Growth Strategy",
+      "Geo-Targeted Advertising",
+      "Local Content Marketing",
+      "Performance Monitoring",
+    ],
+    relatedImages: [
+      "/images/Local Business Domination1.png",
+      "/images/Local Business Domination2.png",
+    ],
   },
-  "ai-integration": {
-    title: "AI Integration Case Study",
-    image: "/images/ai-integration.png",
-    description: "The Organization Relied On Manual Workflows, Human-Driven Decision-Making, And Limited Scalability, Creating Operational Bottlenecks And Slower Growth.",
+  "social-media-brand-growth": {
+    title: "Social Media Brand Growth",
+    image: "/images/Social Media Brand Growth.png",
+    description: [
+      "Building a strong brand presence on social media requires more than just posting content. This project focused on developing a strategic content ecosystem designed to increase engagement, grow followers, and strengthen brand authority.",
+      "Through creative storytelling and targeted campaigns, the brand successfully expanded its digital audience and improved engagement across multiple social platforms.",
+    ],
     projectInfo: {
       client: "Michel Miller",
       date: "17 Nov 2025",
       location: "42 Hangston, USA",
     },
-    overview:
-      "This Case Study Demonstrates How An Organization Successfully Integrated Artificial Intelligence (AI) Into Its Existing Business Operations To Improve Efficiency, Reduce Operational Costs, And Enhance Decision-Making. The Company Initiated The AI Integration",
-    features: [
-      "Key AI Capabilities",
-      "Predictive Inventory Management",
-      "AI-Powered Chatbot",
+    overview: [
+      "The campaign combined organic content strategies with paid social campaigns to maximize reach and engagement. High-quality visual content, storytelling posts, and audience interaction strategies helped the brand build a loyal online community.",
+      "As a result, the company experienced increased follower growth, stronger engagement rates, and improved brand recognition.",
     ],
-    content: {
-      challenge:
-        "A Fortune 500 company needed to integrate AI capabilities across multiple legacy systems without disrupting existing operations.",
-      solution:
-        "Our team designed and implemented a comprehensive AI integration strategy that seamlessly connected AI services with existing ERP, CRM, and data warehouse systems.",
-      results: [
-        "Boost operational efficiency",
-        "Enhance customer experience through intelligent automation",
-      ],
-    },
+    features: [
+      "Strategic Content Planning",
+      "Influencer Collaboration Campaigns",
+      "Social Media Advertising",
+      "Audience Engagement Strategies",
+      "Performance Analytics & Optimization",
+      "Community Building Initiatives",
+    ],
+    relatedImages: [
+      "/images/Social Media Brand Growth1.png",
+      "/images/Social Media Brand Growth2.png",
+    ],
   },
-  "enterprise-workflow-automation": {
-    title: "Enterprise Workflow Automation Case Study",
-    image: "/images/enterprise-workflow-automation.png",
-    description: "This case study highlights how enterprise workflow automation was implemented to replace manual and repetitive processes with automated, scalable workflows that improve efficiency, accuracy, and operational visibility.",
+  "data-driven-marketing-optimization": {
+    title: "Data-Driven Marketing Optimization",
+    image: "/images/Data-Driven Marketing Optimization.png",
+    description: [
+      "Modern marketing success depends on the ability to analyze data and continuously optimize campaigns. This project focused on building a powerful analytics framework to track performance across multiple channels and uncover actionable insights.",
+      "By integrating advanced analytics tools and real-time dashboards, the marketing team was able to make faster, smarter decisions.",
+    ],
     projectInfo: {
       client: "Michel Miller",
       date: "17 Nov 2025",
       location: "42 Hangston, USA",
     },
-    overview:
-      "We designed an end-to-end workflow automation system that connects enterprise tools, automates repetitive tasks, and ensures consistent process execution across departments.",
-    features: [
-      "Rule-based workflow automation",
-      "Cross-platform system integration",
-      "Real-time monitoring dashboards",
-      "Automated approvals and notifications",
+    overview: [
+      "The project implemented a centralized analytics system that tracked marketing performance across paid ads, SEO, social media, and email campaigns. Real-time dashboards provided clear insights into campaign effectiveness and customer behavior.",
+      "With these insights, the company continuously optimized its marketing strategies, resulting in improved ROI and stronger overall campaign performance.",
     ],
-    content: {
-      challenge: [
-        "Manual, time-consuming business processes",
-        "Process delays and bottlenecks",
-        "High operational cost",
-        "Limited system connectivity",
-        "Human-driven errors",
-      ],
-      solution:
-        "We designed an end-to-end workflow automation system that connects enterprise tools, automates repetitive tasks, and ensures consistent process execution across departments.",
-      results: [
-        "60% faster approval processes",
-        "70% reduction in manual tasks",
-        "Improved compliance and audit trails",
-        "Enhanced employee productivity",
-      ],
-    },
+    features: [
+      "Multi-Channel Performance Tracking",
+      "Advanced Marketing Analytics",
+      "Real-Time Reporting Dashboards",
+      "Conversion Rate Optimization",
+      "Campaign Performance Testing",
+      "AI-Powered Marketing Insights",
+    ],
+    relatedImages: [
+      "/images/Data-Driven Marketing Optimization1.png",
+      "/images/Data-Driven Marketing Optimization2.png",
+    ],
   },
-  "ai-agents": {
-    title: "AI Agents Case Study",
-    image: "/images/ai-agents.png",
-    description: "AI agents are intelligent systems designed to operate autonomously by analyzing data, making decisions, and executing tasks with minimal human intervention. In this project, AI agents were implemented to handle complex workflows, adapt to changing inputs, and collaborate across multiple systems. The solution enabled faster decision-making, improved accuracy, and scalable automation, allowing the organization to move from manual operations to intelligent, AI-driven processes.",
+  "email-marketing-revenue-boost": {
+    title: "Email Marketing Revenue Boost",
+    image: "/images/Email Marketing Revenue Boost.png",
+    description: [
+      "Email marketing remains one of the highest-ROI channels when implemented effectively. This project focused on creating automated email sequences designed to nurture leads, increase repeat purchases, and maximize customer lifetime value.",
+      "Through segmentation and personalization, the brand was able to deliver highly relevant messages to the right audience at the right time.",
+    ],
     projectInfo: {
       client: "Michel Miller",
       date: "17 Nov 2025",
       location: "42 Hangston, USA",
     },
-    overview:
-      "This Case Study Demonstrates How Intelligent AI Agents Were Deployed To Independently Analyze Data, Make Real-Time Decisions, And Execute Tasks Across Multiple Systems. The AI Agents Reduced Manual Intervention While Improving Accuracy And Operational Agility.",
-    features: [
-      "Autonomous Decision-Making Agents",
-      "Natural Language Understanding",
-      "Multi-Agent Collaboration",
-      "Context-Aware Task Execution",
+    overview: [
+      "The project implemented a full email marketing automation system, including welcome sequences, promotional campaigns, and re-engagement flows. By segmenting customers based on behavior and purchase history, the brand delivered more relevant messaging that drove higher engagement.",
+      "This approach resulted in improved open rates, increased click-through rates, and significant revenue growth from email campaigns.",
     ],
-    content: {
-      challenge:
-        "A financial services company required intelligent agents to handle complex, multi-step processes that required decision-making and coordination across systems.",
-      solution:
-        "Dima360AI developed autonomous AI agents capable of understanding context, making decisions, and executing complex workflows independently while maintaining human oversight.",
-      results: [
-        "Reduced human dependency in workflows",
-        "Faster and smarter decisions",
-      ],
-    },
+    features: [
+      "Automated Email Workflows",
+      "Audience Segmentation",
+      "Personalized Campaign Messaging",
+      "Abandoned Cart Recovery",
+      "A/B Testing & Optimization",
+      "Detailed Performance Analytics",
+    ],
+    relatedImages: [
+      "/images/Email Marketing Revenue Boost1.png",
+      "/images/Email Marketing Revenue Boost2.png",
+    ],
   },
 };
 
