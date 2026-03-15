@@ -12,9 +12,9 @@ export default function AIIntegrationPage() {
       {/* Page Banner */}
       <div className="max-w-[1150px] mx-auto lg:mt-[160px] mt-[80px] lg:my-[100px] my-[50px]">
         <PageBanner
-          buttonText="Explore Details"
-          heading="AI Integration"
-          subheading="Seamlessly Connect AI Across Your Enterprise Systems"
+          buttonText="Our Services"
+          heading="Email Marketing"
+          subheading="Drive engagement and conversions with targeted email campaigns that nurture leads and keep your brand top of mind."
         />
       </div>
 
@@ -22,9 +22,9 @@ export default function AIIntegrationPage() {
       <div className="max-w-[1150px] w-[95%] mx-auto lg:mt-[180px] mt-[100px] overflow-hidden">
         <GetInTouchSection
           smallText=""
-          heading="Connect AI Across Your Business Ecosystem"
-          description="Seamlessly Connect AI To Your CRM, ERP, Data Warehouses, And Business Tools — Without Disrupting Existing Workflows."
-          imageSrc="/images/ai-integration.png"
+          heading="Email Marketing That Nurtures & Converts"
+          description="Turn subscribers into customers with automated sequences that deliver the right message at the right time."
+          imageSrc="/images/Email.png"
           imageAlt="AI Integration - Connect AI Across Your Business Ecosystem"
         />
       </div>
@@ -58,8 +58,8 @@ export default function AIIntegrationPage() {
       <div className="max-w-[1150px] w-[95%] mx-auto lg:my-[64px] my-[40px] lg:mb-[100px] mb-[50px]">
         <FeaturesBlock
           title="Outcomes"
-          leftImage="/images/img9.png"
-          rightImage="/images/img10.png"
+          leftImage="/images/Ai-email.png"
+          rightImage="/images/lead.png"
           leftImageAlt="AI Central Hub"
           rightImageAlt="Business Ecosystem AI Integration"
           features={[
@@ -89,11 +89,12 @@ export default function AIIntegrationPage() {
       <div>
         {/* CTA Section */}
         <CTASection
-          badgeText="Trusted By Fortune 500 Teams"
-          heading={`Transform Your Business With AI Book A Consultation`}
-          description="Speak With Our Team To Explore How Workflow Can Improve Accuracy, Reduce Hallucinations, And Secure Your AI Systems."
+          badgeText="Ready to grow?"
+          heading={`Let's Build Your Growth Engine
+`}
+          description="Book a free strategy call to discover how we can accelerate your digital marketing results."
           primaryButtonText="Book Consultation"
-          secondaryButtonText="Download AI Roadmap"
+          secondaryButtonText="Download Marketing Audit Checklist"
           secondaryButtonHref="/ai-roadmap"
         />
       </div>

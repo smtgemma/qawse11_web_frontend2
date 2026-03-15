@@ -12,9 +12,9 @@ export default function CustomAIApplicationsPage() {
             {/* Page Banner */}
             <div className="max-w-[1150px] mx-auto lg:mt-[160px] mt-[80px] lg:my-[100px] my-[50px]">
                 <PageBanner
-                    buttonText="Explore Details"
-                    heading="Custom AI Applications"
-                    subheading="Purpose-Built AI Solutions Tailored To Your Business Workflows"
+                    buttonText="Our Services"
+                    heading="Content Marketing"
+                    subheading="Create valuable, engaging content that attracts your target audience, builds trust, and drives consistent traffic and conversions for your business."
                 />
             </div>
 
@@ -22,9 +22,9 @@ export default function CustomAIApplicationsPage() {
             <div className="max-w-[1150px] w-[95%] mx-auto lg:mt-[180px] mt-[100px] overflow-hidden">
                 <GetInTouchSection
                     smallText=""
-                    heading="Custom AI Apps Built For Your Competitive Edge"
-                    description="Purpose-Built AI Products Tailored To Specific Workflows, Industries, And Innovative Digital Experiences."
-                    imageSrc="/images/custom-ai-applications.png"
+                    heading="Content That Converts"
+                    description="Attract and engage your ideal customers with valuable content that builds trust and drives action."
+                    imageSrc="/images/custom-ai-applications2.png"
                     imageAlt="Custom AI Applications - Purpose-Built AI Solutions"
                 />
             </div>
@@ -62,8 +62,8 @@ export default function CustomAIApplicationsPage() {
             <div className="max-w-[1150px] w-[95%] mx-auto lg:my-[64px] my-[40px] lg:mb-[100px] mb-[50px]">
                 <FeaturesBlock
                     title="Why Choose Us"
-                    leftImage="/images/img7.png"
-                    rightImage="/images/img8.png"
+                    leftImage="/images/AI.png"
+                    rightImage="/images/global-content.png"
                     leftImageAlt="AI System Architecture"
                     rightImageAlt="Custom AI App Architecture"
                     features={[
@@ -93,11 +93,12 @@ export default function CustomAIApplicationsPage() {
             <div>
                 {/* CTA Section */}
                 <CTASection
-                    badgeText="Trusted By Fortune 500 Teams"
-                    heading={`Transform Your Business With AI Book A Consultation`}
-                    description="Speak With Our Team To Explore How Workflow Can Improve Accuracy, Reduce Hallucinations, And Secure Your AI Systems."
+                    badgeText="Ready to grow?"
+                    heading={`Let's Build Your Growth Engine
+`}
+                    description="Book a free strategy call to discover how we can accelerate your digital marketing results."
                     primaryButtonText="Book Consultation"
-                    secondaryButtonText="Download AI Roadmap"
+                    secondaryButtonText="Download Marketing Audit Checklist"
                     secondaryButtonHref="/ai-roadmap"
                 />
             </div>

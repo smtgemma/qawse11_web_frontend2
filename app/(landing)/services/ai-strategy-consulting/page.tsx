@@ -12,9 +12,9 @@ export default function AIStrategyConsultingPage() {
             {/* Page Banner */}
             <div className="max-w-[1150px] mx-auto lg:mt-[160px] mt-[80px] lg:my-[100px] my-[50px]">
                 <PageBanner
-                    buttonText="Explore Details"
-                    heading="AI Strategy & Consulting"
-                    subheading="From Ideation To Implementation — Build Sustainable, ROI-Driven AI Roadmaps"
+                    buttonText="Our Services"
+                    heading="Analytics & Reporting"
+                    subheading="We’re offering something special just for you. Don’t miss out on our latest updates and exclusive offer."
                 />
             </div>
 
@@ -22,9 +22,9 @@ export default function AIStrategyConsultingPage() {
             <div className="max-w-[1150px] w-[95%] mx-auto lg:mt-[180px] mt-[100px] overflow-hidden">
                 <GetInTouchSection
                     smallText=""
-                    heading="Turn AI Vision Into Measurable Business Impact"
-                    description="From ideation to implementation — we help organizations build sustainable, ROI-driven AI roadmaps."
-                    imageSrc="/images/ai-strategy-consulting.png"
+                    heading="Analytics & Reporting That Turns Data Into Decisions"
+                    description="Track what matters, understand your performance, and make smarter marketing decisions with powerful analytics and transparent reporting."
+                    imageSrc="/images/ai-content.png"
                     imageAlt="AI Strategy & Consulting - Turn AI Vision Into Measurable Business Impact"
                 />
             </div>
@@ -62,8 +62,8 @@ export default function AIStrategyConsultingPage() {
             <div className="max-w-[1150px] w-[95%] mx-auto lg:my-[64px] my-[40px] lg:mb-[100px] mb-[50px]">
                 <FeaturesBlock
                     title="High-Value Deliverable"
-                    leftImage="/images/img11.png"
-                    rightImage="/images/img12.png"
+                    leftImage="/images/global-digital.png"
+                    rightImage="/images/global-digital2.png"
                     leftImageAlt="AI Impact Infographic"
                     rightImageAlt="AI-Driven Business Conversion Blueprint"
                     features={[
@@ -78,11 +78,12 @@ export default function AIStrategyConsultingPage() {
             <div>
                 {/* CTA Section */}
                 <CTASection
-                    badgeText="Trusted By Fortune 500 Teams"
-                    heading={`Transform Your Business With AI Book A Consultation`}
-                    description="Speak With Our Team To Explore How Workflow Can Improve Accuracy, Reduce Hallucinations, And Secure Your AI Systems."
+                    badgeText="Ready to grow?"
+                    heading={`Let's Build Your Growth Engine
+`}
+                    description="Book a free strategy call to discover how we can accelerate your digital marketing results."
                     primaryButtonText="Book Consultation"
-                    secondaryButtonText="Download AI Roadmap"
+                    secondaryButtonText="Download Marketing Audit Checklist"
                     secondaryButtonHref="/ai-roadmap"
                 />
             </div>

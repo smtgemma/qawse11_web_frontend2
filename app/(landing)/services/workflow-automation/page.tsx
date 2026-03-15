@@ -92,11 +92,12 @@ export default function WorkflowAutomationPage() {
             <div>
                 {/* CTA Section */}
                 <CTASection
-                    badgeText="Trusted By Fortune 500 Teams"
-                    heading={`Transform Your Business With AI Book A Consultation`}
-                    description="Speak With Our Team To Explore How Workflow Can Improve Accuracy, Reduce Hallucinations, And Secure Your AI Systems."
+                    badgeText="Ready to grow?"
+                    heading={`Let's Build Your Growth Engine
+`}
+                    description="Book a free strategy call to discover how we can accelerate your digital marketing results."
                     primaryButtonText="Book Consultation"
-                    secondaryButtonText="Download AI Roadmap"
+                    secondaryButtonText="Download Marketing Audit Checklist"
                     secondaryButtonHref="/ai-roadmap"
                 />
             </div>
