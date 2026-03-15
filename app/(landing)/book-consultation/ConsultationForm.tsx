@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Shield, ChevronDown } from "lucide-react";
 import Link from "next/link";
@@ -11,7 +10,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
 
-// Zod schema for validation
+// Zod schema – fields match Figma; optional ones used for API or project_details
 const consultationSchema = z.object({
   firstName: z
     .string()
@@ -28,38 +27,52 @@ const consultationSchema = z.object({
     .min(1, "Email is required")
     .email("Please enter a valid email address")
     .max(100, "Email must be less than 100 characters"),
+  phone: z.string().max(30).optional(),
   company: z
     .string()
     .min(1, "Company name is required")
     .min(2, "Company name must be at least 2 characters")
     .max(100, "Company name must be less than 100 characters"),
-  timeline: z.string().min(1, "Please select a timeline"),
-  country: z
-    .string()
-    .min(1, "Country is required")
-    .min(2, "Country must be at least 2 characters")
-    .max(100, "Country must be less than 100 characters"),
-  projectType: z.string().min(1, "Please select a project type"),
+  websiteUrl: z.string().max(500).optional(),
+  industry: z.string().max(100).optional(),
   budgetRange: z.string().min(1, "Please select a budget range"),
+  primaryGoal: z.string().min(1, "Please select your goal"),
   helpWith: z
     .array(z.string())
     .min(1, "Please select at least one area where we can help you"),
-  projectDetails: z
-    .string()
-    .min(1, "Project details are required")
-    .min(10, "Project details must be at least 10 characters")
-    .max(1000, "Project details must be less than 1000 characters"),
+  projectDetails: z.string().max(1000).optional(),
 });
 
 type ConsultationFormData = z.infer<typeof consultationSchema>;
 
 const helpWithOptions = [
-  "Data Annotation And Curation For Autonomy",
-  "Enterprise AI Agents & Scalable GenAI Platforms",
-  "Data Generation And RLHF For LLMs",
-  "Model Test And Evaluation",
-  "Robotics And Data Collection",
-  "Others",
+  "Increase Revenue",
+  "Generate More Leads",
+  "Build Brand Awareness",
+  "Reduce Customer Acquisition Cost",
+  "Enter New Markets",
+  "Additional Details",
+];
+
+const industryOptions = [
+  "E-commerce",
+  "SaaS & Tech",
+  "Professional Services",
+  "Healthcare",
+  "Real Estate",
+  "Finance",
+  "Education",
+  "Other",
+];
+
+const primaryGoalOptions = [
+  { value: "ai-agents", label: "AI Agents" },
+  { value: "automations", label: "Automations" },
+  { value: "rag-systems", label: "RAG Systems" },
+  { value: "custom-ai-applications", label: "Custom AI Applications" },
+  { value: "ai-integration", label: "AI Integration" },
+  { value: "ai-strategy-consulting", label: "AI Strategy & Consulting" },
+  { value: "other", label: "Other" },
 ];
 
 export default function ConsultationForm() {
@@ -80,11 +93,12 @@ export default function ConsultationForm() {
       firstName: "",
       lastName: "",
       email: "",
+      phone: "",
       company: "",
-      timeline: "",
-      country: "",
-      projectType: "",
+      websiteUrl: "",
+      industry: "",
       budgetRange: "",
+      primaryGoal: "",
       helpWith: [],
       projectDetails: "",
     },
@@ -106,18 +120,26 @@ export default function ConsultationForm() {
         toast.warning("Please sign up or log in to submit this form.");
         return;
       }
-      // Call your existing mutation
+      const details = [
+        data.projectDetails,
+        data.phone && `Phone: ${data.phone}`,
+        data.websiteUrl && `Website: ${data.websiteUrl}`,
+        data.industry && `Industry: ${data.industry}`,
+      ]
+        .filter(Boolean)
+        .join(" | ");
+
       const res = await consultationAction({
         first_name: data.firstName,
         last_name: data.lastName,
         company_name: data.company,
         email: data.email,
-        country: data.country,
+        country: "",
         budget_range: data.budgetRange,
-        project_type: data.projectType,
-        project_details: data.projectDetails,
+        project_type: data.primaryGoal,
+        project_details: details || "No additional details",
         helps: data.helpWith,
-        timeline: data.timeline,
+        timeline: "",
       }).unwrap();
 
       // Reset form on successful submission
@@ -139,25 +161,23 @@ export default function ConsultationForm() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       className="">
-      <div className="bg-[#1a1a1a] rounded-[12px] p-8 md:p-10">
+      <div className="bg-[#0B1722] rounded-[12px] p-8 md:p-10">
         {/* Header */}
         <div className="mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Schedule Your Free Strategy Call
+          Schedule Your Free Strategy Call
           </h2>
           <p className="text-white/80 text-base leading-relaxed">
-            Tell us about your business and goals. We’ll prepare a custom growth roadmap for your call.
+          Tell us about your business and goals. We’ll prepare a custom growth roadmap for your call.
           </p>
         </div>
 
-        {/* Form */}
+        {/* Form – layout matches Figma: 2-col rows then full-width Primary Goal, then checkboxes */}
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-          {/* First Name & Last Name */}
+          {/* Row 1: First Name | Last Name */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label
-                htmlFor="firstName"
-                className="block text-sm font-medium text-white mb-2">
+              <label htmlFor="firstName" className="block text-sm font-medium text-white mb-2">
                 First Name
               </label>
               <input
@@ -165,18 +185,14 @@ export default function ConsultationForm() {
                 id="firstName"
                 {...register("firstName")}
                 placeholder="Ex. John"
-                className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
+                className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
               />
               {errors.firstName && (
-                <p className="text-red-400 text-xs mt-1.5">
-                  {errors.firstName.message}
-                </p>
+                <p className="text-red-400 text-xs mt-1.5">{errors.firstName.message}</p>
               )}
             </div>
             <div>
-              <label
-                htmlFor="lastName"
-                className="block text-sm font-medium text-white mb-2">
+              <label htmlFor="lastName" className="block text-sm font-medium text-white mb-2">
                 Last Name
               </label>
               <input
@@ -184,239 +200,190 @@ export default function ConsultationForm() {
                 id="lastName"
                 {...register("lastName")}
                 placeholder="Ex. Doe"
-                className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
+                className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
               />
               {errors.lastName && (
-                <p className="text-red-400 text-xs mt-1.5">
-                  {errors.lastName.message}
-                </p>
+                <p className="text-red-400 text-xs mt-1.5">{errors.lastName.message}</p>
               )}
             </div>
           </div>
 
-          {/* Email Address */}
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-white mb-2">
-              Email Address
-            </label>
-            <input
-              type="email"
-              id="email"
-              {...register("email")}
-              placeholder="ex. hello@email.co"
-              className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
-            />
-            {errors.email && (
-              <p className="text-red-400 text-xs mt-1.5">
-                {errors.email.message}
-              </p>
-            )}
+          {/* Row 2: Email Address | Phone Number */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                {...register("email")}
+                placeholder="ex. hello@email.co"
+                className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
+              />
+              {errors.email && (
+                <p className="text-red-400 text-xs mt-1.5">{errors.email.message}</p>
+              )}
+            </div>
+            <div>
+              <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                {...register("phone")}
+                placeholder="Type Phone Number"
+                className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
+              />
+            </div>
           </div>
 
+          {/* Row 3: Company Name | Website URL */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Company */}
             <div>
-              <label
-                htmlFor="company"
-                className="block text-sm font-medium text-white mb-2">
-                Company
+              <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
+                Company Name
               </label>
               <input
                 type="text"
                 id="company"
                 {...register("company")}
                 placeholder="Your company name"
-                className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
+                className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
               />
               {errors.company && (
-                <p className="text-red-400 text-xs mt-1.5">
-                  {errors.company.message}
-                </p>
+                <p className="text-red-400 text-xs mt-1.5">{errors.company.message}</p>
               )}
             </div>
-
-            {/* Timeline */}
             <div>
-              <label
-                htmlFor="timeline"
-                className="block text-sm font-medium text-white mb-2">
-                How soon do you want to start?
+              <label htmlFor="websiteUrl" className="block text-sm font-medium text-white mb-2">
+                Website URL
+              </label>
+              <input
+                type="url"
+                id="websiteUrl"
+                {...register("websiteUrl")}
+                placeholder="Website Url..."
+                className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
+              />
+            </div>
+          </div>
+
+          {/* Row 4: Industry | Monthly Marketing Budget */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="industry" className="block text-sm font-medium text-white mb-2">
+                Industry
               </label>
               <div className="relative">
                 <select
-                  id="timeline"
-                  {...register("timeline")}
-                  className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none cursor-pointer">
-                  <option value="" disabled hidden>
-                    Select Timeline...
-                  </option>
-                  <option value="immediately">Immediately</option>
-                  <option value="1-2-months">Within 1—2 months</option>
-                  <option value="3-6-months">Within 3—6 months</option>
-                  <option value="just-researching">Just researching</option>
+                  id="industry"
+                  {...register("industry")}
+                  className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 pr-10 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none cursor-pointer">
+                  <option value="">Your Industry</option>
+                  {industryOptions.map((opt) => (
+                    <option key={opt} value={opt}>{opt}</option>
+                  ))}
                 </select>
                 <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none" />
               </div>
-              {errors.timeline && (
-                <p className="text-red-400 text-xs mt-1.5">
-                  {errors.timeline.message}
-                </p>
+            </div>
+            <div>
+              <label htmlFor="budgetRange" className="block text-sm font-medium text-white mb-2">
+                Monthly Marketing Budget
+              </label>
+              <div className="relative">
+                <select
+                  id="budgetRange"
+                  {...register("budgetRange")}
+                  className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 pr-10 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none cursor-pointer">
+                  <option value="" disabled hidden>
+                    Select Your Budget Range
+                  </option>
+                  <option value="5k-15k">Under $5,000</option>
+                  <option value="15k-50k">$5,000 - $15,000</option>
+                  <option value="50k-150k">$15,000 - $50,000</option>
+                  <option value="150k-plus">$50,000+</option>
+                </select>
+                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none" />
+              </div>
+              {errors.budgetRange && (
+                <p className="text-red-400 text-xs mt-1.5">{errors.budgetRange.message}</p>
               )}
             </div>
           </div>
 
-          {/* Country */}
+          {/* Row 5: Primary Goal (full width) */}
           <div>
-            <label
-              htmlFor="country"
-              className="block text-sm font-medium text-white mb-2">
-              Country
-            </label>
-            <input
-              type="text"
-              id="country"
-              {...register("country")}
-              placeholder="Type your country"
-              className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors"
-            />
-            {errors.country && (
-              <p className="text-red-400 text-xs mt-1.5">
-                {errors.country.message}
-              </p>
-            )}
-          </div>
-
-          {/* Project Type */}
-          <div>
-            <label
-              htmlFor="projectType"
-              className="block text-sm font-medium text-white mb-2">
-              Project Type
+            <label htmlFor="primaryGoal" className="block text-sm font-medium text-white mb-2">
+              Primary Goal
             </label>
             <div className="relative">
               <select
-                id="projectType"
-                {...register("projectType")}
-                className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none cursor-pointer">
+                id="primaryGoal"
+                {...register("primaryGoal")}
+                className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 pr-10 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none cursor-pointer">
                 <option value="" disabled hidden>
-                  Select Your Project Type...
+                  Your goal
                 </option>
-                <option value="ai-agents">AI Agents</option>
-                <option value="automations">Automations</option>
-                <option value="rag-systems">RAG Systems</option>
-                <option value="custom-ai-applications">Custom AI Applications</option>
-                <option value="ai-integration">AI Integration</option>
-                <option value="ai-strategy-consulting">AI Strategy & Consulting</option>
-                <option value="other">Other</option>
+                {primaryGoalOptions.map((opt) => (
+                  <option key={opt.value} value={opt.value}>{opt.label}</option>
+                ))}
               </select>
               <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none" />
             </div>
-            {errors.projectType && (
-              <p className="text-red-400 text-xs mt-1.5">
-                {errors.projectType.message}
-              </p>
+            {errors.primaryGoal && (
+              <p className="text-red-400 text-xs mt-1.5">{errors.primaryGoal.message}</p>
             )}
           </div>
 
-          {/* Budget Range */}
-          <div>
-            <label
-              htmlFor="budgetRange"
-              className="block text-sm font-medium text-white mb-2">
-              Select Your Budget Range
-            </label>
-            <div className="relative">
-              <select
-                id="budgetRange"
-                {...register("budgetRange")}
-                className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none cursor-pointer">
-                <option value="" disabled hidden>
-                  Select Your Budget Range
-                </option>
-                <option value="5k-15k">$5k-$15k</option>
-                <option value="15k-50k">$15k-$50k</option>
-                <option value="50k-150k">$50k-$150k</option>
-                <option value="150k-plus">$150k+</option>
-                <option value="not-sure-yet">Not sure yet</option>
-              </select>
-              <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none" />
-            </div>
-            {errors.budgetRange && (
-              <p className="text-red-400 text-xs mt-1.5">
-                {errors.budgetRange.message}
-              </p>
-            )}
-          </div>
-
-          {/* What Can We Help With? */}
+          {/* Current Marketing Channels */}
           <div>
             <label className="block text-sm font-medium text-white mb-2">
-              What Can We Help With?
-              <span className="text-white/60 font-normal ml-1">
-                (Select All That Apply)
-              </span>
+              Current Marketing Channels
             </label>
-            <div className="space-y-3 mt-5">
+            <div className="space-y-3 mt-3">
               {helpWithOptions.map((option) => (
-                <label
-                  key={option}
-                  className="relative flex items-center cursor-pointer">
+                <label key={option} className="relative flex items-center cursor-pointer">
                   <input
                     type="checkbox"
                     checked={helpWith.includes(option)}
                     onChange={() => handleCheckboxChange(option)}
                     className="sr-only peer"
                   />
-                  <div className="w-5 h-5 rounded border-2 border-[#3a3a3a] bg-[#2a2a2a] peer-checked:bg-gradient-to-br peer-checked:from-[#1E72A1] peer-checked:to-[#3A9AD4] peer-checked:border-[#1E72A1] transition-all duration-200 flex items-center justify-center">
+                  <div className="w-5 h-5 rounded border-2 border-[#3a3a3a] bg-[#70809080] peer-checked:bg-gradient-to-br peer-checked:from-[#1E72A1] peer-checked:to-[#3A9AD4] peer-checked:border-[#1E72A1] transition-all duration-200 flex items-center justify-center">
                     {helpWith.includes(option) && (
-                      <svg
-                        className="w-3 h-3 text-white"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="3"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path d="M5 13l4 4L19 7"></path>
+                      <svg className="w-3 h-3 text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M5 13l4 4L19 7" />
                       </svg>
                     )}
                   </div>
-                  <span className="ml-3">{option}</span>
+                  <span className="ml-3 text-white">{option}</span>
                 </label>
               ))}
             </div>
             {errors.helpWith && (
-              <p className="text-red-400 text-xs mt-1.5">
-                {errors.helpWith.message}
-              </p>
+              <p className="text-red-400 text-xs mt-1.5">{errors.helpWith.message}</p>
             )}
           </div>
 
-          {/* Project Details */}
+          {/* Optional: Project Details (for API project_details) */}
           <div>
-            <label
-              htmlFor="projectDetails"
-              className="block text-sm font-medium text-white mb-2">
-              Project Details
+            <label htmlFor="projectDetails" className="block text-sm font-medium text-white mb-2">
+              Additional Details
             </label>
             <textarea
               id="projectDetails"
               {...register("projectDetails")}
               placeholder="Briefly describe your goals, challenges, and desired outcomes."
-              rows={5}
-              className="w-full bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors resize-none"
+              rows={4}
+              className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#1E72A1] transition-colors resize-none"
             />
-            {errors.projectDetails && (
-              <p className="text-red-400 text-xs mt-1.5">
-                {errors.projectDetails.message}
-              </p>
-            )}
           </div>
 
           {/* Disclaimer */}
-          <div className="bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg p-4">
+          <div className="bg-[#70809080] border border-[#3a3a3a] rounded-lg p-4">
             <div className="flex items-center mx-auto text-center justify-center gap-2">
               <Shield className="w-5 h-5 text-white shrink-0 mt-0.5" />
               <p className="text-white text-sm">

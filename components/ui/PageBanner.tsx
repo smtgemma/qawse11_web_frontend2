@@ -55,7 +55,7 @@ const PageBanner: React.FC<PageBannerProps> = ({
   };
 
   return (
-    <div className="relative bg-black">
+    <div className="relative">
       <Container className="relative z-10">
         <motion.div
           variants={containerVariants}

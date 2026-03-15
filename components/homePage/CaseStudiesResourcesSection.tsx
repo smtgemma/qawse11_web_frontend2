@@ -3,6 +3,7 @@ import Container from "../ui/Container";
 import { motion, Variants } from "framer-motion";
 import { caseData } from "@/constants/mockData";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function CaseStudiesResourcesSection() {
   // Animation Variants
@@ -148,54 +149,56 @@ export default function CaseStudiesResourcesSection() {
         variants={containerVariants}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {caseData.map((card, index) => {
+          const href = `/case-studies/${card.slug}`;
           return (
-            <motion.div
-              key={card.id}
-              variants={cardVariants}
-              initial="initial"
-              whileHover="hover"
-              className="group bg-[rgba(255,255,255,0.10)] rounded-[20px]">
+            <Link key={card.id} href={href}>
               <motion.div
-                variants={cardHoverVariants}
-                className="rounded-[20px] overflow-hidden border transition-all  duration-300 h-full hover:border-[#1E72A1] bg-[rgba(255,255,255,0.10)]  hover:shadow-[0_4px_40px_0_rgba(30,114,161,0.5)]"
-                style={{
-                  background: "rgba(20, 20, 30, 0.6)",
-                  backdropFilter: "blur(10px)",
-                }}>
-                {/* Image with Background */}
+                variants={cardVariants}
+                initial="initial"
+                whileHover="hover"
+                className="group bg-[rgba(255,255,255,0.10)] rounded-[20px] cursor-pointer">
                 <motion.div
-                  variants={imageVariants}
-                  className="relative flex flex-col items-start gap-3 self-stretch rounded-[20px] overflow-hidden"
+                  variants={cardHoverVariants}
+                  className="rounded-[20px] overflow-hidden border transition-all  duration-300 h-full hover:border-[#1E72A1] bg-[rgba(255,255,255,0.10)]  hover:shadow-[0_4px_40px_0_rgba(30,114,161,0.5)]"
                   style={{
-                    height: "244px",
-                    padding: "32px 32px 40px 32px",
-                    backgroundImage: `url(${card.image})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "50% 50%",
-                    backgroundRepeat: "no-repeat",
-                    backgroundColor: "#FFF",
-                  }}
-                />
+                    background: "rgba(20, 20, 30, 0.6)",
+                    backdropFilter: "blur(10px)",
+                  }}>
+                  {/* Image with Background */}
+                  <motion.div
+                    variants={imageVariants}
+                    className="relative flex flex-col items-start gap-3 self-stretch rounded-[20px] overflow-hidden"
+                    style={{
+                      height: "244px",
+                      padding: "32px 32px 40px 32px",
+                      backgroundImage: `url(${card.image})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "50% 50%",
+                      backgroundRepeat: "no-repeat",
+                      backgroundColor: "#FFF",
+                    }}
+                  />
 
-                {/* Content Below Image */}
-                <div className="p-8 space-y-3">
-                  <motion.h3
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
-                    className="text-xl font-semibold text-white group-hover:text-[#3A9AD4] transition-colors duration-300">
-                    {card.title}
-                  </motion.h3>
-                  <motion.p
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
-                    className="text-white/60 text-base leading-relaxed">
-                    {card.description}
-                  </motion.p>
-                </div>
+                  {/* Content Below Image */}
+                  <div className="p-8 space-y-3">
+                    <motion.h3
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
+                      className="text-xl font-semibold text-white group-hover:text-[#3A9AD4] transition-colors duration-300">
+                      {card.title}
+                    </motion.h3>
+                    <motion.p
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
+                      className="text-white/60 text-base leading-relaxed">
+                      {card.description}
+                    </motion.p>
+                  </div>
+                </motion.div>
               </motion.div>
-            </motion.div>
+            </Link>
           );
         })}
       </motion.div>

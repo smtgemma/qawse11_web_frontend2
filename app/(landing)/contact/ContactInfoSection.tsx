@@ -31,7 +31,7 @@ export default function ContactInfoSection() {
   };
 
   return (
-    <div className="bg-black text-white">
+    <div className=" text-white">
       <Container className="py-12 md:py-16 lg:py-20">
         <motion.div
           initial="hidden"
@@ -44,7 +44,7 @@ export default function ContactInfoSection() {
             {/* Email Card */}
             <motion.div
               variants={fadeInUp}
-              className="bg-[#1a1a1a] border border-[#3a3a3a] bg-white/5 rounded-[20px] p-6 md:p-8">
+              className="bg-[#0B1722] border border-[#3a3a3a] bg-white/5 rounded-[20px] p-6 md:p-8">
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#1E72A1] to-[#3A9AD4] flex items-center justify-center mb-6">
                 <Mail className="w-6 h-6 text-white" />
               </div>
@@ -54,14 +54,14 @@ export default function ContactInfoSection() {
               <Link
                 href={"mailto:hello@dima360ai.com"}
                 className="text-base text-white/80 transition-all hover:text-white hover:underline">
-                hello@dima360ai.com
+                hello@dima360marketing.com
               </Link>
             </motion.div>
 
             {/* Operating Hours Card */}
             <motion.div
               variants={fadeInUp}
-              className="bg-[#1a1a1a] border border-[#3a3a3a] bg-white/5 rounded-[20px] p-6 md:p-8">
+              className="bg-[#0B1722] border border-[#3a3a3a] bg-white/5 rounded-[20px] p-6 md:p-8">
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#1E72A1] to-[#3A9AD4] flex items-center justify-center mb-6">
                 <Clock className="w-6 h-6 text-white" />
               </div>
@@ -80,7 +80,7 @@ export default function ContactInfoSection() {
             {/* Office Address Card */}
             <motion.div
               variants={fadeInUp}
-              className="bg-[#1a1a1a] border border-[#3a3a3a] bg-white/5 rounded-[20px] p-6 md:p-8">
+              className="bg-[#0B1722] border border-[#3a3a3a] bg-white/5 rounded-[20px] p-6 md:p-8">
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#1E72A1] to-[#3A9AD4] flex items-center justify-center mb-6">
                 <MapPin className="w-6 h-6 text-white" />
               </div>
@@ -96,7 +96,7 @@ export default function ContactInfoSection() {
             {/* Follow Us Card */}
             <motion.div
               variants={fadeInUp}
-              className="bg-[#1a1a1a] border border-[#3a3a3a] bg-white/5 rounded-[20px] p-6 md:p-8 flex flex-col justify-center">
+              className="bg-[#0B1722] border border-[#3a3a3a] bg-white/5 rounded-[20px] p-6 md:p-8 flex flex-col justify-center">
               <div>
                 <h3 className="text-xl md:text-2xl font-semibold text-white mb-6">
                   Follow Us

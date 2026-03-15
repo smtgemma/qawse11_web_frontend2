@@ -13,7 +13,7 @@ export default async function CaseStudyDetailPage({
 
   if (!caseStudy) {
     return (
-      <div className="bg-black text-white min-h-screen flex items-center justify-center">
+      <div className=" text-white min-h-screen flex items-center justify-center">
         <Container>
           <h1 className="text-2xl font-semibold">Case Study Not Found</h1>
         </Container>

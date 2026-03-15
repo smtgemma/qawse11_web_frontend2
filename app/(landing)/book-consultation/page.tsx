@@ -12,7 +12,7 @@ export default function BookConsultationPage() {
         <PageBanner
           buttonText="Book Consultation"
           heading="Let's Build Your Growth Strategy"
-          subheading="Book a free consultation to explore how we can help you achieve your marketing goals.."
+          subheading="Book a free consultation to explore how we can help you achieve your marketing goals."
         />
       </div>
 

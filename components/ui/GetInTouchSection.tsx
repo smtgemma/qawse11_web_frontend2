@@ -137,7 +137,7 @@ const GetInTouchSection: React.FC<GetInTouchSectionProps> = ({
   };
 
   return (
-    <div className={`w-full bg-black  ${className}`}>
+    <div className={`w-full  ${className}`}>
       <Container className="relative z-10">
         <div className="">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

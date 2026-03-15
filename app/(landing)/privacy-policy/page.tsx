@@ -41,7 +41,7 @@ export default function PrivacyPolicyPage() {
       </div>
 
       {/* Content Section */}
-      <div className="bg-black text-white lg:mt-[100px] mt-[50px]">
+      <div className=" text-white lg:mt-[100px] mt-[50px]">
         <Container className="py-12 md:py-16 lg:py-20">
           <motion.div
             initial="hidden"
