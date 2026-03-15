@@ -11,8 +11,8 @@ export default function ContactPage() {
       <div className="lg:mt-[160px] mt-[100px]">
         <PageBanner
           buttonText="CONTACT US"
-          heading="Let's Build Your AI Roadmap"
-          subheading="Connect With Our AI Specialists To Discuss Your Project, Explore Solutions, Or Build Your Custom AI Roadmap"
+          heading="Let's Talk Growth"
+          subheading="Ready to scale your digital marketing? Get in touch and let's discuss your goals."
         />
       </div>
       <ContactForm />

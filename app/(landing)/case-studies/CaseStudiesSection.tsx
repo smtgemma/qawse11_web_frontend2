@@ -135,7 +135,7 @@ export default function CaseStudiesSection() {
   ];
 
   return (
-    <div className="bg-black text-white overflow-hidden mb-20">
+    <div className=" text-white overflow-hidden mb-20">
       <Container className="">
         <div className="space-y-12">
           {/* Heading */}

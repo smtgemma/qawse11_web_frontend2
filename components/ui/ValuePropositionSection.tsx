@@ -58,7 +58,7 @@ const ValuePropositionSection: React.FC<ValuePropositionSectionProps> = ({
   };
 
   return (
-    <div className={`w-full bg-black ${className}`}>
+    <div className={`w-full ${className}`}>
       <Container>
         <motion.div
           initial="hidden"
