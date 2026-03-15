@@ -179,12 +179,14 @@ export const frameWorkData = [
 export const caseData = [
   {
     id: 1,
+    slug: "e-commerce-revenue-surge",
     title: "E-commerce Revenue Surge",
     description: "Scaled ad spend 5x while maintaining a 4.2x ROAS for a DTC brand.",
     image: "/images/e-commerce.png",
   },
   {
     id: 2,
+    slug: "saas-lead-generation",
     title: "SaaS Lead Generation",
     description:
       "Reduced cost per lead by 62% through funnel optimization",
@@ -192,6 +194,7 @@ export const caseData = [
   },
   {
     id: 3,
+    slug: "local-business-domination",
     title: "Local Business Domination",
     description: "Achieved #1 Google rankings for 47 target keywords.",
     image: "/images/business.png",

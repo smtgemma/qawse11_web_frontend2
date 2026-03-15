@@ -55,7 +55,7 @@ const CTASection: React.FC<CTASectionProps> = ({
 
   return (
     <div
-      className={`relative w-full py-12 md:py-16 lg:py-[100px] bg-gradient-to-b from-[#1E72A1] via-[#3A9AD4] to-[#1E72A1] ${className}`}>
+      className={`relative w-full py-12 md:py-16 lg:py-[100px] bg-gradient-to-b from-[#1E72A1]/70 via-[#3A9AD4]/70 to-[#1E72A1]/70 ${className}`}>
       <Container className="relative z-10">
         <motion.div
           variants={containerVariants}
