@@ -269,19 +269,22 @@ const GetInTouchSection: React.FC<GetInTouchSectionProps> = ({
                         </p>
                       )}
                     </div>
-                    <motion.button
+                    <button
                       type="submit"
                       disabled={isSubmitting || isLoading}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
                       className="w-full flex items-center justify-center gap-2.5 px-6 py-3 rounded-lg bg-transparent text-white border-[1.5px] border-white font-medium text-sm hover:bg-white/10 transition-all duration-200 mt-4 disabled:opacity-50 disabled:cursor-not-allowed">
-                      <Send className="w-4 h-4" />
-                      <span>
-                        {isSubmitting || isLoading
-                          ? "Sending..."
-                          : "Send Message"}
-                      </span>
-                    </motion.button>
+                      <motion.span
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="inline-flex items-center justify-center gap-2.5">
+                        <Send className="w-4 h-4" />
+                        <span>
+                          {isSubmitting || isLoading
+                            ? "Sending..."
+                            : "Send Message"}
+                        </span>
+                      </motion.span>
+                    </button>
                   </form>
                 </div>
 

@@ -104,12 +104,14 @@ const CTASection: React.FC<CTASectionProps> = ({
             {primaryButtonText && (
               <motion.div className="">
                 {primaryButtonHref ? (
-                  <motion.a
+                  <a
                     href={primaryButtonHref}
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    whileTap={{ scale: 0.98 }}
-                    transition={{ duration: 0.2 }}
                     className="flex items-center justify-center gap-2 px-6 py-3 md:py-4 rounded-lg text-sm md:text-base font-semibold bg-white text-[#1E72A1] border border-[#1E72A1] hover:bg-white/95 transition-all duration-200 w-fit">
+                    <motion.span
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      whileTap={{ scale: 0.98 }}
+                      transition={{ duration: 0.2 }}
+                      className="inline-flex items-center justify-center gap-2">
                     <svg
                       width="24"
                       height="24"
@@ -189,7 +191,8 @@ const CTASection: React.FC<CTASectionProps> = ({
                     </svg>
 
                     <span>{primaryButtonText}</span>
-                  </motion.a>
+                    </motion.span>
+                  </a>
                 ) : (
                   <motion.button
                     onClick={primaryButtonOnClick}
@@ -284,15 +287,18 @@ const CTASection: React.FC<CTASectionProps> = ({
             {secondaryButtonText && (
               <motion.div className="">
                 {secondaryButtonHref ? (
-                  <motion.a
+                  <a
                     href={secondaryButtonHref}
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    whileTap={{ scale: 0.98 }}
-                    transition={{ duration: 0.2 }}
                     className="flex items-center justify-center gap-2 px-6 py-3 md:py-4 rounded-lg text-sm md:text-base font-semibold bg-transparent text-white border border-white hover:bg-[#3A9AD4] transition-all duration-200 w-fit">
-                    <span>{secondaryButtonText}</span>
-                    <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
-                  </motion.a>
+                    <motion.span
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      whileTap={{ scale: 0.98 }}
+                      transition={{ duration: 0.2 }}
+                      className="inline-flex items-center justify-center gap-2">
+                      <span>{secondaryButtonText}</span>
+                      <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
+                    </motion.span>
+                  </a>
                 ) : (
                   <motion.button
                     onClick={secondaryButtonOnClick}

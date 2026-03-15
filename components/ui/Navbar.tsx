@@ -292,15 +292,16 @@ const DesktopNavLink: React.FC<{
                 backdropFilter: "blur(20px)",
                 border: "1px solid rgba(30, 114, 161, 0.3)",
               }}
-              role="menu"
-              aria-label="Services dropdown menu"
-              onMouseEnter={onDropdownMouseEnter}
-              onMouseLeave={onDropdownMouseLeave}
               variants={dropdownVariants}
               initial="closed"
               animate="open"
               exit="closed">
-              <div className="p-2">
+              <div
+                className="p-2"
+                role="menu"
+                aria-label="Services dropdown menu"
+                onMouseEnter={onDropdownMouseEnter}
+                onMouseLeave={onDropdownMouseLeave}>
                 {link.subRoutes.map((subLink, idx) => (
                   <motion.div
                     key={subLink.id}
@@ -425,7 +426,7 @@ const MobileMenu: React.FC<{
           />
 
           {/* Sidebar */}
-          <motion.div
+          <div
             className="fixed top-0 right-0 h-full w-full sm:w-[340px] z-[9999] lg:hidden overflow-y-auto"
             style={{
               background:
@@ -436,11 +437,13 @@ const MobileMenu: React.FC<{
             role="dialog"
             aria-modal="true"
             aria-label="Mobile navigation menu"
-            variants={sidebarVariants}
-            initial="closed"
-            animate="open"
-            exit="closed"
             onClick={(e) => e.stopPropagation()}>
+            <motion.div
+              variants={sidebarVariants}
+              initial="closed"
+              animate="open"
+              exit="closed"
+              className="h-full">
             {/* Header */}
             <div
               className="flex items-center justify-between sticky top-0 z-10 p-4 sm:p-5"
@@ -557,7 +560,8 @@ const MobileMenu: React.FC<{
                 <CTAButtons onLinkClick={onClose} />
               </div>
             </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </>
       )}
     </AnimatePresence>
