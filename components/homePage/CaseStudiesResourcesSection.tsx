@@ -115,11 +115,10 @@ export default function CaseStudiesResourcesSection() {
         {/* Title and Description */}
         <motion.div variants={headerVariants} className="space-y-4 max-w-2xl">
           <h1 className="text-2xl md:text-3xl lg:text-[40px] font-semibold leading-[1.3] md:leading-[1.35] lg:leading-[50px]">
-            Case Studies & Resources
+           Case Studies & Success Stories
           </h1>
-          <p className="text-sm md:text-base lg:text-lg leading-relaxed">
-            Learn more about building, evaluating, training, and scaling agent
-            solutions.
+          <p className="text-sm md:text-base lg:text-md leading-relaxed">
+           Real results from real campaigns. See how we’ve helped businesses like yours grow.
           </p>
         </motion.div>
 
@@ -134,7 +133,7 @@ export default function CaseStudiesResourcesSection() {
             background: "transparent",
             color: "#FFFFFF",
           }}>
-          <span className="whitespace-nowrap">View Case Study</span>
+          <span className="whitespace-nowrap">View All Case Studies</span>
           <motion.div variants={arrowVariants}>
             <ArrowRight className="w-5 h-5" />
           </motion.div>
@@ -158,7 +157,7 @@ export default function CaseStudiesResourcesSection() {
               className="group bg-[rgba(255,255,255,0.10)] rounded-[20px]">
               <motion.div
                 variants={cardHoverVariants}
-                className="rounded-[20px] overflow-hidden border transition-all  duration-300 h-full hover:border-[#6C03FF] bg-[rgba(255,255,255,0.10)]  hover:shadow-[0_4px_40px_0_rgba(106,0,255,0.5)]"
+                className="rounded-[20px] overflow-hidden border transition-all  duration-300 h-full hover:border-[#1E72A1] bg-[rgba(255,255,255,0.10)]  hover:shadow-[0_4px_40px_0_rgba(30,114,161,0.5)]"
                 style={{
                   background: "rgba(20, 20, 30, 0.6)",
                   backdropFilter: "blur(10px)",
@@ -184,7 +183,7 @@ export default function CaseStudiesResourcesSection() {
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
-                    className="text-xl font-semibold text-white group-hover:text-purple-400 transition-colors duration-300">
+                    className="text-xl font-semibold text-white group-hover:text-[#3A9AD4] transition-colors duration-300">
                     {card.title}
                   </motion.h3>
                   <motion.p

@@ -57,7 +57,7 @@ const InputField: React.FC<InputFieldProps> = ({
           className={`w-full h-12 px-3 py-[13px] bg-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 transition-all backdrop-blur-sm ${
             error
               ? "ring-2 ring-red-500 focus:ring-red-500"
-              : "focus:ring-purple-500"
+              : "focus:ring-[#1E72A1]"
           }`}
         />
       </div>
@@ -180,7 +180,7 @@ const ForgetPasswordContent: React.FC = () => {
             <button
               onClick={handleSubmit(onSubmit)}
               disabled={isLoading}
-              className="w-full h-12 flex items-center justify-center rounded-xl bg-linear-to-r from-[#6C03FF] to-[#9A3DFF] text-white font-semibold text-base hover:opacity-90 active:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed">
+              className="w-full h-12 flex items-center justify-center rounded-xl bg-linear-to-r from-[#1E72A1] to-[#3A9AD4] text-white font-semibold text-base hover:opacity-90 active:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-[#1E72A1] focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed">
               {isLoading ? (
                 <div className="flex items-center gap-2">
                   <svg
@@ -212,7 +212,7 @@ const ForgetPasswordContent: React.FC = () => {
               Remember your password?{" "}
               <Link
                 href="/signin"
-                className="text-[#9A3DFF] hover:text-[#6C03FF] transition-colors font-medium focus:outline-none focus:underline">
+                className="text-[#3A9AD4] hover:text-[#1E72A1] transition-colors font-medium focus:outline-none focus:underline">
                 Sign in!
               </Link>
             </p>

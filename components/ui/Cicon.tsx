@@ -478,8 +478,8 @@ export const RevenueIcon = (props: React.SVGProps<SVGSVGElement>) => (
         x2="50.625"
         y2="27"
         gradientUnits="userSpaceOnUse">
-        <stop stopColor="#6C03FF" />
-        <stop offset="1" stopColor="#9A3DFF" />
+        <stop stopColor="#1E72A1" />
+        <stop offset="1" stopColor="#3A9AD4" />
       </linearGradient>
     </defs>
   </svg>
@@ -505,8 +505,8 @@ export const PowerIcon = (props: React.SVGProps<SVGSVGElement>) => (
         x2="43.8649"
         y2="27.0103"
         gradientUnits="userSpaceOnUse">
-        <stop stopColor="#6C03FF" />
-        <stop offset="1" stopColor="#9A3DFF" />
+        <stop stopColor="#1E72A1" />
+        <stop offset="1" stopColor="#3A9AD4" />
       </linearGradient>
     </defs>
   </svg>
@@ -532,8 +532,8 @@ export const DollarIcon = (props: React.SVGProps<SVGSVGElement>) => (
         x2="40.4977"
         y2="27"
         gradientUnits="userSpaceOnUse">
-        <stop stopColor="#6C03FF" />
-        <stop offset="1" stopColor="#9A3DFF" />
+        <stop stopColor="#1E72A1" />
+        <stop offset="1" stopColor="#3A9AD4" />
       </linearGradient>
     </defs>
   </svg>
@@ -561,8 +561,8 @@ export const ArrowBoardIcon = (props: React.SVGProps<SVGSVGElement>) => (
         x2="54.0001"
         y2="27"
         gradientUnits="userSpaceOnUse">
-        <stop stopColor="#6C03FF" />
-        <stop offset="1" stopColor="#9A3DFF" />
+        <stop stopColor="#1E72A1" />
+        <stop offset="1" stopColor="#3A9AD4" />
       </linearGradient>
       <clipPath id="clip0_463_6293">
         <rect width="54" height="54" fill="white" />
@@ -591,8 +591,8 @@ export const ZicZacArrowIcon = (props: React.SVGProps<SVGSVGElement>) => (
         x2="49.5"
         y2="27.0368"
         gradientUnits="userSpaceOnUse">
-        <stop stopColor="#6C03FF" />
-        <stop offset="1" stopColor="#9A3DFF" />
+        <stop stopColor="#1E72A1" />
+        <stop offset="1" stopColor="#3A9AD4" />
       </linearGradient>
     </defs>
   </svg>
@@ -624,8 +624,8 @@ export const CheckRoundIcon = (props: React.SVGProps<SVGSVGElement>) => (
         x2="54.0097"
         y2="27.0019"
         gradientUnits="userSpaceOnUse">
-        <stop stopColor="#6C03FF" />
-        <stop offset="1" stopColor="#9A3DFF" />
+        <stop stopColor="#1E72A1" />
+        <stop offset="1" stopColor="#3A9AD4" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_463_6325"
@@ -634,8 +634,8 @@ export const CheckRoundIcon = (props: React.SVGProps<SVGSVGElement>) => (
         x2="40.2205"
         y2="27.0067"
         gradientUnits="userSpaceOnUse">
-        <stop stopColor="#6C03FF" />
-        <stop offset="1" stopColor="#9A3DFF" />
+        <stop stopColor="#1E72A1" />
+        <stop offset="1" stopColor="#3A9AD4" />
       </linearGradient>
       <clipPath id="clip0_463_6325">
         <rect width="54" height="54" fill="white" />

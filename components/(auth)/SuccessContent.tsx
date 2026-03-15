@@ -61,7 +61,7 @@ export default function SuccessContent({ title, sub_title }: Props) {
           whileTap={{ scale: 0.98 }}>
           <Link
             href={"/signin"}
-            className="w-full h-12 flex items-center justify-center rounded-xl bg-linear-to-r from-[#6C03FF] to-[#9A3DFF] text-white font-semibold text-sm sm:text-base hover:opacity-90 active:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed">
+            className="w-full h-12 flex items-center justify-center rounded-xl bg-linear-to-r from-[#1E72A1] to-[#3A9AD4] text-white font-semibold text-sm sm:text-base hover:opacity-90 active:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-[#1E72A1] focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed">
             Continue
           </Link>
         </motion.div>
