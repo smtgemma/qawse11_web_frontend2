@@ -12,9 +12,9 @@ export default function RAGSystemsPage() {
             {/* Page Banner */}
             <div className="max-w-[1150px] mx-auto lg:mt-[160px] mt-[80px] lg:my-[100px] my-[50px]">
                 <PageBanner
-                    buttonText="Explore Details"
-                    heading="RAG Systems"
-                    subheading="Retrieval-Augmented Generation Systems For Accurate, Secure Enterprise AI"
+                    buttonText="Our Services"
+                    heading="Social Media Marketing"
+                    subheading="Build brand awareness and drive engagement with strategic social media marketing that turns followers into loyal customers."
                 />
             </div>
 
@@ -22,9 +22,9 @@ export default function RAGSystemsPage() {
             <div className="max-w-[1150px] w-[95%] mx-auto lg:mt-[180px] mt-[100px] overflow-hidden">
                 <GetInTouchSection
                     smallText=""
-                    heading="Reliable AI Powered By Source-Backed Knowledge"
-                    description="RAG Systems Ensure AI Responses Are Grounded In Verified Data — Not Hallucinations."
-                    imageSrc="/images/rag-systems.png"
+                    heading="Social Media That Builds Brands"
+                    description="Connect with your audience where they spend their time. Build community, drive engagement, and turn followers into customers.."
+                    imageSrc="/images/rag-systems2.png"
                     imageAlt="RAG Systems - Source-Backed AI Knowledge"
                 />
             </div>
@@ -57,8 +57,8 @@ export default function RAGSystemsPage() {
             <div className="max-w-[1150px] w-[95%] mx-auto lg:my-[64px] my-[40px] lg:mb-[100px] mb-[50px]">
                 <FeaturesBlock
                     title="Core Capabilities"
-                    leftImage="/images/img5.png"
-                    rightImage="/images/img6.png"
+                    leftImage="/images/facebook.png"
+                    rightImage="/images/social-media.png"
                     leftImageAlt="Knowledge Graph and AI Processing"
                     rightImageAlt="AI Knowledge Engine Architecture"
                     features={[
@@ -88,11 +88,12 @@ export default function RAGSystemsPage() {
             <div>
                 {/* CTA Section */}
                 <CTASection
-                    badgeText="Trusted By Fortune 500 Teams"
-                    heading={`Transform Your Business With AI Book A Consultation`}
-                    description="Speak With Our Team To Explore How Workflow Can Improve Accuracy, Reduce Hallucinations, And Secure Your AI Systems."
+                    badgeText="Ready to grow?"
+                    heading={`Let's Build Your Growth Engine
+`}
+                    description="Book a free strategy call to discover how we can accelerate your digital marketing results."
                     primaryButtonText="Book Consultation"
-                    secondaryButtonText="Download AI Roadmap"
+                    secondaryButtonText="Download Marketing Audit Checklist"
                     secondaryButtonHref="/ai-roadmap"
                 />
             </div>
