@@ -55,7 +55,7 @@ const HeroSection = () => {
         muted
         playsInline
         className="absolute top-1/2 left-1/2 w-auto min-w-full min-h-full h-auto transform -translate-x-1/2 -translate-y-1/2 object-cover -z-10">
-        <source src="/videos/hero-video.mp4" type="video/mp4" />
+        <source src="/videos/hero-video2.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </motion.video>
 

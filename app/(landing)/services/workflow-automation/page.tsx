@@ -53,9 +53,9 @@ export default function WorkflowAutomationPage() {
             {/* Page Banner */}
             <div className="max-w-[1150px] mx-auto lg:mt-[160px] mt-[80px] lg:my-[100px] my-[50px]">
                 <PageBanner
-                    buttonText="Explore Details"
-                    heading="Workflow Automation"
-                    subheading="Rule-Driven AI Workflows That Scale Securely Across Teams."
+                    buttonText="Our Services"
+                    heading="Search Engine Optimization (SEO)"
+                    subheading="Drive sustainable growth with data-driven SEO strategies that improve search rankings, increase organic traffic, and connect your business with high-intent customers."
                 />
             </div>
 
@@ -63,9 +63,9 @@ export default function WorkflowAutomationPage() {
             <div className="max-w-[1150px] w-[95%] mx-auto lg:mt-[180px] mt-[100px] overflow-hidden">
                 <GetInTouchSection
                     smallText=""
-                    heading="Remove Manual Work. Unlock Smart Automation."
-                    description="Unify Systems, Eliminate Bottlenecks, And Deploy Rule-Driven AI Workflows That Scale With Your Business."
-                    imageSrc="/images/workflow-automation.png"
+                    heading="SEO That Drives Organic Growth"
+                    description="Rank higher, get found, and build sustainable organic traffic that compounds over time.."
+                    imageSrc="/images/workflow-automation2.png"
                     imageAlt="Workflow Automation"
                 />
             </div>
@@ -82,8 +82,8 @@ export default function WorkflowAutomationPage() {
             <div className="max-w-[1150px] w-[95%] mx-auto lg:my-[64px] my-[40px] lg:mb-[100px] mb-[50px]">
                 <FeaturesBlock
                     title="What We Deliver"
-                    leftImage="/images/img3.png"
-                    rightImage="/images/img4.png"
+                    leftImage="/images/brain.png"
+                    rightImage="/images/twopc.png"
                     leftImageAlt="3D Robot Automation Illustration"
                     rightImageAlt="Smart Workflow Automation Schematic"
                     features={whatWeDeliverFeatures}
