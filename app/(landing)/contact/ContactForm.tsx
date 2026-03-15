@@ -4,9 +4,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import Container from "@/components/ui/Container";
+import { Select } from "@/components/ui/Select";
 import { useContactMutation } from "@/redux/api/formsApi";
 import { useAppSelector } from "@/redux/hooks";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
@@ -52,6 +53,7 @@ export default function ContactForm() {
   // React Hook Form setup
   const {
     register,
+    control,
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
@@ -225,35 +227,19 @@ export default function ContactForm() {
                     className="block text-sm font-medium text-white mb-2">
                     Country
                   </label>
-                  <div className="relative">
-                    <select
-                      id="country"
-                      {...register("country")}
-                      className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none pr-10">
-                      <option value="" disabled hidden>
-                        Select Your Country
-                      </option>
-                      {countries.map((country) => (
-                        <option key={country} value={country}>
-                          {country}
-                        </option>
-                      ))}
-                    </select>
-                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                      <svg
-                        className="w-5 h-5 text-white/50"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24">
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </div>
-                  </div>
+                  <Controller
+                    name="country"
+                    control={control}
+                    render={({ field }) => (
+                      <Select
+                        id="country"
+                        value={field.value}
+                        onValueChange={field.onChange}
+                        options={countries.map((c) => ({ value: c, label: c }))}
+                        placeholder="Select Your Country"
+                      />
+                    )}
+                  />
                   {errors.country && (
                     <p className="text-red-400 text-xs mt-1.5">
                       {errors.country.message}
@@ -269,37 +255,27 @@ export default function ContactForm() {
                   className="block text-sm font-medium text-white mb-2">
                   Project Type
                 </label>
-                <div className="relative">
-                  <select
-                    id="projectType"
-                    {...register("projectType")}
-                    className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none pr-10">
-                    <option value="" disabled hidden>
-                      Select Your Project Type...
-                    </option>
-                    <option value="ai-agents">AI Agents</option>
-                    <option value="automations">Automations</option>
-                    <option value="rag-systems">RAG Systems</option>
-                    <option value="custom-ai-applications">Custom AI Applications</option>
-                    <option value="ai-integration">AI Integration</option>
-                    <option value="ai-strategy-consulting">AI Strategy & Consulting</option>
-                    <option value="other">Other</option>
-                  </select>
-                  <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                    <svg
-                      className="w-5 h-5 text-white/50"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </div>
-                </div>
+                <Controller
+                  name="projectType"
+                  control={control}
+                  render={({ field }) => (
+                    <Select
+                      id="projectType"
+                      value={field.value}
+                      onValueChange={field.onChange}
+                      options={[
+                        { value: "ai-agents", label: "AI Agents" },
+                        { value: "automations", label: "Automations" },
+                        { value: "rag-systems", label: "RAG Systems" },
+                        { value: "custom-ai-applications", label: "Custom AI Applications" },
+                        { value: "ai-integration", label: "AI Integration" },
+                        { value: "ai-strategy-consulting", label: "AI Strategy & Consulting" },
+                        { value: "other", label: "Other" },
+                      ]}
+                      placeholder="Select Your Project Type..."
+                    />
+                  )}
+                />
                 {errors.projectType && (
                   <p className="text-red-400 text-xs mt-1.5">
                     {errors.projectType.message}
@@ -314,35 +290,19 @@ export default function ContactForm() {
                   className="block text-sm font-medium text-white mb-2">
                   Budget Range
                 </label>
-                <div className="relative">
-                  <select
-                    id="budgetRange"
-                    {...register("budgetRange")}
-                    className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none pr-10">
-                    <option value="" disabled hidden>
-                      Select Your Budget Range
-                    </option>
-                    {budgetRanges.map((range) => (
-                      <option key={range} value={range}>
-                        {range}
-                      </option>
-                    ))}
-                  </select>
-                  <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                    <svg
-                      className="w-5 h-5 text-white/50"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </div>
-                </div>
+                <Controller
+                  name="budgetRange"
+                  control={control}
+                  render={({ field }) => (
+                    <Select
+                      id="budgetRange"
+                      value={field.value}
+                      onValueChange={field.onChange}
+                      options={budgetRanges.map((r) => ({ value: r, label: r }))}
+                      placeholder="Select Your Budget Range"
+                    />
+                  )}
+                />
                 {errors.budgetRange && (
                   <p className="text-red-400 text-xs mt-1.5">
                     {errors.budgetRange.message}

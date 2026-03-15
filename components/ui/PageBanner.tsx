@@ -73,11 +73,8 @@ const PageBanner: React.FC<PageBannerProps> = ({
               variants={buttonVariants}
               className="flex justify-center mb-8 relative">
               {buttonHref ? (
-                <motion.a
+                <a
                   href={buttonHref}
-                  // whileHover={{ scale: 1.05, y: -2 }}
-                  // whileTap={{ scale: 0.98 }}
-                  // transition={{ duration: 0.2 }}
                   className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-sm md:text-base text-white border border-white/90 hover:border-white transition-all duration-200 font-semibold">
                   {buttonText}
                   <svg 
@@ -95,13 +92,11 @@ const PageBanner: React.FC<PageBannerProps> = ({
                       strokeLinecap="round"
                     />
                   </svg>
-                </motion.a>
+                </a>
               ) : (
-                <motion.button
+                <button
+                  type="button"
                   onClick={onButtonClick}
-                  // whileHover={{ scale: 1.05, y: -2 }}
-                  // whileTap={{ scale: 0.98 }}
-                  // transition={{ duration: 0.2 }}
                   className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-sm md:text-base text-white border border-white/90 hover:border-white transition-all duration-200 font-semibold relative">
                   {buttonText}
                   <svg 
@@ -119,7 +114,7 @@ const PageBanner: React.FC<PageBannerProps> = ({
                       strokeLinecap="round"
                     />
                   </svg>
-                </motion.button>
+                </button>
               )}
             </motion.div>
           )}

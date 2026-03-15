@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, ChevronDown } from "lucide-react";
+import { Shield } from "lucide-react";
+import { Select } from "@/components/ui/Select";
 import Link from "next/link";
 import { useConsultationMutation } from "@/redux/api/formsApi";
 import { useAppSelector } from "@/redux/hooks";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
@@ -82,6 +83,7 @@ export default function ConsultationForm() {
   // React Hook Form setup
   const {
     register,
+    control,
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
@@ -276,38 +278,43 @@ export default function ConsultationForm() {
               <label htmlFor="industry" className="block text-sm font-medium text-white mb-2">
                 Industry
               </label>
-              <div className="relative">
-                <select
-                  id="industry"
-                  {...register("industry")}
-                  className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 pr-10 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none cursor-pointer">
-                  <option value="">Your Industry</option>
-                  {industryOptions.map((opt) => (
-                    <option key={opt} value={opt}>{opt}</option>
-                  ))}
-                </select>
-                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none" />
-              </div>
+              <Controller
+                name="industry"
+                control={control}
+                render={({ field }) => (
+                  <Select
+                    id="industry"
+                    value={field.value ?? ""}
+                    onValueChange={field.onChange}
+                    options={industryOptions.map((opt) => ({ value: opt, label: opt }))}
+                    placeholder="Your Industry"
+                    allowEmpty
+                  />
+                )}
+              />
             </div>
             <div>
               <label htmlFor="budgetRange" className="block text-sm font-medium text-white mb-2">
                 Monthly Marketing Budget
               </label>
-              <div className="relative">
-                <select
-                  id="budgetRange"
-                  {...register("budgetRange")}
-                  className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 pr-10 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none cursor-pointer">
-                  <option value="" disabled hidden>
-                    Select Your Budget Range
-                  </option>
-                  <option value="5k-15k">Under $5,000</option>
-                  <option value="15k-50k">$5,000 - $15,000</option>
-                  <option value="50k-150k">$15,000 - $50,000</option>
-                  <option value="150k-plus">$50,000+</option>
-                </select>
-                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none" />
-              </div>
+              <Controller
+                name="budgetRange"
+                control={control}
+                render={({ field }) => (
+                  <Select
+                    id="budgetRange"
+                    value={field.value}
+                    onValueChange={field.onChange}
+                    options={[
+                      { value: "5k-15k", label: "Under $5,000" },
+                      { value: "15k-50k", label: "$5,000 - $15,000" },
+                      { value: "50k-150k", label: "$15,000 - $50,000" },
+                      { value: "150k-plus", label: "$50,000+" },
+                    ]}
+                    placeholder="Select Your Budget Range"
+                  />
+                )}
+              />
               {errors.budgetRange && (
                 <p className="text-red-400 text-xs mt-1.5">{errors.budgetRange.message}</p>
               )}
@@ -319,20 +326,19 @@ export default function ConsultationForm() {
             <label htmlFor="primaryGoal" className="block text-sm font-medium text-white mb-2">
               Primary Goal
             </label>
-            <div className="relative">
-              <select
-                id="primaryGoal"
-                {...register("primaryGoal")}
-                className="w-full bg-[#70809080] border border-[#3a3a3a] rounded-lg px-4 py-3 pr-10 text-white focus:outline-none focus:border-[#1E72A1] transition-colors appearance-none cursor-pointer">
-                <option value="" disabled hidden>
-                  Your goal
-                </option>
-                {primaryGoalOptions.map((opt) => (
-                  <option key={opt.value} value={opt.value}>{opt.label}</option>
-                ))}
-              </select>
-              <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none" />
-            </div>
+            <Controller
+              name="primaryGoal"
+              control={control}
+              render={({ field }) => (
+                <Select
+                  id="primaryGoal"
+                  value={field.value}
+                  onValueChange={field.onChange}
+                  options={primaryGoalOptions}
+                  placeholder="Your goal"
+                />
+              )}
+            />
             {errors.primaryGoal && (
               <p className="text-red-400 text-xs mt-1.5">{errors.primaryGoal.message}</p>
             )}
