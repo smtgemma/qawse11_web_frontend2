@@ -115,11 +115,10 @@ export default function CaseStudiesResourcesSection() {
         {/* Title and Description */}
         <motion.div variants={headerVariants} className="space-y-4 max-w-2xl">
           <h1 className="text-2xl md:text-3xl lg:text-[40px] font-semibold leading-[1.3] md:leading-[1.35] lg:leading-[50px]">
-            Case Studies & Resources
+           Case Studies & Success Stories
           </h1>
-          <p className="text-sm md:text-base lg:text-lg leading-relaxed">
-            Learn more about building, evaluating, training, and scaling agent
-            solutions.
+          <p className="text-sm md:text-base lg:text-md leading-relaxed">
+           Real results from real campaigns. See how we’ve helped businesses like yours grow.
           </p>
         </motion.div>
 
@@ -134,7 +133,7 @@ export default function CaseStudiesResourcesSection() {
             background: "transparent",
             color: "#FFFFFF",
           }}>
-          <span className="whitespace-nowrap">View Case Study</span>
+          <span className="whitespace-nowrap">View All Case Studies</span>
           <motion.div variants={arrowVariants}>
             <ArrowRight className="w-5 h-5" />
           </motion.div>

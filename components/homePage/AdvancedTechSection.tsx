@@ -49,10 +49,10 @@ const AdvancedTechSection = () => {
   };
 
   const advantages = [
-    "Composable microservices with event-driven orchestration",
-    "Optimized retrieval layers tuned for accuracy & low latency",
-    "Enterprise-grade security with encrypted data pipelines",
-    "Full observability across prompts, traces, and model evaluations",
+    "Multi-channel attribution tracking across all touchpoints",
+    "AI-powered bid optimization and audience targeting",
+    "Real-time dashboards with actionable insights",
+    "Conversion rate optimization through continuous A/B testing",
   ];
 
   return (
@@ -81,16 +81,14 @@ const AdvancedTechSection = () => {
           <motion.h2
             variants={fadeInUp}
             className="text-2xl md:text-3xl lg:text-[40px] font-semibold leading-[1.3] md:leading-[1.35] lg:leading-[50px]">
-            Powered by Next-Generation AI Architecture
+            Powered by Data, Driven by Results
           </motion.h2>
 
           {/* Description */}
           <motion.p
             variants={fadeInUp}
             className="text-sm md:text-base lg:text-lg leading-relaxed text-white/80">
-            Our AI systems leverage cutting-edge neural networks, transformer
-            models, and proprietary retrieval layers to deliver exceptional
-            accuracy, speed, and reliability.
+            Our marketing stack combines enterprise-grade analytics, AI-powered optimization, and real-time reporting to maximize your ROI.
           </motion.p>
 
           {/* Core Advantages */}
@@ -131,7 +129,7 @@ const AdvancedTechSection = () => {
             transition={{ duration: 0.3 }}
             className="relative w-full max-w-[400px] md:max-w-[500px] lg:max-w-[550px]">
             <Image
-              src="/images/advnc-tech.svg"
+              src="/images/brain.png"
               alt="Advanced Technology Architecture"
               width={600}
               height={600}

@@ -51,8 +51,7 @@ export default function ImpactResultSection() {
           Measurable Business Outcomes
         </h1>
         <p className="text-sm md:text-base lg:text-lg leading-relaxed">
-          Data-driven results that demonstrate the transformative power of
-          enterprise AI implementation.
+          Data-driven results that demonstrate the power of strategic digital marketing.
         </p>
       </motion.div>
 

@@ -48,13 +48,12 @@ export default function IndustrySolutions() {
         </div>
 
         <h1 className="text-2xl md:text-3xl lg:text-[40px] font-semibold leading-[1.3] md:leading-[1.35] lg:leading-[50px]">
-          Transforming Industries Through AI
+          Marketing Strategies Tailored to Your Industry
         </h1>
         <p className="text-sm md:text-base lg:text-lg leading-relaxed">
-          Deep domain expertise across multiple sectors enables us to deliver AI
-          solutions that
+          Deep expertise across sectors enables us to deliver campaigns that resonate
           <br />
-          address industry-specific challenges.
+          with your specific audience.
         </p>
       </motion.div>
 

@@ -47,17 +47,16 @@ export default function BuiltWithAi() {
           <motion.h2
             variants={fadeInUp}
             className="text-2xl md:text-3xl lg:text-[40px] font-semibold leading-[1.3] md:leading-[1.35] lg:leading-[50px]">
-            Built with Advanced AI
+            Built on Advanced 
             <br />
-            Engineering
+           Marketing Intelligence
           </motion.h2>
 
           {/* Description */}
           <motion.p
             variants={fadeInUp}
             className="text-sm md:text-base lg:text-lg leading-relaxed text-white/80">
-            Our solutions combine cutting-edge AI models, secure architectures,
-            and scalable cloud infrastructure.
+            Our performance framework combines AI-powered optimization, multi-channel attribution, and real-time analytics to continuously improve campaign results and maximize ROI.
           </motion.p>
         </motion.div>
 
@@ -73,7 +72,7 @@ export default function BuiltWithAi() {
             transition={{ duration: 0.3 }}
             className="relative w-full max-w-[400px] md:max-w-[500px] ">
             <Image
-              src="/images/built-with-ai.svg"
+              src="/images/build-with-ai.png"
               alt="Advanced Technology Architecture"
               width={550}
               height={550}
