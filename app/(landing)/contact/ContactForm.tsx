@@ -116,11 +116,10 @@ export default function ContactForm() {
   ];
 
   const budgetRanges = [
-    "$5k-$15k",
-    "$15k-$50k",
-    "$50k-$150k",
-    "$150k+",
-    "Not sure yet",
+    "Under $5,000",
+    "$5,000 - $15,000",
+    "$15,000 - $50,000",
+    "$50,000+",
   ];
 
   return (

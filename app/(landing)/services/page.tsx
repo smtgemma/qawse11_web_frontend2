@@ -62,9 +62,9 @@ export default function ServicesPage() {
             {/* Page Banner */}
             <div className="max-w-[1150px] mx-auto lg:mt-[160px] mt-[80px] lg:my-[100px] my-[50px]">
                 <PageBanner
-                    buttonText="Explore Details"
-                    heading="AI Chatbots & AI Agents"
-                    subheading="Enterprise-Ready AI Agents For Automation, Support & Operations"
+                    buttonText="Our Services"
+                    heading="Paid Advertising (PPC)"
+                    subheading="Drive immediate traffic and measurable growth with data-driven PPC campaigns that target the right audience and maximize your return on ad spend."
                 />
             </div>
 
@@ -90,11 +90,12 @@ export default function ServicesPage() {
             <div>
                 {/* CTA Section */}
                 <CTASection
-                    badgeText="Trusted By Fortune 500 Teams"
-                    heading={`Transform Your Business With AI Book A Consultation`}
-                    description="Speak With Our Team To Explore How Workflow Can Improve Accuracy, Reduce Hallucinations, And Secure Your AI Systems."
+                    badgeText="Ready to grow?"
+                    heading={`Let's Build Your Growth Engine
+`}
+                    description="Book a free strategy call to discover how we can accelerate your digital marketing results."
                     primaryButtonText="Book Consultation"
-                    secondaryButtonText="Download AI Roadmap"
+                    secondaryButtonText="Download Marketing Audit Checklist"
                     secondaryButtonHref="/ai-roadmap"
                 />
             </div>

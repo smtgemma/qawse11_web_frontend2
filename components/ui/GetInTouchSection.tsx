@@ -44,9 +44,9 @@ type GetInTouchFormData = z.infer<typeof getInTouchSchema>;
 
 const GetInTouchSection: React.FC<GetInTouchSectionProps> = ({
   smallText = "AI Agent Capabilities",
-  heading = "Next-Gen AI Agents For Conversations That Convert",
-  description = "From Automating Support To Powering Custom AI Workflows, Our Agents Drive Measurable Business Results Across Enterprise Operations.",
-  imageSrc = "/images/service-get-in-touch.png",
+  heading = "Paid Advertising That Delivers ROI",
+  description = "Stop wasting ad spend on campaigns that don’t convert. Our data-driven approach to paid media ensures every dollar works toward your business goals.",
+  imageSrc = "/images/service-get-in-touch2.png",
   imageAlt = "AI Agent Capabilities",
   className = "",
 }) => {

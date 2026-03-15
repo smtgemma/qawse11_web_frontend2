@@ -23,13 +23,13 @@ export default function AboutContent() {
       icon: MissionIcon,
       title: "Our Mission",
       description:
-        "Empowering Enterprises With Scalable AI Solutions That Deliver Reliable, Real-World Performance At Global Scale.",
+        "To help businesses grow through data-driven digital marketing strategies that attract the right audience, generate quality leads, and deliver measurable results.",
     },
     {
       icon: VisionIcon,
       title: "Our Vision",
       description:
-        "A Future Where Every Business Workflow Is Automated, Intelligent, And Fully Data-Driven.",
+        "To become a trusted global partner for businesses seeking innovative, performance-focused marketing solutions that drive sustainable growth.",
     },
   ];
 
@@ -39,8 +39,8 @@ export default function AboutContent() {
       <div className="max-w-[1150px]  lg:mt-[160px] mt-[80px] mx-auto lg:my-[100px] my-[50px]">
         <PageBanner
           buttonText="About Us"
-          heading={`We Build Enterprise-Grade\nAI Systems`}
-          subheading="We Accelerate Enterprise Growth Through Intelligent, Scalable AI Automation."
+          heading={`We Build Marketing Engines That\nDrive Sustainable Growth`}
+          subheading="A results-obsessed agency helping ambitious brands scale through strategic digital marketing."
         />
       </div>
 
@@ -52,36 +52,36 @@ export default function AboutContent() {
       {/* Our Values Section */}
       <div className="max-w-[1150px] w-[95%] mx-auto lg:my-[100px] my-[50px]">
         <ValuesSection
-          smallText="Our Values"
-          heading="The Principles That Guide Our Work And Define Our Commitment To Excellence."
+          smallText="Our Approach"
+          heading="How We're Different"
           values={[
             {
               icon: InnovationIcon,
-              title: "Innovation",
+              title: "Data-First Decisions",
               description:
-                "Advancing AI To Deliver Cutting-Edge Solutions That Create Measurable Business Impact.",
+                "Every strategy, campaign, and creative choice is backed by data not guesswork.",
             },
             {
               icon: IntegrityIcon,
-              title: "Integrity",
+              title: "Full Transparency",
               description:
-                "Transparency, Ethical AI Practices, And Unwavering Commitment To Client Trust.",
+                "Real-time dashboards. Weekly updates. No hidden fees or confusing reports.",
             },
             {
               icon: ReliabilityIcon,
-              title: "Reliability",
+              title: "Results Obsessed",
               description:
-                "Robust, Scalable Systems Engineered For Consistent Performance In Mission-Critical Environments.",
+                "We’re not happy unless you’re hitting your goals. Your success is our success.",
             },
             {
               icon: ExcellenceIcon,
-              title: "Excellence",
+              title: "Long-Term Partners",
               description:
-                "Top-Tier Engineering, Design, And Execution Across Every Engagement.",
+                "We don’t do quick wins that fade. We build sustainable growth engines.",
             },
           ]}
-          imageSrc="/images/ourValues.jpg"
-          imageAlt="Our Values"
+          imageSrc="/images/ourValues2.png"
+          imageAlt="Our Approach"
         />
       </div>
 
@@ -89,31 +89,31 @@ export default function AboutContent() {
       <div className="max-w-[1150px]  mx-auto lg:mt-[100px] mt-[50px]">
         <WhyChooseUsSection
           smallText="Why Choose Us"
-          heading="We Deliver AI Solutions That Drive Real Business Value With Speed, Security, And Reliability."
+          heading="Built for Measurable Growth"
           features={[
             {
               icon: BrainIcon,
-              title: "Expertise In AI Agents",
+              title: "Data-Driven Strategy",
               description:
-                "Deep Specialization In Autonomous Systems And Enterprise-Grade AI Workflows.",
+                "Smarter marketing decisions powered by real data.",
             },
             {
               icon: ReliabilityIcon,
-              title: "Proven Enterprise Deployments",
+              title: "Proven Marketing Results",
               description:
-                "Track Record Delivering High-Impact AI Implementations For Fortune-Level Organizations.",
+                "Strategies designed to drive measurable business growth.",
             },
             {
               icon: ClockIcon,
-              title: "Fast Delivery Cycles",
+              title: "Full-Funnel Expertise",
               description:
-                "Agile Methodology That Accelerates Time-To-Value Without Sacrificing Quality.",
+                "Optimizing every stage of the customer journey.",
             },
             {
               icon: PadlockIcon,
-              title: "Robust Security Standards",
+              title: "Transparent Reporting",
               description:
-                "Enterprise-Grade Compliance And Data Protection Built Into Every Solution.",
+                "Your goals are our goals.",
             },
           ]}
         />
@@ -122,11 +122,12 @@ export default function AboutContent() {
       <div>
         {/* CTA Section */}
         <CTASection
-          badgeText="Trusted By Fortune 500 Teams"
-          heading={`Transform Your Business With AI Book A Consultation`}
-          description="Speak With Our Team To Explore How Workflow Can Improve Accuracy, Reduce Hallucinations, And Secure Your AI Systems."
+          badgeText="Ready to grow?"
+          heading={`Let's Build Your Growth Engine
+`}
+          description="Book a free strategy call to discover how we can accelerate your digital marketing results."
           primaryButtonText="Book Consultation"
-          secondaryButtonText="Download AI Roadmap"
+          secondaryButtonText="Download Marketing Audit Checklist"
           secondaryButtonHref="/ai-roadmap"
         />
       </div>
