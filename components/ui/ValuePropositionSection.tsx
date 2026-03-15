@@ -17,7 +17,7 @@ interface ValuePropositionSectionProps {
 }
 
 const ValuePropositionSection: React.FC<ValuePropositionSectionProps> = ({
-  smallText = "Value Proposition Sections",
+  smallText = "What's Included",
   items,
   className = "",
 }) => {

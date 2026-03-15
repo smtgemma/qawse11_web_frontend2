@@ -143,11 +143,10 @@ export default function ConsultationForm() {
         {/* Header */}
         <div className="mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Let&apos;s Build Smarter Together
+            Schedule Your Free Strategy Call
           </h2>
           <p className="text-white/80 text-base leading-relaxed">
-            Empower Your Business With Next-Generation AI Solutions From
-            Dima360AI. Schedule a 1:1 strategy session tailored to your goals.
+            Tell us about your business and goals. We’ll prepare a custom growth roadmap for your call.
           </p>
         </div>
 

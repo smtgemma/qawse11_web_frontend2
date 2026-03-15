@@ -11,8 +11,8 @@ export default function BookConsultationPage() {
       <div className="max-w-[1150px] mx-auto lg:mt-[160px] mt-[80px] lg:my-[100px] my-[50px]">
         <PageBanner
           buttonText="Book Consultation"
-          heading="Let's Build The Future With Dima360AI"
-          subheading="Book a consultation and explore how AI can transform your business."
+          heading="Let's Build Your Growth Strategy"
+          subheading="Book a free consultation to explore how we can help you achieve your marketing goals.."
         />
       </div>
 

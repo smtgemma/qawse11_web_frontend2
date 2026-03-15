@@ -403,8 +403,8 @@ export default function ContactForm() {
                   <Send className="w-5 h-5" />
                   <span>
                     {isSubmitting || isLoading
-                      ? "Submitting..."
-                      : "Submit Inquiry"}
+                      ? "Booking..."
+                      : "Book a Call"}
                   </span>
                 </span>
               </button>
