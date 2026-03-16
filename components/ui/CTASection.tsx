@@ -25,7 +25,7 @@ const CTASection: React.FC<CTASectionProps> = ({
   primaryButtonHref = "/book-consultation",
   primaryButtonOnClick,
   secondaryButtonText = "Download AI Roadmap",
-  secondaryButtonHref = "/ai-roadmap",
+  secondaryButtonHref = "/download-marketing-audit-checklist",
   secondaryButtonOnClick,
   className = "",
 }) => {

@@ -99,7 +99,7 @@ export default function RAGSystemsPage() {
                     description="Book a free strategy call to discover how we can accelerate your digital marketing results."
                     primaryButtonText="Book Consultation"
                     secondaryButtonText="Download Marketing Audit Checklist"
-                    secondaryButtonHref="/ai-roadmap"
+                    secondaryButtonHref="/download-marketing-audit-checklist"
                 />
             </div>
         </>
