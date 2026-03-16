@@ -9,7 +9,7 @@ export default function CaseStudiesPage() {
       <div className="lg:mt-[160px] mt-[100px]">
         <PageBanner
           buttonText="Case Studies"
-          heading={`Let's Build The Future With \nDima360AI`}
+          heading={`Let's Build The Future With \nDima360Marketing`}
           subheading="Book a consultation or get in touch with our team."
         />
       </div>

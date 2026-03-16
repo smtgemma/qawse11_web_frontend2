@@ -139,7 +139,7 @@ export default function CaseStudiesSection() {
       <Container className="">
         <div className="space-y-12">
           {/* Heading */}
-          <motion.div
+          {/* <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -150,7 +150,7 @@ export default function CaseStudiesSection() {
               automation, intelligence, and measurable business outcomes across
               industries.
             </h2>
-          </motion.div>
+          </motion.div> */}
 
           {/* Case Study Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">

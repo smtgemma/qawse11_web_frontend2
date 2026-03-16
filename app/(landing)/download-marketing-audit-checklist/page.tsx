@@ -34,13 +34,13 @@ export default function AIRoadmapPage() {
       {/* Page Banner */}
       <div className="lg:mt-[160px] mt-[100px]">
         <PageBanner
-          heading="Download Your AI Transformation Roadmap"
-          subheading="A Step-By-Step Strategic Roadmap To Plan, Build, And Scale AI Solutions For Your Business."
+          heading="Free Marketing Audit Checklist"
+          subheading="Evaluate your current marketing strategy and uncover opportunities for growth."
         />
       </div>
 
       {/* Content Section */}
-      <div className="bg-black text-white lg:mt-[100px] mt-[50px]">
+      <div className=" text-white lg:mt-[100px] mt-[50px]">
         <Container className="py-12 md:py-16">
           <motion.div
             initial="hidden"
@@ -48,17 +48,17 @@ export default function AIRoadmapPage() {
             viewport={{ once: true, amount: 0.3 }}
             variants={containerVariants}
             className="space-y-12 md:space-y-16">
-            {/* Why you need an ai roadmap */}
+            {/* Description */}
             <motion.section variants={fadeInUp}>
               <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-white">
-                Why you need an ai roadmap
+                Description
               </h2>
               <div className="space-y-4">
                 <p className="text-base font-normal leading-relaxed text-white/80">
-                  Many businesses fail with AI because they start with tools instead of strategy.
-                </p>
-                <p className="text-base font-normal leading-relaxed text-white/80">
-                  This roadmap helps you avoid costly mistakes and shows you exactly what to do, when to do it, and why it matters.
+                  Many businesses struggle with digital marketing because they
+                  jump into tools and campaigns without a clear strategy. A
+                  marketing roadmap helps you focus on the right channels,
+                  optimize performance, and scale your growth with a clear plan.
                 </p>
               </div>
             </motion.section>
@@ -73,19 +73,21 @@ export default function AIRoadmapPage() {
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-lg font-semibold mb-2 text-white">
-                      Clear AI Strategy
+                      Clear Marketing Strategy
                     </h3>
-                    <li className="text-base font-normal text-white/80 list-disc list-inside">
-                      Align AI initiatives with real business goals
-                    </li>
+                    <ul className="list-disc list-inside space-y-1 text-base font-normal text-white/80">
+                      <li>Align all marketing campaigns with real business goals</li>
+                      <li>Focus on channels that generate measurable results</li>
+                    </ul>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2 text-white">
-                      Reduced Risk
+                      Reduced Marketing Waste
                     </h3>
-                    <li className="text-base font-normal text-white/80 list-disc list-inside">
-                      Avoid security, compliance, and scalability issues
-                    </li>
+                    <ul className="list-disc list-inside space-y-1 text-base font-normal text-white/80">
+                      <li>Avoid spending budget on ineffective campaigns</li>
+                      <li>Improve ROI with data-driven decisions</li>
+                    </ul>
                   </div>
                 </div>
 
@@ -93,100 +95,109 @@ export default function AIRoadmapPage() {
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-lg font-semibold mb-2 text-white">
-                      Faster ROI
+                      Faster Growth
                     </h3>
-                    <li className="text-base font-normal text-white/80 list-disc list-inside">
-                      Focus on high-impact, low-risk AI use cases
-                    </li>
+                    <ul className="list-disc list-inside space-y-1 text-base font-normal text-white/80">
+                      <li>Identify high-impact marketing opportunities</li>
+                      <li>Prioritize strategies that bring qualified leads</li>
+                    </ul>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2 text-white">
-                      Execution-Ready
+                      Execution Ready
                     </h3>
-                    <li className="text-base font-normal text-white/80 list-disc list-inside">
-                      Move from idea to deployment with clarity
-                    </li>
+                    <ul className="list-disc list-inside space-y-1 text-base font-normal text-white/80">
+                      <li>Move from planning to launching campaigns with clarity</li>
+                      <li>Implement marketing systems that scale with your business</li>
+                    </ul>
                   </div>
                 </div>
               </div>
             </motion.section>
 
-            {/* What's Inside The AI Roadmap */}
+            {/* What's Inside The Marketing Roadmap */}
             <motion.section variants={fadeInUp}>
               <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-white">
-                What&apos;s Inside The AI Roadmap
+                What&apos;s Inside The Marketing Roadmap
               </h2>
               <h3 className="text-xl font-semibold my-3 mt-7 text-white">
-                Roadmap Breakdown
+                Marketing Strategy Breakdown
               </h3>
               <div className="space-y-6">
                 {/* Step 01 */}
                 <div>
                   <h4 className="text-lg font-semibold mb-2 text-white">
-                    Step 01 - AI Readiness Assessment
+                    Step 01 – Marketing Performance Audit
                   </h4>
                   <p className="text-base font-normal text-white/80">
-                    Evaluate your data, systems, and organizational readiness
+                    Analyze your current marketing channels, website
+                    performance, and lead generation strategy.
                   </p>
                 </div>
 
                 {/* Step 02 */}
                 <div>
                   <h4 className="text-lg font-semibold mb-2 text-white">
-                    Step 02 - Use Case Identification
+                    Step 02 – Audience &amp; Market Research
                   </h4>
                   <p className="text-base font-normal text-white/80">
-                    Identify AI opportunities with the highest business impact
+                    Identify your target audience, customer needs, and
+                    competitive positioning.
                   </p>
                 </div>
 
                 {/* Step 03 */}
                 <div>
                   <h4 className="text-lg font-semibold mb-2 text-white">
-                    Step 03 - Data & Infrastructure Planning
+                    Step 03 – Channel Strategy Planning
                   </h4>
                   <p className="text-base font-normal text-white/80">
-                    Understand what data you need and how to structure it
+                    Determine the most effective channels such as SEO, paid ads,
+                    social media, and content marketing.
                   </p>
                 </div>
 
                 {/* Step 04 */}
                 <div>
                   <h4 className="text-lg font-semibold mb-2 text-white">
-                    Step 04 - Model & Tool Selection
+                    Step 04 – Campaign &amp; Funnel Design
                   </h4>
                   <p className="text-base font-normal text-white/80">
-                    Choose the right AI models, platforms, and vendors
+                    Create optimized marketing funnels that attract visitors and
+                    convert them into customers.
                   </p>
                 </div>
 
                 {/* Step 05 */}
                 <div>
                   <h4 className="text-lg font-semibold mb-2 text-white">
-                    Step 05 - Implementation & Deployment
+                    Step 05 – Implementation &amp; Campaign Launch
                   </h4>
                   <p className="text-base font-normal text-white/80">
-                    Build, test, and launch AI solutions safely
+                    Launch campaigns across selected channels with clear KPIs
+                    and tracking systems.
                   </p>
                 </div>
 
                 {/* Step 06 */}
                 <div>
                   <h4 className="text-lg font-semibold mb-2 text-white">
-                    Step 06 - Security & Governance
+                    Step 06 – Analytics &amp; Performance Tracking
                   </h4>
                   <p className="text-base font-normal text-white/80">
-                    Ensure compliance, privacy, and responsible AI usage
+                    Monitor marketing performance through analytics dashboards
+                    and data insights.
                   </p>
                 </div>
 
                 {/* Step 07 */}
                 <div>
                   <h4 className="text-lg font-semibold mb-2 text-white">
-                    Step 07 - Scaling & Optimization
+                    Step 07 – Optimization &amp; Scaling
                   </h4>
                   <p className="text-base font-normal text-white/80">
-                    Improve performance and expand AI across teams
+                    Continuously improve campaigns and scale the strategies that
+                    drive the best results.
                   </p>
                 </div>
               </div>

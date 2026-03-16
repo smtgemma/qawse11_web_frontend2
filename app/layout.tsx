@@ -13,39 +13,41 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.dima360ai.com"),
+  metadataBase: new URL("https://www.dima360marketing.com"),
   title: {
-    template: "%s | DIMA360AI",
-    default: "DIMA360AI – Enterprise AI Solutions, Agents & Automation",
+    template: "%s | DIMA360MARKETING",
+    default: "DIMA360MARKETING – Performance Marketing & Growth Partner",
   },
   description:
-    "DIMA360AI delivers enterprise-grade AI solutions including AI agents, intelligent automation, RAG systems, data analytics, and custom AI engineering.",
-  applicationName: "DIMA360AI",
-  category: "Technology",
+    "DIMA360MARKETING helps brands scale with performance-driven digital marketing across paid ads, SEO, social, content, email, and analytics.",
+  applicationName: "DIMA360MARKETING",
+  category: "Marketing",
   keywords: [
-    "enterprise AI solutions",
-    "AI agents",
-    "AI automation",
-    "RAG systems",
-    "custom AI development",
-    "AI engineering services",
+    "performance marketing agency",
+    "digital marketing",
+    "paid advertising",
+    "seo services",
+    "social media marketing",
+    "content marketing",
+    "email marketing",
+    "analytics and reporting",
   ],
-  authors: [{ name: "DIMA360AI Team" }],
-  creator: "DIMA360AI",
-  publisher: "DIMA360AI",
+  authors: [{ name: "DIMA360MARKETING Team" }],
+  creator: "DIMA360MARKETING",
+  publisher: "DIMA360MARKETING",
   icons: {
-    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
-    shortcut: "/favicon.ico",
+    icon: [{ url: "/images/logo.png", type: "image/png" }],
+    shortcut: "/images/logo.png",
   },
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "DIMA360AI – Enterprise AI Solutions Built for Scale",
+    title: "DIMA360MARKETING – Performance Marketing Built To Scale",
     description:
-      "Design, deploy, and scale enterprise-ready AI with DIMA360AI. AI agents, automation, and RAG systems.",
+      "DIMA360MARKETING drives measurable growth with paid advertising, SEO, social media, content, email marketing, and analytics.",
     url: "/",
-    siteName: "DIMA360AI",
+    siteName: "DIMA360MARKETING",
     locale: "en_US",
     type: "website",
     images: [
@@ -59,9 +61,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DIMA360AI – Enterprise AI Solutions & Automation",
+    title: "DIMA360MARKETING – Performance Marketing & Growth Partner",
     description:
-      "Enterprise AI solutions including AI agents and scalable AI systems.",
+      "Performance-focused digital marketing across paid ads, SEO, social, content, email, and analytics.",
     images: ["/og-image.png"],
   },
   robots: {
