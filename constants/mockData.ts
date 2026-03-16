@@ -23,7 +23,7 @@ import {
 
 export const solutionData = [
   {
-    id: "ai-chatbots-agents",
+    id: "paid-advertising",
     title: "Paid Advertising (PPC",
     icon: ChatBotIcon,
     link: "/services",
@@ -34,10 +34,10 @@ export const solutionData = [
     ],
   },
   {
-    id: "Search Engine Optimization (SEO)",
+    id: "seo",
     title: "Search Engine Optimization (SEO)",
     icon: WorkFlowIcon,
-    link: "/services/workflow-automation",
+    link: "/services/seo",
     features: [
       "Technical SEO audits & fixes",
       "Content strategy & link building",
@@ -45,10 +45,10 @@ export const solutionData = [
     ],
   },
   {
-    id: "Social Media Marketing",
+    id: "social-media",
     title: "Social Media Marketing",
     icon: DataBaseIcon,
-    link: "/services/rag-systems",
+    link: "/services/social-media",
     features: [
       "Content creation & scheduling",
       "Community management",
@@ -59,7 +59,7 @@ export const solutionData = [
     id: "Content Marketing",
     title: "Content Marketing",
     icon: CodeIcon,
-    link: "/services/custom-ai-applications",
+    link: "/services/content-marketing",
     features: [
       "Blog posts & articles",
       "Video production & podcasts",
@@ -70,7 +70,7 @@ export const solutionData = [
     id: "Email Marketing",
     title: "Email Marketing",
     icon: AiIcon,
-    link: "/services/ai-integration",
+    link: "/services/email-marketing",
     features: [
       "Campaign strategy & design",
       "Marketing automation flows",
@@ -78,10 +78,10 @@ export const solutionData = [
     ],
   },
   {
-    id: "Analytics & Reporting",
+    id: "analytics",
     title: "Analytics & Reporting",
     icon: ConsultIcon,
-    link: "/services/ai-strategy-consulting",
+    link: "/services/analytics",
     features: [
       "Custom dashboard setup",
       "Conversion tracking & attribution",
@@ -145,34 +145,34 @@ export const frameWorkData = [
   {
     id: "01",
     title: "Discovery",
-    description: "Explore your AI opportunities, challenges, and goals.",
+    description: "Deep dive into your business, goals, audience, and competitive landscape.",
   },
   {
     id: "02",
-    title: "Data Assessment",
+    title: "Strategy",
     description:
-      "Analyze your data infrastructure and existing tech ecosystem.",
+      "Custom marketing roadmap with channel mix, messaging, and KPIs.",
   },
   {
     id: "03",
-    title: "Solution Design",
+    title: "Creative",
     description:
-      "Custom AI architecture built for your requirements and scalable growth.",
+      "Compelling ads, content, and landing pages that convert.",
   },
   {
     id: "04",
-    title: "AI Engineering",
-    description: "Develop and integrate AI models with rigorous testing.",
+    title: "Launch",
+    description: "Campaign deployment with precise targeting and tracking.",
   },
   {
     id: "05",
-    title: "Deployment",
-    description: "Seamless rollout with minimal impact on operations.",
+    title: "Optimize",
+    description: "Continuous testing, learning, and improvement.",
   },
   {
     id: "06",
-    title: "Optimization",
-    description: "Continuous monitoring and optimization for maximum ROI.",
+    title: "Scale",
+    description: "Double down on winners and expand to new channels.",
   },
 ];
 

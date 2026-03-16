@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
       <div className="lg:mt-[160px] mt-[100px]">
         <PageBanner
           heading="Privacy Policy"
-          subheading="Learn how we collect, use, and protect your information."
+          subheading="Please read this Privacy Policy carefully to understand how we collect, use, and protect your information."
         />
       </div>
 
@@ -49,14 +49,14 @@ export default function PrivacyPolicyPage() {
             viewport={{ once: true, amount: 0.3 }}
             variants={containerVariants}
             className="space-y-8 md:space-y-12">
-            {/* Our Commitment to Privacy */}
+            {/* Our Commitment To Privacy */}
             <motion.section variants={fadeInUp}>
               <h2 className="text-2xl font-semibold mb-4 text-white">
-                Our Commitment to Privacy
+                Our Commitment To Privacy
               </h2>
               <p className="text-base font-normal leading-relaxed text-white/80">
-                Dima360AI is committed to protecting your personal and business
-                data and handling it responsibly.
+                DIMA360MARKETING is committed to protecting your personal
+                information and handling it responsibly.
               </p>
             </motion.section>
 
@@ -65,12 +65,14 @@ export default function PrivacyPolicyPage() {
               <h2 className="text-2xl font-semibold mb-4 text-white">
                 Information We Collect
               </h2>
-              <ul className="list-disc list-inside space-y-2 ml-4 text-base font-normal text-white/80">
-                <li>Name, email address, and company name</li>
-                <li>Information submitted via contact or consultation forms</li>
-                <li>Website usage and analytics data</li>
-                <li>Communication records</li>
-              </ul>
+              <p className="text-base font-normal leading-relaxed text-white/80">
+                We may collect personal information you provide directly,
+                including your name, email address, phone number, company name,
+                and any information submitted through contact forms,
+                consultation requests, or other communications. We may also
+                collect website usage data, analytics data, cookies, device
+                information, and communication records.
+              </p>
             </motion.section>
 
             {/* How We Use Your Information */}
@@ -78,23 +80,25 @@ export default function PrivacyPolicyPage() {
               <h2 className="text-2xl font-semibold mb-4 text-white">
                 How We Use Your Information
               </h2>
-              <ul className="list-disc list-inside space-y-2 ml-4 text-base font-normal text-white/80">
-                <li>Respond to inquiries and consultation requests</li>
-                <li>Deliver and improve our services</li>
-                <li>Internal analytics and performance optimization</li>
-                <li>Legal and regulatory compliance</li>
-              </ul>
+              <p className="text-base font-normal leading-relaxed text-white/80">
+                We use your information to respond to inquiries, provide and
+                improve our digital marketing services, communicate with you,
+                analyze website and campaign performance, manage business
+                operations, and comply with legal obligations.
+              </p>
             </motion.section>
 
-            {/* Data Sharing & Disclosure */}
+            {/* Marketing Services And Third-Party Platforms */}
             <motion.section variants={fadeInUp}>
               <h2 className="text-2xl font-semibold mb-4 text-white">
-                Data Sharing & Disclosure
+                Marketing Services And Third-Party Platforms
               </h2>
               <p className="text-base font-normal leading-relaxed text-white/80">
-                We do not sell your data. Information may be shared only with
-                trusted service partners (e.g., hosting, analytics) or when
-                legally required.
+                Our services may involve third-party tools and platforms such as
+                analytics providers, CRM systems, email marketing platforms, ad
+                platforms, scheduling tools, and hosting providers. Your
+                information may be processed through these services as needed to
+                deliver and support our marketing services.
               </p>
             </motion.section>
 
@@ -104,20 +108,22 @@ export default function PrivacyPolicyPage() {
                 Data Security
               </h2>
               <p className="text-base font-normal leading-relaxed text-white/80">
-                We use industry-standard security measures to protect your
-                information from unauthorized access or disclosure.
+                We use reasonable administrative, technical, and organizational
+                safeguards designed to protect your information from
+                unauthorized access, disclosure, alteration, or destruction.
               </p>
             </motion.section>
 
             {/* Cookies & Tracking Technologies */}
             <motion.section variants={fadeInUp}>
               <h2 className="text-2xl font-semibold mb-4 text-white">
-                Cookies & Tracking Technologies
+                Cookies And Tracking Technologies
               </h2>
               <p className="text-base font-normal leading-relaxed text-white/80">
-                Cookies are used to enhance user experience and analyze website
-                performance. You can manage cookies through your browser
-                settings or available consent tools.
+                We use cookies and similar technologies to improve website
+                functionality, analyze traffic, and support marketing
+                performance measurement. You can manage cookie preferences
+                through your browser settings or any available consent tools.
               </p>
             </motion.section>
 
@@ -126,14 +132,11 @@ export default function PrivacyPolicyPage() {
               <h2 className="text-2xl font-semibold mb-4 text-white">
                 Your Data Rights
               </h2>
-              <ul className="list-disc list-inside space-y-2 ml-4 text-base font-normal text-white/80">
-                <li>Access your personal data</li>
-                <li>Request correction or deletion</li>
-                <li>Withdraw consent at any time</li>
-                <li>
-                  These rights may vary by jurisdiction (e.g., GDPR, CCPA).
-                </li>
-              </ul>
+              <p className="text-base font-normal leading-relaxed text-white/80">
+                Depending on your location, you may have the right to request
+                access to your personal information, request correction or
+                deletion, or withdraw consent where applicable.
+              </p>
             </motion.section>
 
             {/* Policy Updates */}
@@ -142,8 +145,8 @@ export default function PrivacyPolicyPage() {
                 Policy Updates
               </h2>
               <p className="text-base font-normal leading-relaxed text-white/80">
-                This privacy policy may be updated periodically. any changes
-                will be reflected on this page.
+                We may update this Privacy Policy from time to time. Any changes
+                will be posted on this page.
               </p>
             </motion.section>
 
@@ -153,11 +156,11 @@ export default function PrivacyPolicyPage() {
                 Contact Information
               </h2>
               <p className="text-base font-normal leading-relaxed text-white/80">
-                For questions regarding this privacy policy, contact us at:{" "}
+                For questions regarding this Privacy Policy, contact us at:{" "}
                 <Link
-                  href="mailto:hello@dima360ai.com"
+                  href="mailto:hello@dima360marketing.com"
                   className="text-[#1E72A1] hover:underline font-medium">
-                  hello@dima360ai.com
+                  hello@dima360marketing.com
                 </Link>
               </p>
             </motion.section>

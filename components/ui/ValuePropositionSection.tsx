@@ -77,14 +77,14 @@ const ValuePropositionSection: React.FC<ValuePropositionSectionProps> = ({
           {/* Value Proposition Cards */}
           <motion.div
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {items.map((item, index) => (
             <motion.div
               key={index}
               variants={cardVariants}
-              className="flex flex-col items-start text-left">
+              className="flex items-start gap-3 text-left">
               {/* Icon Circle */}
-              <div className="w-6 h-6 rounded-full bg-gradient-to-br from-[#8B3DFF] to-[#7D2FFF] flex items-center justify-center mb-4 md:mb-5">
+              <div className="w-6 h-6 rounded-full  flex items-center justify-center mb-4 md:mb-5">
                 <item.icon className="w-4 h-4 text-white" />
               </div>
 

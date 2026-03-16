@@ -23,7 +23,7 @@ export default function SuccessContent({ title, sub_title }: Props) {
             duration: 0.6,
           }}>
           <Image
-            src={"/images/success-vector.svg"}
+            src={"/images/successful vector.png"}
             alt="success-vector"
             width={400}
             height={400}

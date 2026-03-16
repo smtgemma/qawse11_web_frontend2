@@ -36,7 +36,7 @@ export default function TermsOfServicePage() {
       <div className="lg:mt-[160px] mt-[100px]">
         <PageBanner
           heading="Terms of Service"
-          subheading="Please read these terms carefully before using our website or services."
+          subheading="Please read these Terms carefully before using our website or services."
         />
       </div>
 
@@ -55,8 +55,8 @@ export default function TermsOfServicePage() {
                 Acceptance of Terms
               </h2>
               <p className="text-base font-normal leading-relaxed text-white/80">
-                By accessing or using Dima360AI&apos;s website and services, you
-                agree to be bound by these terms of service.
+                By accessing or using DIMA360MARKETING&apos;S website or
+                services, you agree to be bound by these Terms of Service.
               </p>
             </motion.section>
 
@@ -66,25 +66,36 @@ export default function TermsOfServicePage() {
                 Our Services
               </h2>
               <p className="text-base font-normal leading-relaxed text-white/80">
-                Dima360AI provides AI strategy, consulting, custom AI
-                development, workflow automation, RAG systems, and AI
-                integration services. Service scope may vary by engagement.
+                DIMA360MARKETING provides digital marketing services, including
+                strategy, paid advertising, SEO, social media marketing, content
+                marketing, email marketing, analytics, consulting, and related
+                marketing support. Service scope may vary by engagement.
               </p>
             </motion.section>
 
-            {/* User Responsibilities */}
+            {/* Client Responsibilities */}
             <motion.section variants={fadeInUp}>
               <h2 className="text-2xl font-semibold mb-4 text-white">
-                User Responsibilities
+                Client Responsibilities
               </h2>
-              <ul className="list-disc list-inside space-y-2 ml-4 text-base font-normal text-white/80">
-                <li>Provide accurate and lawful information</li>
-                <li>Use services only for legal purposes</li>
-                <li>
-                  Do not misuse, copy, or reverse-engineer any part of the
-                  service
-                </li>
-              </ul>
+              <p className="text-base font-normal leading-relaxed text-white/80">
+                You agree to provide accurate information, timely feedback,
+                approvals, and any access reasonably needed to perform the
+                services. You are responsible for ensuring that materials,
+                claims, and instructions you provide are lawful and accurate.
+              </p>
+            </motion.section>
+
+            {/* Fees and Payment */}
+            <motion.section variants={fadeInUp}>
+              <h2 className="text-2xl font-semibold mb-4 text-white">
+                Fees and Payment
+              </h2>
+              <p className="text-base font-normal leading-relaxed text-white/80">
+                Fees, billing terms, and any ad spend will be set out in a
+                proposal, invoice, or separate agreement. Late or unpaid
+                balances may result in paused or terminated services.
+              </p>
             </motion.section>
 
             {/* Intellectual Property */}
@@ -93,9 +104,11 @@ export default function TermsOfServicePage() {
                 Intellectual Property
               </h2>
               <p className="text-base font-normal leading-relaxed text-white/80">
-                All website content, designs, code, and materials remain the
-                intellectual property of Dima360AI unless otherwise agreed in
-                writing.
+                All website content, branding, designs, code, strategies,
+                reports, and materials created by DIMA360MARKETING remain our
+                property unless otherwise agreed in writing. Client-owned
+                materials remain the client&apos;s property. Any transfer of
+                ownership in deliverables must be stated in writing.
               </p>
             </motion.section>
 
@@ -105,20 +118,47 @@ export default function TermsOfServicePage() {
                 Confidentiality
               </h2>
               <p className="text-base font-normal leading-relaxed text-white/80">
-                Any Business Or Technical Information Shared During
-                Consultations Or Projects Will Be Treated As Confidential.
+                We will treat non-public business, marketing, and technical
+                information shared during an engagement as confidential, except
+                where disclosure is required by law.
+              </p>
+            </motion.section>
+
+            {/* Third-Party Platforms */}
+            <motion.section variants={fadeInUp}>
+              <h2 className="text-2xl font-semibold mb-4 text-white">
+                Third-Party Platforms
+              </h2>
+              <p className="text-base font-normal leading-relaxed text-white/80">
+                Our services may involve third-party platforms such as Google,
+                Meta, HubSpot, Shopify, analytics tools, or email platforms. We
+                are not responsible for outages, policy changes, suspensions, or
+                actions taken by third-party platforms.
               </p>
             </motion.section>
 
             {/* Limitation Of Liability */}
             <motion.section variants={fadeInUp}>
               <h2 className="text-2xl font-semibold mb-4 text-white">
-                Limitation Of Liability
+                Disclaimer of Warranties
               </h2>
               <p className="text-base font-normal leading-relaxed text-white/80">
-                Dima360AI shall not be liable for indirect, incidental, or
-                consequential damages arising from the use of our services, to
-                the maximum extent permitted by law.
+                Our website and services are provided on an &quot;as is&quot;
+                and &quot;as available&quot; basis to the maximum extent
+                permitted by law.
+              </p>
+            </motion.section>
+
+            {/* Limitation of Liability */}
+            <motion.section variants={fadeInUp}>
+              <h2 className="text-2xl font-semibold mb-4 text-white">
+                Limitation of Liability
+              </h2>
+              <p className="text-base font-normal leading-relaxed text-white/80">
+                To the maximum extent permitted by law, DIMA360MARKETING will
+                not be liable for any indirect, incidental, special,
+                consequential, or punitive damages arising out of or related to
+                the use of our website or services.
               </p>
             </motion.section>
 
@@ -128,19 +168,33 @@ export default function TermsOfServicePage() {
                 Termination
               </h2>
               <p className="text-base font-normal leading-relaxed text-white/80">
-                We reserve the right to suspend or terminate access to our
-                services if these terms are violated.
+                We may suspend or terminate access to our website or services if
+                these Terms are violated, if payments are overdue, or if we
+                reasonably believe continued service creates legal, financial,
+                or reputational risk.
               </p>
             </motion.section>
 
             {/* Changes To Terms */}
             <motion.section variants={fadeInUp}>
               <h2 className="text-2xl font-semibold mb-4 text-white">
-                Changes To Terms
+                Changes to Terms
               </h2>
               <p className="text-base font-normal leading-relaxed text-white/80">
-                Continued use of our services constitutes acceptance of the
-                updated terms.
+                We may update these Terms from time to time. Continued use of
+                our website or services after updates are posted means you
+                accept the revised Terms.
+              </p>
+            </motion.section>
+
+            {/* Governing Law */}
+            <motion.section variants={fadeInUp}>
+              <h2 className="text-2xl font-semibold mb-4 text-white">
+                Governing Law
+              </h2>
+              <p className="text-base font-normal leading-relaxed text-white/80">
+                These Terms are governed by the laws of Florida US, without
+                regard to conflict-of-law principles.
               </p>
             </motion.section>
 
@@ -150,11 +204,11 @@ export default function TermsOfServicePage() {
                 Contact Information
               </h2>
               <p className="text-base font-normal leading-relaxed text-white/80">
-                For questions regarding these terms, contact us at:{" "}
+                For questions regarding these Terms, contact us at:{" "}
                 <Link
-                  href="mailto:hello@dima360ai.com"
+                  href="mailto:hello@dima360marketing.com"
                   className="text-[#1E72A1] hover:underline font-medium">
-                  hello@dima360ai.com
+                  hello@dima360marketing.com
                 </Link>
               </p>
             </motion.section>

@@ -15,45 +15,48 @@ export default function ServicesPage() {
     const valuePropositions = [
         {
             icon: LightningIcon,
-            heading: "Automate Support At Scale",
-            description: "24/7 multilingual responses in any channel.",
+            heading: "Google Ads (Search, Shopping, Display, YouTube)",
+            description: "",
         },
         {
-            icon: TrendingUpIcon,
-            heading: "Internal Productivity Boost",
-            description: "Automate HR, IT, and workflow approvals.",
+            icon: LightningIcon,
+            heading: "Meta Ads (Facebook & Instagram)",
+            description: "",
         },
         {
-            icon: ShieldIcon,
-            heading: "Enterprise-Grade Personalization",
-            description: "AI tuned to your tone, rules, and security needs.",
+            icon: LightningIcon,
+            heading: "LinkedIn Advertising",
+            description: "",
+        },
+        {
+            icon: LightningIcon,
+            heading: "TikTok & Emerging Platforms",
+            description: "",
+        },
+        {
+            icon: LightningIcon,
+            heading: "Retargeting & Remarketing",
+            description: "",
+        },
+        {
+            icon: LightningIcon,
+            heading: "Landing Page Optimization",
+            description: "",
         },
     ];
 
     const features = [
         {
-            title: "Multi-Channel Support",
-            description: "Deploy on web, mobile, SMS, WhatsApp, Slack, and more.",
+            title: "Lower cost per acquisition",
+            description: "",
         },
         {
-            title: "Secure Retrieval (RAG)",
-            description: "Agents provide accurate answers based on your private data.",
+            title: "Higher conversion rates",
+            description: "",
         },
         {
-            title: "Custom Personality & Tone",
-            description: "Tailored to your brand voice and compliance rules.",
-        },
-        {
-            title: "Human-Like Conversations",
-            description: "Natural language understanding with memory.",
-        },
-        {
-            title: "Workflow Automation",
-            description: "Automate tickets, approvals, IT support, and HR processes.",
-        },
-        {
-            title: "Continuous Learning",
-            description: "Agents improve automatically using real interaction data.",
+            title: "Scalable, profitable campaigns",
+            description: "",
         },
     ];
 
@@ -79,9 +82,9 @@ export default function ServicesPage() {
             </div>
             <div className="max-w-[1150px] w-[95%] mx-auto lg:mt-[64px] mt-[40px] lg:mb-[100px] mb-[50px]">
                 <FeaturesBlock
-                    title="Features Block"
-                    leftImage="/images/img1.png"
-                    rightImage="/images/img2.png"
+                    title="Results You Can Expect"
+                    leftImage="/images/services1.png"
+                    rightImage="/images/services2.png"
                     leftImageAlt="AI Assistant analyzing market data"
                     rightImageAlt="Neural network workflow automation"
                     features={features}

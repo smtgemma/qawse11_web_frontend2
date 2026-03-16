@@ -38,13 +38,10 @@ export default function FrameWorkSection() {
         viewport={{ once: true, amount: 0.3 }}
         variants={titleVariants}>
         <h1 className="text-2xl md:text-3xl lg:text-[40px] font-semibold leading-[1.3] md:leading-[1.35] lg:leading-[50px] text-white">
-          Transforming Industries Through AI
+        Our Proven Growth Process
         </h1>
         <p className="text-sm md:text-base lg:text-lg leading-relaxed text-white/70">
-          Deep domain expertise across multiple sectors enables us to deliver AI
-          solutions that
-          <br />
-          address industry-specific challenges.
+        A systematic approach to marketing success, from strategy to scale.
         </p>
       </motion.div>
 
