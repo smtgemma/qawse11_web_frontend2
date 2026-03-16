@@ -14,7 +14,9 @@ import {
   ExcellenceIcon,
   BrainIcon,
   ClockIcon,
-  PadlockIcon,
+  WorkFlowIcon,
+  RevenueIcon,
+  ResultsGrowthIcon,
 } from "@/components/ui/Cicon";
 
 export default function AboutContent() {
@@ -98,22 +100,22 @@ export default function AboutContent() {
                 "Smarter marketing decisions powered by real data.",
             },
             {
-              icon: ReliabilityIcon,
+              icon: ResultsGrowthIcon,
               title: "Proven Marketing Results",
               description:
-                "Strategies designed to drive measurable business growth.",
+                "Campaigns built around ROI and measurable revenue growth.",
             },
             {
-              icon: ClockIcon,
+              icon: WorkFlowIcon,
               title: "Full-Funnel Expertise",
               description:
-                "Optimizing every stage of the customer journey.",
+                "From awareness to retention, we optimize every step of the funnel.",
             },
             {
-              icon: PadlockIcon,
+              icon: IntegrityIcon,
               title: "Transparent Reporting",
               description:
-                "Your goals are our goals.",
+                "Clear dashboards, honest insights, and full visibility into performance.",
             },
           ]}
         />

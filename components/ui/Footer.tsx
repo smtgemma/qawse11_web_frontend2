@@ -120,47 +120,56 @@ const Footer: React.FC = () => {
                     className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${
                       isActive("/services") ? activeClass : ""
                     }`}>
-                    AI Agents
+                    Paid Advertising
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/workflow-automation"
+                    href="/services/seo"
                     className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${
-                      isActive("/services/workflow-automation")
+                      isActive("/services/seo")
                         ? activeClass
                         : ""
                     }`}>
-                    Automation
+                    SEO
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/rag-systems"
+                    href="/services/social-media"
                     className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${
-                      isActive("/services/rag-systems") ? activeClass : ""
+                      isActive("/services/social-media") ? activeClass : ""
                     }`}>
-                    RAG Systems
+                    Social Media
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/custom-ai-applications"
+                    href="/services/content-marketing"
                     className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${
-                      isActive("/services/custom-ai-applications")
+                      isActive("/services/content-marketing")
                         ? activeClass
                         : ""
                     }`}>
-                    Custom Apps
+                    Content Marketing
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/ai-integration"
+                    href="/services/email-marketing"
                     className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${
-                      isActive("/services/ai-integration") ? activeClass : ""
+                      isActive("/services/email-marketing") ? activeClass : ""
                     }`}>
-                    Integrations
+                    Email Marketing
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/analytics"
+                    className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${
+                      isActive("/services/analytics") ? activeClass : ""
+                    }`}>
+                    Analytics
                   </Link>
                 </li>
               </ul>

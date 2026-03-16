@@ -32,23 +32,35 @@ export default function AIIntegrationPage() {
       {/* Capabilities Section */}
       <div className="max-w-[1150px] w-[95%] mx-auto lg:my-[64px] my-[40px]">
         <WhyItMattersSection
-          title="Capabilities"
+          title="What's Included"
           items={[
             {
-              heading: "Real-time data syncing",
+              heading: "Email Strategy & Planning",
               description:
-                "Keep every system updated automatically with live data across platforms and teams.",
+                "",
             },
             {
-              heading: "Secure cross-platform automation",
+              heading: "Campaign Design & Copywriting",
               description:
-                "Eliminate manual tasks and connect all tools safely using enterprise-grade security.",
+                "",
             },
             {
               heading:
-                "Prebuilt integrations for Salesforce, HubSpot, SAP, and more",
+                "Marketing Automation Setup",
               description:
-                "Integrate AI seamlessly into your current tech stack without replacing existing systems.",
+                "",
+            },
+            {
+              heading:
+                "List Segmentation & Personalization",
+              description:
+                "",
+            },
+            {
+              heading:
+                "A/B Testing & Optimization",
+              description:
+                "",
             },
           ]}
         />
@@ -57,31 +69,26 @@ export default function AIIntegrationPage() {
       {/* Outcomes Section */}
       <div className="max-w-[1150px] w-[95%] mx-auto lg:my-[64px] my-[40px] lg:mb-[100px] mb-[50px]">
         <FeaturesBlock
-          title="Outcomes"
+          title="Results You Can Expect"
           leftImage="/images/Ai-email.png"
           rightImage="/images/lead.png"
           leftImageAlt="AI Central Hub"
           rightImageAlt="Business Ecosystem AI Integration"
           features={[
             {
-              title: "Faster, data-driven decisions",
+              title: "Increased brand authority and industry credibility",
               description:
-                "Gain immediate access to unified insights so teams can respond quicker and smarter.",
+                "",
             },
             {
-              title: "A single source of truth",
+              title: "Higher website traffic and audience engagement",
               description:
-                "All information comes together in one place — enabling clarity, transparency, and better strategic planning.",
+                "",
             },
             {
-              title: "Less manual work, fewer errors across operations",
+              title: "More qualified leads and consistent conversions",
               description:
-                "Automation removes repetitive tasks, saving time and minimizing human errors across processes.",
-            },
-            {
-              title: "Improved operational reliability",
-              description:
-                "AI ensures consistent performance across systems, reducing downtime and workflow disruptions.",
+                "",
             },
           ]}
         />

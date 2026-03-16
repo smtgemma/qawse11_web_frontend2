@@ -382,7 +382,7 @@ const OtpContent: React.FC = () => {
             className="relative w-full max-w-[446px] lg:w-[446px]"
             style={{ aspectRatio: "446/629" }}>
             <Image
-              src="/images/auth-left.png"
+              src="/images/auth.png"
               alt="AI Technology Interface"
               width={446}
               height={629}

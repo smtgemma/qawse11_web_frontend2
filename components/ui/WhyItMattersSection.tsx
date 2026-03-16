@@ -61,7 +61,7 @@ const WhyItMattersSection: React.FC<WhyItMattersSectionProps> = ({
           </motion.h2>
 
           {/* Items List */}
-          <div className="space-y-6">
+          <div className="space-y-6 grid grid-cols-1 md:grid-cols-2 ">
             {items.map((item, index) => (
               <motion.div
                 key={index}
