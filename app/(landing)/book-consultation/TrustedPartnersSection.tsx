@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function TrustedPartnersSection() {
   const logos = [
     { src: "/images/googlepartner.png", alt: "Shopify" },
-    { src: "/images/meta.png", alt: "Meta" },
+    { src: "/images/Meta.png", alt: "Meta" },
     { src: "/images/Hubspot.png", alt: "Zapier" },
     { src: "/images/shopify.png", alt: "OpenAI" },
   ];
