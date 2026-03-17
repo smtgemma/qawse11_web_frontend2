@@ -31,12 +31,13 @@ const Footer: React.FC = () => {
             <Link
               href="/"
               className="flex items-center gap-2 no-underline mb-2">
- <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.6664 22.6666H8C7.6464 22.6663 7.30738 22.5257 7.05735 22.2757C6.80732 22.0256 6.66672 21.6866 6.6664 21.333V13.333C6.66682 12.9795 6.80748 12.6406 7.05749 12.3906C7.30751 12.1407 7.64647 12.0001 8 11.9998H21.3332C21.6868 11.9999 22.0259 12.1404 22.2759 12.3904C22.526 12.6404 22.6666 12.9794 22.6668 13.333V19.4462L25.3332 18.379V13.333C25.3332 11.1246 23.5428 9.33301 21.3332 9.33301H8C5.7908 9.33301 4 11.1246 4 13.333V21.333C4 23.5426 5.7916 25.333 8 25.333H12.6664V22.6666ZM17.3336 29.333H20V35.9998H17.3336V29.333Z" fill="#F3F6FA"/>
-<path d="M22.4762 21.6768C21.1142 22.2212 18.8006 22.6668 17.3334 22.6668H14.6662V30.6668H17.3334C18.8006 30.6668 21.1142 31.112 22.4762 31.6564L33.333 36V17.3332L22.4762 21.6768ZM19.9998 28.2604C19.053 28.0988 18.117 28 17.3334 28V25.3332C18.1154 25.3332 19.053 25.2344 19.9998 25.0732V28.2604ZM30.6666 32.0612L23.4658 29.1808C23.2027 29.0776 22.9362 28.9834 22.6666 28.8984V24.4348C22.9478 24.3436 23.2186 24.25 23.4658 24.1524L30.6666 21.2724V32.0612ZM33.333 29.3332L35.9998 28V25.3332L33.333 24V29.3332ZM11.999 4V5.3332L13.6658 6V9.3332H15.6658V6L17.3334 5.3332V4H11.999Z" fill="#F3F6FA"/>
-<path d="M17.9996 17.3337C18.7361 17.3337 19.3332 16.7366 19.3332 16.0001C19.3332 15.2636 18.7361 14.6665 17.9996 14.6665C17.2631 14.6665 16.666 15.2636 16.666 16.0001C16.666 16.7366 17.2631 17.3337 17.9996 17.3337Z" fill="#F3F6FA"/>
-<path d="M12.6668 16.0002C12.6669 16.1753 12.6326 16.3487 12.5657 16.5105C12.4987 16.6723 12.4006 16.8193 12.2768 16.9431C12.153 17.0669 12.006 17.1651 11.8442 17.2321C11.6825 17.2991 11.5091 17.3335 11.334 17.3334C10.5964 17.3334 10.0004 16.7374 10.0004 16.0002C10.0004 15.263 10.5964 14.667 11.334 14.667C11.5091 14.6669 11.6825 14.7013 11.8442 14.7683C12.006 14.8352 12.153 14.9334 12.2768 15.0573C12.4006 15.1811 12.4987 15.3281 12.5657 15.4899C12.6326 15.6517 12.6669 15.8251 12.6668 16.0002ZM12.0004 18.667H17.334V20.667H12.0004V18.667ZM11.334 9.33339H9.33398V6.66699H10.6668L11.334 9.33339ZM18.0004 9.33339H20.0004V6.66699H18.6668L18.0004 9.33339Z" fill="#F3F6FA"/>
-</svg>
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M29.0844 6.875H21.5625V4.625C21.5625 4.39294 21.4703 4.17038 21.3062 4.00628C21.1421 3.84219 20.9196 3.75 20.6875 3.75H19.3125C19.0804 3.75 18.8579 3.84219 18.6938 4.00628C18.5297 4.17038 18.4375 4.39294 18.4375 4.625V6.875H10.9156C9.34696 6.87583 7.84278 7.49935 6.73356 8.60856C5.62435 9.71778 5.00083 11.222 5 12.7906V16.3156C5 20.1936 6.54051 23.9127 9.28265 26.6549C12.0248 29.397 15.7439 30.9375 19.6219 30.9375H20.6875C20.9196 30.9375 21.1421 30.8453 21.3062 30.6812C21.4703 30.5171 21.5625 30.2946 21.5625 30.0625V28.6875C21.5625 28.4554 21.4703 28.2329 21.3062 28.0688C21.1421 27.9047 20.9196 27.8125 20.6875 27.8125H19.6219C16.5727 27.8125 13.6484 26.6012 11.4924 24.4451C9.33628 22.2891 8.125 19.3648 8.125 16.3156V12.7906C8.125 12.0505 8.41901 11.3407 8.94235 10.8174C9.4657 10.294 10.1755 10 10.9156 10H29.0844C29.8245 10 30.5343 10.294 31.0576 10.8174C31.581 11.3407 31.875 12.0505 31.875 12.7906V16.5625C31.873 17.4199 31.7681 18.2739 31.5625 19.1062C31.508 19.3207 31.5371 19.5479 31.6439 19.7417C31.7506 19.9355 31.9271 20.0815 32.1375 20.15L33.45 20.5781C33.5634 20.6157 33.6833 20.6297 33.8022 20.619C33.9212 20.6084 34.0367 20.5734 34.1417 20.5163C34.2466 20.4591 34.3386 20.3811 34.4121 20.2869C34.4855 20.1927 34.5389 20.0844 34.5688 19.9688C34.8529 18.8556 34.9978 17.7114 35 16.5625V12.7906C34.9992 11.222 34.3757 9.71778 33.2664 8.60856C32.1572 7.49935 30.653 6.87583 29.0844 6.875Z" fill="#F3F6FA" />
+                <path d="M15 20C16.3807 20 17.5 18.8807 17.5 17.5C17.5 16.1193 16.3807 15 15 15C13.6193 15 12.5 16.1193 12.5 17.5C12.5 18.8807 13.6193 20 15 20Z" fill="#F3F6FA" />
+                <path d="M25 20C26.3807 20 27.5 18.8807 27.5 17.5C27.5 16.1193 26.3807 15 25 15C23.6193 15 22.5 16.1193 22.5 17.5C22.5 18.8807 23.6193 20 25 20Z" fill="#F3F6FA" />
+                <path d="M34.916 29.0002L37.7472 30.1158C37.8055 30.1388 37.8556 30.1789 37.8908 30.2307C37.926 30.2825 37.9449 30.3438 37.9449 30.4064C37.9449 30.4691 37.926 30.5303 37.8908 30.5822C37.8556 30.634 37.8055 30.674 37.7472 30.6971L34.916 31.8127C34.4148 32.0108 33.9596 32.3097 33.5785 32.6908C33.1974 33.0719 32.8985 33.5271 32.7004 34.0283L31.5847 36.8408C31.5617 36.8991 31.5217 36.9491 31.4699 36.9843C31.418 37.0196 31.3568 37.0384 31.2941 37.0384C31.2314 37.0384 31.1702 37.0196 31.1184 36.9843C31.0666 36.9491 31.0265 36.8991 31.0035 36.8408L29.8879 34.0283C29.6902 33.5268 29.3915 33.0714 29.0103 32.6902C28.6292 32.3091 28.1737 32.0104 27.6722 31.8127L24.8597 30.6971C24.8015 30.674 24.7514 30.634 24.7162 30.5822C24.681 30.5303 24.6621 30.4691 24.6621 30.4064C24.6621 30.3438 24.681 30.2825 24.7162 30.2307C24.7514 30.1789 24.8015 30.1388 24.8597 30.1158L27.6722 29.0002C28.1737 28.8025 28.6292 28.5038 29.0103 28.1226C29.3915 27.7415 29.6902 27.286 29.8879 26.7846L31.0035 23.9721C31.0265 23.9138 31.0666 23.8637 31.1184 23.8285C31.1702 23.7933 31.2314 23.7744 31.2941 23.7744C31.3568 23.7744 31.418 23.7933 31.4699 23.8285C31.5217 23.8637 31.5617 23.9138 31.5847 23.9721L32.7004 26.7846C32.8985 27.2857 33.1974 27.741 33.5785 28.122C33.9596 28.5031 34.4148 28.802 34.916 29.0002Z" fill="#F3F6FA" />
+              </svg>
+
 
               <span
                 className="font-bold text-sm sm:text-base leading-none whitespace-nowrap"
@@ -49,7 +50,7 @@ const Footer: React.FC = () => {
 
             {/* Tagline */}
             <p className="text-[#999999] text-[15px] leading-[1.6] mb-6 sm:mb-8 md:mb-10">
-            Full-service digital marketing agency helping ambitious <br /> businesses scale through data-driven strategies and <br /> measurable results.
+              Full-service digital marketing agency helping ambitious <br /> businesses scale through data-driven strategies and <br /> measurable results.
             </p>
 
             {/* Social Section */}
@@ -117,58 +118,52 @@ const Footer: React.FC = () => {
                 <li>
                   <Link
                     href="/services"
-                    className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${
-                      isActive("/services") ? activeClass : ""
-                    }`}>
+                    className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${isActive("/services") ? activeClass : ""
+                      }`}>
                     Paid Advertising
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/services/seo"
-                    className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${
-                      isActive("/services/seo")
+                    className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${isActive("/services/seo")
                         ? activeClass
                         : ""
-                    }`}>
+                      }`}>
                     SEO
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/services/social-media"
-                    className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${
-                      isActive("/services/social-media") ? activeClass : ""
-                    }`}>
+                    className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${isActive("/services/social-media") ? activeClass : ""
+                      }`}>
                     Social Media
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/services/content-marketing"
-                    className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${
-                      isActive("/services/content-marketing")
+                    className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${isActive("/services/content-marketing")
                         ? activeClass
                         : ""
-                    }`}>
+                      }`}>
                     Content Marketing
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/services/email-marketing"
-                    className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${
-                      isActive("/services/email-marketing") ? activeClass : ""
-                    }`}>
+                    className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${isActive("/services/email-marketing") ? activeClass : ""
+                      }`}>
                     Email Marketing
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/services/analytics"
-                    className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${
-                      isActive("/services/analytics") ? activeClass : ""
-                    }`}>
+                    className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${isActive("/services/analytics") ? activeClass : ""
+                      }`}>
                     Analytics
                   </Link>
                 </li>
@@ -184,18 +179,16 @@ const Footer: React.FC = () => {
                 <li>
                   <Link
                     href="/case-studies"
-                    className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${
-                      isActive("/case-studies") ? activeClass : ""
-                    }`}>
+                    className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight ${isActive("/case-studies") ? activeClass : ""
+                      }`}>
                     Case Studies
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="#"
-                    className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight hidden ${
-                      isActive("#") ? activeClass : ""
-                    }`}>
+                    className={`text-[#999999] hover:text-white transition-colors text-[15px] leading-tight hidden ${isActive("#") ? activeClass : ""
+                      }`}>
                     Blog
                   </Link>
                 </li>
@@ -212,16 +205,14 @@ const Footer: React.FC = () => {
           <div className="flex items-center gap-6 sm:gap-8 md:gap-12 order-1 sm:order-2">
             <Link
               href="/terms-of-service"
-              className={`text-white hover:text-white/80 transition-colors text-sm font-normal ${
-                isActive("/terms-of-service") ? "text-white font-medium" : ""
-              }`}>
+              className={`text-white hover:text-white/80 transition-colors text-sm font-normal ${isActive("/terms-of-service") ? "text-white font-medium" : ""
+                }`}>
               Terms of Service
             </Link>
             <Link
               href="/privacy-policy"
-              className={`text-white hover:text-white/80 transition-colors text-sm font-normal ${
-                isActive("/privacy-policy") ? "text-white font-medium" : ""
-              }`}>
+              className={`text-white hover:text-white/80 transition-colors text-sm font-normal ${isActive("/privacy-policy") ? "text-white font-medium" : ""
+                }`}>
               Privacy Policy
             </Link>
           </div>
