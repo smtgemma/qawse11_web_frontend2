@@ -218,7 +218,7 @@ const HeroSection = () => {
           className="grid grid-cols-4 items-center justify-items-center w-full mt-6 sm:mt-8 md:mt-10 gap-8 sm:gap-10 md:gap-8 lg:gap-12 max-w-[1000px] px-4 sm:px-6 md:px-8 lg:px-0">
           {[
             { src: "/images/googlepartner.png", alt: "googlepartner" },
-            { src: "/images/meta.png", alt: "meta" },
+            { src: "/images/Meta.png", alt: "meta" },
             { src: "/images/Hubspot.png", alt: "hubspot" },
             { src: "/images/shopify.png", alt: "shopify" },
           ].map((logo, i) => (
