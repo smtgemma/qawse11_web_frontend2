@@ -8,7 +8,7 @@ export const authApi = baseApi.injectEndpoints({
       { email: string; password: string }
     >({
       query: (credentials) => ({
-        url: "/auth/login?device=mobile",
+        url: "/auth/login",
         method: "POST",
         body: credentials,
       }),
@@ -78,8 +78,6 @@ export const authApi = baseApi.injectEndpoints({
     resetPassword: build.mutation<
       { success: boolean; message: string },
       {
-        email: string;
-        otp: string;
         newPassword: string;
         confirmPassword: string;
       }

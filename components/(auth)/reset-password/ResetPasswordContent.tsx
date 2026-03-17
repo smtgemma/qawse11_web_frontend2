@@ -8,7 +8,8 @@ import { Eye, EyeOff } from "lucide-react";
 import Image from "next/image";
 import { CompanyLogo } from "@/components/ui/CompanyLogo";
 import { useResetPasswordMutation } from "@/redux/api/authApi";
-import { useAppSelector } from "@/redux/hooks";
+import { logout } from "@/redux/features/authSlice";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import SuccessContent from "../SuccessContent";
 import { toast } from "sonner";
 
@@ -202,7 +203,8 @@ const PasswordStrengthIndicator: React.FC<PasswordStrengthProps> = ({
 const ResetPasswordContent: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const { otpPurposeData } = useAppSelector((state) => state.auth);
+  const token = useAppSelector((state) => state.auth.token);
+  const dispatch = useAppDispatch();
   const [resetAction, { isLoading }] = useResetPasswordMutation();
   const [isVarified, setIsVerified] = useState(false);
 
@@ -224,25 +226,26 @@ const ResetPasswordContent: React.FC = () => {
 
   const onSubmit = async (data: ResetPasswordFormData) => {
     try {
-      if (!otpPurposeData?.email || !otpPurposeData?.otp) {
-        throw new Error("OTP context missing");
+      if (!token) {
+        throw new Error("Missing reset token. Please verify OTP again.");
       }
 
-      const { email, otp } = otpPurposeData;
-
       const res = await resetAction({
-        email,
-        otp,
         newPassword: data.password,
         confirmPassword: data.confirmPassword,
       }).unwrap();
 
       if (res.success) {
         setIsVerified(true);
+        dispatch(logout());
       }
     } catch (error: any) {
       console.error("Password reset error:", error);
-      toast.error(error.data.message);
+      toast.error(
+        error?.data?.message ||
+          error?.message ||
+          "Failed to reset password. Please try again.",
+      );
     }
   };
 

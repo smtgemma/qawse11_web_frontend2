@@ -12,9 +12,18 @@ export const formsApi = baseApi.injectEndpoints({
       { name: string; email: string; message: string }
     >({
       query: (body) => ({
-        url: "/getInTouch",
+        url: "/auth/send-support-mail",
         method: "POST",
-        body,
+        body: {
+          firstName: body.name?.trim() || "",
+          lastName: "",
+          email: body.email,
+          company: "",
+          country: "",
+          projectType: "Other",
+          budgetRange: "",
+          message: body.message,
+        },
       }),
       invalidatesTags: ["Forms"],
     }),
@@ -22,18 +31,18 @@ export const formsApi = baseApi.injectEndpoints({
     contact: build.mutation<
       ContactFormResponseType,
       {
-        first_name: string;
-        last_name: string;
+        firstName: string;
+        lastName: string;
         email: string;
-        company_name: string;
+        company: string;
         country: string;
-        project_type: string;
-        budget_range: string;
+        projectType: string;
+        budgetRange: string;
         message: string;
       }
     >({
       query: (body) => ({
-        url: "/contact",
+        url: "/auth/send-support-mail",
         method: "POST",
         body,
       }),
@@ -43,20 +52,22 @@ export const formsApi = baseApi.injectEndpoints({
     consultation: build.mutation<
       ConsultationFormResponseType,
       {
-        first_name: string;
-        last_name: string;
+        firstName: string;
+        lastName: string;
         email: string;
-        company_name: string;
-        timeline: string;
-        country: string;
-        project_type: string;
-        budget_range: string;
-        helps: string[];
-        project_details: string;
+        phoneNumber?: string;
+        companyName: string;
+        websiteUrl?: string;
+        industry?: string;
+        monthlyMarketingBudget: string;
+        primaryGoal: string;
+        currentMarketingChannels: string[];
+        additionalDetails?: string;
+        ip?: string;
       }
     >({
       query: (body) => ({
-        url: "/consultation",
+        url: "/form/create-form",
         method: "POST",
         body,
       }),

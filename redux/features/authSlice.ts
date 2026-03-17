@@ -36,11 +36,16 @@ const authSlice = createSlice({
       state.token = action.payload.token;
     },
 
+    clearOtpPurpose: (state) => {
+      state.otpPurposeData = null;
+    },
+
     logout: (state) => {
       state.token = null;
     },
   },
 });
 
-export const { setOtpPurpose, setCredentials, logout } = authSlice.actions;
+export const { setOtpPurpose, setCredentials, clearOtpPurpose, logout } =
+  authSlice.actions;
 export default authSlice.reducer;
