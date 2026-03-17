@@ -13,7 +13,10 @@ import {
 } from "@/redux/api/authApi";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { useRouter } from "next/navigation";
-import { setOtpPurpose } from "@/redux/features/authSlice";
+import {
+  clearOtpPurpose,
+  setCredentials,
+} from "@/redux/features/authSlice";
 import SuccessContent from "../SuccessContent";
 import { toast } from "sonner";
 
@@ -277,19 +280,20 @@ const OtpContent: React.FC = () => {
       } else {
         throw new Error(res.message || "Failed to resend OTP");
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Resend error:", error);
 
       // Handle rate limiting from backend
-      if (error.status === 429) {
+      const err = error as { status?: number; data?: { message?: string }; message?: string };
+      if (err?.status === 429) {
         setIsRateLimited(true);
         toast.error(
           `Rate limit exceeded. Please wait ${OTP_RATE_LIMIT_WINDOW_MINUTES} minutes before requesting another OTP.`
         );
       } else {
         toast.error(
-          error.data?.message ||
-            error.message ||
+          err?.data?.message ||
+            err?.message ||
             "Failed to resend OTP. Please try again."
         );
       }
@@ -320,23 +324,31 @@ const OtpContent: React.FC = () => {
 
       const { email, purpose } = otpPurposeData;
 
-      if (purpose === "VERIFY") {
-        const res = await verifyOtpAction({
-          otp: data.otp,
-          email,
-          purpose,
-        }).unwrap();
+      const res = await verifyOtpAction({
+        otp: data.otp,
+        email,
+        purpose,
+      }).unwrap();
 
-        if (res.success) {
-          setIsVerified(true);
-          setVerificationError(null);
+      if (res.success) {
+        // For both VERIFY and RESET we treat verify-otp as an auth step
+        // (backend returns an accessToken in `data.accessToken`)
+        if (res.data?.accessToken) {
+          dispatch(setCredentials({ token: res.data.accessToken }));
         }
-      } else {
-        dispatch(setOtpPurpose({ otp: data.otp }));
-        router.push("/reset-password");
+
+        setIsVerified(true);
+        setVerificationError(null);
+
+        if (purpose === "RESET") {
+          // Clear OTP data so we don't reuse it accidentally
+          dispatch(clearOtpPurpose());
+          router.push("/reset-password");
+        }
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("OTP verification error:", error);
+      const err = error as { data?: { message?: string }; message?: string };
 
       // Increment verification attempts
       const newAttempts = verifyAttempts + 1;
@@ -351,8 +363,8 @@ const OtpContent: React.FC = () => {
 
       // Set error message
       const errorMessage =
-        error.data?.message ||
-        error.message ||
+        err?.data?.message ||
+        err?.message ||
         "Invalid OTP. Please try again.";
       setVerificationError(errorMessage);
 

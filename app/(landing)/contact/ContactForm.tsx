@@ -6,7 +6,6 @@ import { Send } from "lucide-react";
 import Container from "@/components/ui/Container";
 import { Select } from "@/components/ui/Select";
 import { useContactMutation } from "@/redux/api/formsApi";
-import { useAppSelector } from "@/redux/hooks";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -47,7 +46,6 @@ const contactSchema = z.object({
 type ContactFormData = z.infer<typeof contactSchema>;
 
 export default function ContactForm() {
-  const token = useAppSelector((state) => state.auth.token);
   const [contactAction, { isLoading }] = useContactMutation();
 
   // React Hook Form setup
@@ -73,20 +71,15 @@ export default function ContactForm() {
 
   const onSubmit = async (data: ContactFormData) => {
     try {
-      if (!token) {
-        toast.warning("Please sign up or log in to submit this form.");
-        return;
-      }
-
       // Call your existing mutation
       const res = await contactAction({
-        first_name: data.firstName,
-        last_name: data.lastName,
-        company_name: data.company,
         email: data.email,
+        firstName: data.firstName,
+        lastName: data.lastName,
+        company: data.company,
         country: data.country,
-        budget_range: data.budgetRange,
-        project_type: data.projectType,
+        budgetRange: data.budgetRange,
+        projectType: data.projectType,
         message: data.message,
       }).unwrap();
 
@@ -100,7 +93,10 @@ export default function ContactForm() {
     } catch (error: any) {
       // Handle error (you can add error toast here if needed)
       console.error("Form submission error:", error);
-      toast.error(error.data.message);
+      toast.error(
+        error?.data?.message ||
+          "Something went wrong while submitting the form. Please try again.",
+      );
     }
   };
 

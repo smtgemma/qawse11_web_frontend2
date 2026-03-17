@@ -5,7 +5,6 @@ import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import Image from "next/image";
 import Container from "./Container";
 import { useGetInTouchMutation } from "@/redux/api/formsApi";
-import { useAppSelector } from "@/redux/hooks";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -50,7 +49,6 @@ const GetInTouchSection: React.FC<GetInTouchSectionProps> = ({
   imageAlt = "AI Agent Capabilities",
   className = "",
 }) => {
-  const token = useAppSelector((state) => state.auth.token);
   const [getInTouchAction, { isLoading }] = useGetInTouchMutation();
 
   // React Hook Form setup
@@ -69,11 +67,6 @@ const GetInTouchSection: React.FC<GetInTouchSectionProps> = ({
   });
 
   const onSubmit = async (data: GetInTouchFormData) => {
-    if (!token) {
-      toast.warning("Please sign up or log in to submit this form.");
-      return;
-    }
-
     try {
       // Call your existing mutation
       const res = await getInTouchAction(data).unwrap();
