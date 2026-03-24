@@ -66,12 +66,12 @@ const industryOptions = [
 ];
 
 const primaryGoalOptions = [
-  { value: "ai-agents", label: "AI Agents" },
-  { value: "automations", label: "Automations" },
-  { value: "rag-systems", label: "RAG Systems" },
-  { value: "custom-ai-applications", label: "Custom AI Applications" },
-  { value: "ai-integration", label: "AI Integration" },
-  { value: "ai-strategy-consulting", label: "AI Strategy & Consulting" },
+  { value: "paid-advertising", label: "Paid Advertising (PPC)" },
+  { value: "seo", label: "SEO" },
+  { value: "social-media", label: "Social Media" },
+  { value: "content-marketing", label: "Content Marketing" },
+  { value: "email-marketing", label: "Email Marketing" },
+  { value: "analytics", label: "Analytics" },
   { value: "other", label: "Other" },
 ];
 
