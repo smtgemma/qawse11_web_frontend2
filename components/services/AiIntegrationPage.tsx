@@ -21,6 +21,7 @@ export default function AIIntegrationPage() {
       {/* Get In Touch Section */}
       <div className="max-w-[1150px] w-[95%] mx-auto lg:mt-[180px] mt-[100px] overflow-hidden">
         <GetInTouchSection
+          projectType="Email Marketing"
           smallText=""
           heading="Email Marketing That Nurtures & Converts"
           description="Turn subscribers into customers with automated sequences that deliver the right message at the right time."

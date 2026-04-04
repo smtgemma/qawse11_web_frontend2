@@ -10,8 +10,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
 import Link from "next/link";
+import { useAppSelector } from "@/redux/hooks";
 
 interface GetInTouchSectionProps {
+  /** Sent to API as projectType — set per services page */
+  projectType: string;
   smallText?: string;
   heading?: string;
   description?: string;
@@ -42,6 +45,7 @@ const getInTouchSchema = z.object({
 type GetInTouchFormData = z.infer<typeof getInTouchSchema>;
 
 const GetInTouchSection: React.FC<GetInTouchSectionProps> = ({
+  projectType,
   smallText = "AI Agent Capabilities",
   heading = "Paid Advertising That Delivers ROI",
   description = "Stop wasting ad spend on campaigns that don’t convert. Our data-driven approach to paid media ensures every dollar works toward your business goals.",
@@ -49,6 +53,7 @@ const GetInTouchSection: React.FC<GetInTouchSectionProps> = ({
   imageAlt = "AI Agent Capabilities",
   className = "",
 }) => {
+  const token = useAppSelector((state) => state.auth.token);
   const [getInTouchAction, { isLoading }] = useGetInTouchMutation();
 
   // React Hook Form setup
@@ -67,9 +72,18 @@ const GetInTouchSection: React.FC<GetInTouchSectionProps> = ({
   });
 
   const onSubmit = async (data: GetInTouchFormData) => {
+    if (!token?.trim()) {
+      toast.error("Please sign up or log in to submit this form.");
+      return;
+    }
+
     try {
-      // Call your existing mutation
-      const res = await getInTouchAction(data).unwrap();
+      const res = await getInTouchAction({
+        name: data.name,
+        email: data.email,
+        msg: data.message,
+        projectType,
+      }).unwrap();
 
       // Reset form on successful submission
       reset();
@@ -79,7 +93,9 @@ const GetInTouchSection: React.FC<GetInTouchSectionProps> = ({
 
       // Professional success message
       toast.success(
-        res.message || "Your request has been submitted successfully.",
+        res.message ||
+          res.data?.message ||
+          "Your request has been submitted successfully.",
       );
     } catch (error: any) {
       // Professional error log

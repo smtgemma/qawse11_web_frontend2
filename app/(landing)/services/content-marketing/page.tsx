@@ -21,6 +21,7 @@ export default function CustomAIApplicationsPage() {
             {/* Get In Touch Section */}
             <div className="max-w-[1150px] w-[95%] mx-auto lg:mt-[180px] mt-[100px] overflow-hidden">
                 <GetInTouchSection
+                    projectType="Content Marketing"
                     smallText=""
                     heading="Content That Converts"
                     description="Attract and engage your ideal customers with valuable content that builds trust and drives action."

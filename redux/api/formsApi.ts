@@ -9,20 +9,16 @@ export const formsApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     getInTouch: build.mutation<
       GetInTouchResponseType,
-      { name: string; email: string; message: string }
+      { name: string; email: string; msg: string; projectType: string }
     >({
       query: (body) => ({
-        url: "/auth/send-support-mail",
+        url: "/form/send-booking",
         method: "POST",
         body: {
-          firstName: body.name?.trim() || "",
-          lastName: "",
-          email: body.email,
-          company: "",
-          country: "",
-          projectType: "Other",
-          budgetRange: "",
-          message: body.message,
+          name: body.name?.trim() || "",
+          email: body.email.trim(),
+          msg: body.msg.trim(),
+          projectType: body.projectType.trim(),
         },
       }),
       invalidatesTags: ["Forms"],

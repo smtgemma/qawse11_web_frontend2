@@ -21,6 +21,7 @@ export default function RAGSystemsPage() {
             {/* Get In Touch Section */}
             <div className="max-w-[1150px] w-[95%] mx-auto lg:mt-[180px] mt-[100px] overflow-hidden">
                 <GetInTouchSection
+                    projectType="Social Media Marketing"
                     smallText=""
                     heading="Social Media That Builds Brands"
                     description="Connect with your audience where they spend their time. Build community, drive engagement, and turn followers into customers.."
