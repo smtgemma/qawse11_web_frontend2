@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
 
                 {/* X (Twitter) */}
                 <Link
-                  href="https://x.com/dima360ai/"
+                  href="https://x.com/dima360marketing/"
                   target="_blank"
                   className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#1E72A1] to-[#3A9AD4] flex items-center justify-center transition-all hover:shadow-[0_4px_40px_rgba(30,114,161,0.6)]"
                   aria-label="X (Twitter)">
@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
 
                 {/* Instagram */}
                 <Link
-                  href="https://www.instagram.com/dima360ai/"
+                  href="https://www.instagram.com/dima360marketing/"
                   target="_blank"
                   className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#1E72A1] to-[#3A9AD4] flex items-center justify-center transition-all hover:shadow-[0_4px_40px_rgba(30,114,161,0.6)]"
                   aria-label="X (Twitter)">
