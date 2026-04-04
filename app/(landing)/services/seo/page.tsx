@@ -72,6 +72,7 @@ export default function WorkflowAutomationPage() {
             {/* Get In Touch Section */}
             <div className="max-w-[1150px] w-[95%] mx-auto lg:mt-[180px] mt-[100px] overflow-hidden">
                 <GetInTouchSection
+                    projectType="Search Engine Optimization (SEO)"
                     smallText=""
                     heading="SEO That Drives Organic Growth"
                     description="Rank higher, get found, and build sustainable organic traffic that compounds over time.."

@@ -21,6 +21,7 @@ export default function AIStrategyConsultingPage() {
             {/* Get In Touch Section */}
             <div className="max-w-[1150px] w-[95%] mx-auto lg:mt-[180px] mt-[100px] overflow-hidden">
                 <GetInTouchSection
+                    projectType="Analytics & Reporting"
                     smallText=""
                     heading="Analytics & Reporting That Turns Data Into Decisions"
                     description="Track what matters, understand your performance, and make smarter marketing decisions with powerful analytics and transparent reporting."

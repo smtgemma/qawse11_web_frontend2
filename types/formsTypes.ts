@@ -1,6 +1,7 @@
 export type GetInTouchResponseType = {
   success: boolean;
   message: string;
+  data?: { message?: string };
 };
 
 export type ContactFormResponseType = {

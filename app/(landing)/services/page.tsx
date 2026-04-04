@@ -75,7 +75,7 @@ export default function ServicesPage() {
 
             {/* Get In Touch Section */}
             <div className="lg:mt-[180px] lg:mb-[64px] mb-[40px] mt-[100px] max-w-[1150px] w-[95%] mx-auto">
-                <GetInTouchSection />
+                <GetInTouchSection projectType="Paid Advertising (PPC)" />
             </div>
             <div className="max-w-[1150px] w-[95%] mx-auto lg:my-[64px] my-[40px]">
                 <ValuePropositionSection items={valuePropositions} />
