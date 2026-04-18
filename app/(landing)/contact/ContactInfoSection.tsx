@@ -52,7 +52,7 @@ export default function ContactInfoSection() {
                 Email
               </h3>
               <Link
-                href={"mailto:hello@dima360ai.com"}
+                href={"mailto:hello@dima360marketing.com"}
                 className="text-base text-white/80 transition-all hover:text-white hover:underline">
                 hello@dima360marketing.com
               </Link>
