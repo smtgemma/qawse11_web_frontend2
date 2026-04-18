@@ -323,9 +323,9 @@ const GetInTouchSection: React.FC<GetInTouchSectionProps> = ({
                           Email Us
                         </p>
                         <Link
-                          href={"mailto:hello@dima360ai.com"}
+                          href={"mailto:hello@dima360marketing.com"}
                           className="text-sm text-white/90 hover:underline hover:text-white transition-colors">
-                          hello@dima360ai.com
+                          hello@dima360marketing.com
                         </Link>
                       </div>
                     </div>
